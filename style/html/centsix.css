@@ -184,11 +184,12 @@ div.listingblock > div.content {
 }
 
 div.quoteblock, div.verseblock {
-  padding-left: 1.0em;
+  padding-left: 50px;
   margin-left: 1.0em;
   margin-right: 10%;
   border-left: 5px solid #f0f0f0;
   color: #777777;
+  background: url(images/icons/quote.png) no-repeat left ;
 }
 
 div.quoteblock > div.attribution {

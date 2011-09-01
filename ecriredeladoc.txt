@@ -1,0 +1,97 @@
+= Ecrire de la documentation pour un projet libre
+Fabrice_Flore-Thebault <fab@centsix.org>
+:Date:      2011
+:Revision:  1
+:lang: fr
+
+== L'auteur
+
+Fabrice Flore-Thébault est "technical writer" dans des projets libres (GLPI,
+Rudder). 
+
+== La place du "technical writer"
+
+- Un non développeur dans une équipe de développeurs.
+
+[quote]
+"Comment, quelqu'un qui ne lit pas le code ?") ; 
+
+- Nécessaire adaptation.
+
+== Traiter la documentation comme du code
+
+== Contrôle de version
+
+Utiliser le même outil de gestion de version que le reste du projet.
+
+[TIP]
+Git, Subversion
+
+== Intégration continue
+
+- Utiliser le même outil d'intégration continue que le reste du projet.
+
+- Déploiement continu : mieux qu'un CMS !
+
+TIP: Jenkins
+
+== Choisir les outils d'écriture
+
+- Traiter la documentation comme du code
+
+== CMS, wiki
+
+- Impossible de travailler offline.
+
+- Pénible gestion d'édition concurrente.
+
+- "Ma page n'a pas été sauvegardée!"
+
+- Et le format papier ?
+
+== Opendocument
+
+- Difficile séparation du style.
+
+- Pénible à versionner.
+
+- Impose un outil d'édition lourd.
+
+== LaTeX
+
+- Syntaxe pénible pour l'auteur.
+
+- Impose l'utilisation d'un éditeur spécialisé.
+
+- Reste un incontournable format intermédiaire pour produire de la documentation à
+  imprimer.
+
+== XML : Dita, Docbook
+
+- Syntaxe pénible pour l'auteur.
+
+- Riche, trop riche.
+
+- Impose l'utilisation d'un éditeur lourd.
+
+- Docbook : un bon format intermédiaire.
+
+== Langages de markup simple : RST, Asciidoc
+
+- Syntaxe simple pour l'auteur.
+
+- Asciidoc + Graphviz, le duo gagnant.
+
+== L'impact qualité  pour le projet
+
+== Rapports de bugs
+
+- Tests extensifs de l'application.
+
+- Regard extérieur.
+
+== Ergonomie
+
+- Une interface ergonomique demande moins d'explications.
+
+- Modification de l'interface utilisateur.

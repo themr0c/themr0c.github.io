@@ -1,0 +1,12 @@
+ecriredeladoc.xml
+*.pdf
+*.tex
+*.html
+*.swp
+*~
+*.bak
+*.off
+main_*.png
+_*.png
+temp/*
+graphs/*

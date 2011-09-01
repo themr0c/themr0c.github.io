@@ -4,28 +4,58 @@ Fabrice_Flore-Thebault <fab@centsix.org>
 :Revision:  1
 :lang: fr
 
-== L'auteur
+== L'auteur : Fabrice Flore-Thébault 
 
-Fabrice Flore-Thébault est "technical writer" dans des projets libres (GLPI,
-Rudder). 
+Auteur de documentation dans des projets libres :
+
+- GLPI
+- Rudder 
+
+Sysadmin, consultant en logiciels libres et ... auteur de documentation dans des infrastructures IT :
+
+- Emakina
+- Mediaxim
+- Centre Hospitalier Jean Titeca
+- ...
+
 
 == La place du "technical writer"
 
 - Un non développeur dans une équipe de développeurs.
 
 [quote]
-"Comment, quelqu'un qui ne lit pas le code ?") ; 
+"Comment, quelqu'un qui ne lit pas le code ?" 
 
-- Nécessaire adaptation.
+- Nécessaire adaptation réciproque.
 
-== Traiter la documentation comme du code
+- Jeu des questions-réponses.
+
+== Les objectifs
+
+=== S'adapter au projet
+
+- Un projet comme les autres.
+
+- Traiter la documentation comme le reste du code.
+
+=== Faciliter la vie des auteurs
+
+- Simplicité pour l'auteur (outil, syntaxe).
+
+- Ne pas imposer un outil d'édition.
+
+- Pouvoir travailler offline.
+
+- Pouvoir travailler à plusieurs.
 
 == Contrôle de version
 
-Utiliser le même outil de gestion de version que le reste du projet.
+- Utiliser le même outil de gestion de version que le reste du projet.
+
+- Intégration à la forge.
 
 [TIP]
-Git, Subversion
+Git, Subversion, Redmine
 
 == Intégration continue
 
@@ -33,13 +63,10 @@ Git, Subversion
 
 - Déploiement continu : mieux qu'un CMS !
 
-TIP: Jenkins
+[TIP]
+Makefile, Jenkins
 
-== Choisir les outils d'écriture
-
-- Traiter la documentation comme du code
-
-== CMS, wiki
+== Choix des outils : CMS? Wiki?
 
 - Impossible de travailler offline.
 
@@ -49,7 +76,7 @@ TIP: Jenkins
 
 - Et le format papier ?
 
-== Opendocument
+== Choix des outils : Opendocument ?
 
 - Difficile séparation du style.
 
@@ -57,7 +84,7 @@ TIP: Jenkins
 
 - Impose un outil d'édition lourd.
 
-== LaTeX
+== Choix des outils : LaTeX ?
 
 - Syntaxe pénible pour l'auteur.
 
@@ -66,21 +93,31 @@ TIP: Jenkins
 - Reste un incontournable format intermédiaire pour produire de la documentation à
   imprimer.
 
-== XML : Dita, Docbook
+== Choix des outils : XML ? Dita ? Docbook ?
 
 - Syntaxe pénible pour l'auteur.
 
 - Riche, trop riche.
 
-- Impose l'utilisation d'un éditeur lourd.
+- Impose de facto l'utilisation d'un éditeur lourd.
 
 - Docbook : un bon format intermédiaire.
 
-== Langages de markup simple : RST, Asciidoc
+== Choix des outils : Langages de markup simple : RST ? Asciidoc !
 
 - Syntaxe simple pour l'auteur.
 
 - Asciidoc + Graphviz, le duo gagnant.
+
+== Mise en oeuvre de Asciidoc
+
+- "include" rulez
+
+- utilisation de scripts pour ordonner le contenu et générer le document maître
+
+- feuille de style pour la sortie XHTML
+
+- feuille de style pour la sortie PDF
 
 == L'impact qualité  pour le projet
 

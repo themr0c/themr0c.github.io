@@ -2,6 +2,9 @@
 Fabrice Flore-Thebault <fab@centsix.org>
 1, jeudi 6 octobre 2011: Jeudis du Libre de Bruxelles
 :lang: fr
+:max-width: 45em
+//:data-uri: //broken
+//:incremental: //ugly when generalized
 
 == L'auteur: Fabrice Flore-Thébault http://identi.ca/themr0c[@themr0c]
 
@@ -10,40 +13,50 @@ Partout où il faut documenter les projets, les processus, les infrastructures.
 ["graphviz", "author.svg", "dot", "svg"]
 ----
 digraph author{
-node [shape=Mrecord, style=filled, color="#6699ff", fillcolor="#ececff",
-fontsize=10]
+node [shape=Mrecord, style=filled, color="#6699ff", fillcolor="#ececff"]; 
 FFT [label="Fabrice Flore-Thébault (@themr0c)" URL="http://identi.ca/themr0c"] ;
-CHJT [label="Centre hospitalier Jean Titeca"];
-Libre [label="Projets libres"];
 Doc [label="Documentation, Processus, QA"]
+Libre [label="Projets libres"];
+CHJT [label="Centre hospitalier Jean Titeca"];
 FFT -> {Libre Consultant Doc Sysadmin};
-Esquimaux -> CHJT;
-Centsix -> Normation -> Rudder;
 Libre -> {GLPI Rudder};
 Consultant -> {Esquimaux Centsix};
+Esquimaux -> CHJT;
+Centsix -> Normation -> Rudder;
 Doc -> {Emakina Mediaxim GLPI CHJT Rudder Centsix};
 Sysadmin -> {Emakina Mediaxim CHJT};
 }
 ----
 
-== La place du "technical writer"
+== L'arrivée du "technical writer"
 
-- Un non développeur dans une équipe de développeurs.
+Nécessaire adaptation réciproque.
 
-[quote]
-"Comment, quelqu'un qui ne lit pas le code ?" 
+.Arrivée d'un non développeur dans une équipe de développeurs.
+____
+Comment, quelqu'un qui ne lit pas le code ?
 
-- Nécessaire adaptation réciproque.
+image::images/code.png["Ne pas lire le code"]
 
-- Jeu des questions-réponses.
+credit: cc-by @scruch http://www.flickr.com/photos/81655050@N00/4247848460
+____
+
+== Implication des autres acteurs du projet
+
+.Jeu des questions-réponses.
+====
+image::images/irc.png["Questions réponses sur IRC"]
+====
 
 == Les objectifs
 
-=== S'adapter au projet
+=== S'adapter aux autres acteurs du projet
 
-- Un projet comme les autres.
+- Une composante du projet comme les autres.
 
 - Traiter la documentation comme le reste du code.
+
+- Permettre aux contributeurs d'utiliser leurs outils habituels.
 
 === Faciliter la vie des auteurs
 
@@ -55,34 +68,133 @@ Sysadmin -> {Emakina Mediaxim CHJT};
 
 - Pouvoir travailler à plusieurs.
 
+== S'adapter au projet
+
+[role="standard"]
+. Contrôle de version
+. Gestion de projet
+. Intégration continue
+. Accessibilité immédiate
+. Environnement de travail
+
 == Contrôle de version
 
-- Utiliser le même outil de gestion de version que le reste du projet.
+Utiliser le même outil de gestion de version que le reste du projet.
 
-- Intégration à la forge.
-
-[TIP]
+.Visualisation des activités Git avec Gitorious
 ====
-Intégration à Redmine avec Git
+image::images/gitoriousactivities.png["Gitorious activities"]
+====
 
-image::images/roadmap.png["Roadmap displayed in Redmine"]
+== Gestion de projet
+
+Intégration à la forge du reste du projet.
+
+.Intégration à Redmine avec Git
+====
+image::images/redminegit.png["Intégration de Git et Redmine"]
 ====
 
 == Intégration continue
 
-- Utiliser le même outil d'intégration continue que le reste du projet.
+Utiliser le même outil d'intégration continue que le reste du projet.
 
-- Déploiement continu : mieux qu'un CMS !
+Déploiement continu : validation de la publication, mieux qu'un CMS !
 
-
-[TIP]
+.Intégration continue avec Jenkins, utilisation de Makefile
 ====
-Intégration continue avec Jenkins, utilisation de Makefile
-
 image::images/ci.png["Intégration continue avec Jenkins"]
 ====
 
-== Choix des outils : CMS? Wiki?
+== Edition rapide
+
+Un outil simple pour de petites modifications.
+
+.Edition en ligne avec Github
+====
+image::images/githubedit.png["Editeur en ligne de Github"]
+====
+
+== Votre éditeur de texte habituel
+
+Utiliser votre éditeur de texte préféré.
+
+.Un fichier asciidoc dans Vim
+====
+image::images/editor.png["Un fichier asciidoc dans Vim"]
+====
+
+== Choix de la chaîne de production
+
+.La chaîne de production est centrée sur les formats d'édition et de publication.
+["graphviz", "workflow.svg", "dot", "svg"]
+----
+digraph workflow{
+node [shape=Mrecord, style=filled, color="#6699ff", fillcolor="#ececff"]; 
+FormatE [label="Format d'écriture"];
+OutilsE [label="Outils d'édition"]; 
+FlowE [label="Flux de production"];
+FormatP [label="Formats de publication"];
+OutilsP [label="Outils de publication"];
+FlowP [label="Chaîne de publication"];
+FormatE -> OutilsE -> FlowE;
+FormatE -> FormatP -> OutilsP -> FlowP;
+
+}
+----
+
+== Formats de publication
+
+Deux cibles : le web et l'impression papier.
+
+.Formats de publication standards.
+["graphviz", "publicationformats.svg", "dot", "svg"]
+----
+digraph workflow{
+node [shape=Mrecord, style=filled, color="#6699ff", fillcolor="#ececff"]; 
+FormatP [label="Formats de publication"];
+FormatP -> {Web Papier};
+Web -> XHTML;
+Papier -> PDF;
+}
+----
+
+== Format pour le web: HTML
+
+.Version Web de la documentation utilisateur de Rudder
+====
+image::images/rudderwebdoctitle.png["Rudder documentation"]
+====
+
+== Format pour l'impression: PDF
+
+.Version PDF de la documentation utilisateur de Rudder
+====
+image::images/rudderpdf.png["Rudder documentation"]
+====
+
+
+== Formats et outils d'édition
+
+=== Les prérequis
+
+- Séparation style et contenu;
+- Maintenable comme du code;
+
+== Formats et outils d'édition standards
+
+- Applications web;
+- OpenDocument;
+- LaTeX;
+- XML: Docbook, Dita;
+- Simple markup: rst, asciidoc.
+
+=== Les illustrations
+
+- Captures d'écran (avec parcimonie).
+- Graphiques sémantiques: graphviz.
+
+== Application web: CMS? Wiki?
 
 - Impossible de travailler offline.
 
@@ -90,21 +202,29 @@ image::images/ci.png["Intégration continue avec Jenkins"]
 
 - "Ma page n'a pas été sauvegardée!"
 
-- Et le format papier ?
+- Et le format papier ? Les exports PDF ne sont qu'un pis aller.
+
+- Un outil d'appoint ponctuel appréciable, pas l'outil de travail habituel.
+
+- Ne pas dépendre d'un serveur de DB pour une documentation d'architecture.
 
 == Choix des outils : Opendocument ?
 
-- Difficile séparation du style.
+- Non adapté à la séparation du style et du contenu.
 
 - Pénible à versionner.
 
+- Pas maintenable.
+
 - Impose un outil d'édition lourd.
+
+- La création de templates de mise en forme ne résout pas les problèmes.
 
 == Choix des outils : LaTeX ?
 
 - Syntaxe pénible pour l'auteur.
 
-- Impose l'utilisation d'un éditeur spécialisé.
+- Impose de facto l'utilisation d'un éditeur spécialisé.
 
 - Reste un incontournable format intermédiaire pour produire de la documentation à
   imprimer.
@@ -113,16 +233,27 @@ image::images/ci.png["Intégration continue avec Jenkins"]
 
 - Syntaxe pénible pour l'auteur.
 
-- Riche, trop riche.
-
 - Impose de facto l'utilisation d'un éditeur lourd.
 
-Serna, seul éditeur libre pour DITA : une version free, qui évolue très
-lentement à côté d'une version entreprise, open source depuis peu, dont les
-paquets ne sont pas installable dans certaines distributions majeures (Fedora,
-Debian).
+- Riche, trop riche.
 
 - Docbook : un bon format intermédiaire.
+
+.DITA XML dans un éditeur de texte 
+====
+image::images/ditafile.png["DITA XML"]
+====
+
+=== DITA et Serna
+
+.Serna, éditeur libre pour DITA
+====
+une version, qui évolue très lentement à côté d'une version entreprise, open
+source depuis peu, dont les paquets ne sont pas installable dans certaines
+distributions majeures (Fedora, Debian).
+
+image::images/serna.png["Serna, éditeur DITA"]
+====
 
 == Choix des outils : Langages de markup simple : RST ? Asciidoc !
 

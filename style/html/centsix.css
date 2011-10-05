@@ -187,10 +187,18 @@ div.quoteblock, div.verseblock {
   padding-left: 50px;
   margin-left: 1.0em;
   margin-right: 10%;
-  border-left: 5px solid #f0f0f0;
   color: #777777;
-  background: url(images/icons/quote.png) no-repeat left ;
+  background: url(images/icons/quote.png) no-repeat top left ;
 }
+
+div.exampleblock {
+  padding-left: 50px;
+  margin-left: 1.0em;
+  margin-right: 10%;
+  color: #777777;
+  background: url(images/icons/example.png) no-repeat top left ;
+}
+
 
 div.quoteblock > div.attribution {
   padding-top: 0.5em;
@@ -223,7 +231,7 @@ div.admonitionblock td.content {
   border-left: 3px solid #dddddd;
 }
 
-div.exampleblock > div.content {
+div.exampleblock > div.content, div.quoteblock > div.content {
   border-left: 3px solid #dddddd;
   padding-left: 0.5em;
 }

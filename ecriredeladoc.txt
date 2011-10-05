@@ -62,7 +62,11 @@ Sysadmin -> {Emakina Mediaxim CHJT};
 - Intégration à la forge.
 
 [TIP]
-Git, Subversion, Redmine
+====
+Intégration à Redmine avec Git
+
+image::images/roadmap.png["Roadmap displayed in Redmine"]
+====
 
 == Intégration continue
 
@@ -70,8 +74,13 @@ Git, Subversion, Redmine
 
 - Déploiement continu : mieux qu'un CMS !
 
+
 [TIP]
-Makefile, Jenkins
+====
+Intégration continue avec Jenkins, utilisation de Makefile
+
+image::images/ci.png["Intégration continue avec Jenkins"]
+====
 
 == Choix des outils : CMS? Wiki?
 

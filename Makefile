@@ -53,7 +53,7 @@ slides/index.html : $(PROJECTNAME).txt
 ## WARNING: at cleanup, delete png files that were produced by output only !
 
 clean : 
-	rm -rf $(PROJECTNAME).xml *.pdf *.html *.png temp graphs html slides
+	rm -rf $(PROJECTNAME).xml *.pdf *.html *.png temp graphs html slides *.svg
 
 view : all
 	$(SEE) $(TARGETS)

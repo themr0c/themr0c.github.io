@@ -26,9 +26,9 @@ body {
 color: rgb(232,197,78);
 }
 
-#header h1 {
+.book {
   padding-top: 111px;
-  background: url('logo.png') no-repeat top left; 
+  background: url('logo.png') no-repeat top right; 
 }
 
 #content {

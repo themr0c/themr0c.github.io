@@ -2,7 +2,6 @@
   DocBook document information file.
 -->
 
-<authorgroup>
  <author>
     <firstname>Fabrice</firstname>
     <surname>Flore-Thebault</surname>
@@ -11,7 +10,6 @@
       <orgname>Centsix</orgname>
     </affiliation>
   </author>
-</authorgroup>
 
 <copyright>
   <year>2011</year>

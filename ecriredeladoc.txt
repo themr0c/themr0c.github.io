@@ -1,23 +1,30 @@
 = Ecrire de la documentation pour un projet libre
-Fabrice_Flore-Thebault <fab@centsix.org>
-:Date:      2011
-:Revision:  1
+Fabrice Flore-Thebault <fab@centsix.org>
+1, jeudi 6 octobre 2011: Jeudis du Libre de Bruxelles
 :lang: fr
 
-== L'auteur : Fabrice Flore-Thébault 
+== L'auteur: Fabrice Flore-Thébault http://identi.ca/themr0c[@themr0c]
 
-Auteur de documentation dans des projets libres :
+Partout où il faut documenter les projets, les processus, les infrastructures.
 
-- GLPI
-- Rudder 
-
-Sysadmin, consultant en logiciels libres et ... auteur de documentation dans des infrastructures IT :
-
-- Emakina
-- Mediaxim
-- Centre Hospitalier Jean Titeca
-- ...
-
+["graphviz", "author.svg", "dot", "svg"]
+----
+digraph author{
+node [shape=Mrecord, style=filled, color="#6699ff", fillcolor="#ececff",
+fontsize=10]
+FFT [label="Fabrice Flore-Thébault (@themr0c)" URL="http://identi.ca/themr0c"] ;
+CHJT [label="Centre hospitalier Jean Titeca"];
+Libre [label="Projets libres"];
+Doc [label="Documentation, Processus, QA"]
+FFT -> {Libre Consultant Doc Sysadmin};
+Esquimaux -> CHJT;
+Centsix -> Normation -> Rudder;
+Libre -> {GLPI Rudder};
+Consultant -> {Esquimaux Centsix};
+Doc -> {Emakina Mediaxim GLPI CHJT Rudder Centsix};
+Sysadmin -> {Emakina Mediaxim CHJT};
+}
+----
 
 == La place du "technical writer"
 
@@ -100,6 +107,11 @@ Makefile, Jenkins
 - Riche, trop riche.
 
 - Impose de facto l'utilisation d'un éditeur lourd.
+
+Serna, seul éditeur libre pour DITA : une version free, qui évolue très
+lentement à côté d'une version entreprise, open source depuis peu, dont les
+paquets ne sont pas installable dans certaines distributions majeures (Fedora,
+Debian).
 
 - Docbook : un bon format intermédiaire.
 

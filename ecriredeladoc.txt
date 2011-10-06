@@ -28,11 +28,58 @@ Sysadmin -> {Emakina Mediaxim CHJT};
 }
 ----
 
-== L'arrivée du "technical writer"
+== La documentation utilisateur
 
-Nécessaire adaptation réciproque.
+[role="incremental"]
 
-.Arrivée d'un non développeur dans une équipe de développeurs.
+* Circulation de la connaissance.
+
+* Permettre à des personnes extérieures au projet d'utiliser l'outil produit.
+
+* Donner du sens et expliciter les intentions.
+
+* Libérer de l'espace de support.
++
+____
+
+image::images/rtfm.png["RTFM"]
+
+credit cc-by-sa @bike http://www.flickr.com/photos/bike/2263136517/
+
+____
+
+== Approche traditionnelle
+
+=== Traitement de texte et outils de PAO
+
+[role="incremental"]
+
+* WYSIWYG => WYGIWYS What you get is what you see
+
+* Pas de structure
+
+* Pas d'historisation
+
+=== Rédacteur isolé des développeurs
+
+[role="incremental"]
+
+* Pas de correction de l'application
+
+* Capture d'écran vs. dynamique d'utilisation
+
+* Procédure vs. intention
+
+== Faire appel à un rédacteur technique
+
+[role="incremental"]
+
+* Un non développeur dans une équipe de développeurs.
+
+* Choc culturel.
+
+* Nécessaire adaptation réciproque.
++
 ____
 Comment, quelqu'un qui ne lit pas le code ?
 
@@ -48,9 +95,11 @@ ____
 image::images/irc.png["Questions réponses sur IRC"]
 ====
 
-== Les objectifs
+== Les objectifs humains
 
 === S'adapter aux autres acteurs du projet
+
+[role="incremental"]
 
 - Une composante du projet comme les autres.
 
@@ -60,17 +109,18 @@ image::images/irc.png["Questions réponses sur IRC"]
 
 === Faciliter la vie des auteurs
 
+[role="incremental"]
+
 - Simplicité pour l'auteur (outil, syntaxe).
 
 - Ne pas imposer un outil d'édition.
 
-- Pouvoir travailler offline.
-
 - Pouvoir travailler à plusieurs.
+
+- Pouvoir travailler offline.
 
 == S'adapter au projet
 
-[role="standard"]
 . Contrôle de version
 . Gestion de projet
 . Intégration continue
@@ -153,9 +203,10 @@ Deux cibles : le web et l'impression papier.
 digraph workflow{
 node [shape=Mrecord, style=filled, color="#6699ff", fillcolor="#ececff"]; 
 FormatP [label="Formats de publication"];
-FormatP -> {Web Papier};
+FormatP -> {Web Papier Console};
 Web -> XHTML;
 Papier -> PDF;
+Console -> "Man pages";
 }
 ----
 
@@ -174,112 +225,266 @@ image::images/rudderpdf.png["Rudder documentation"]
 ====
 
 
-== Formats et outils d'édition
+== Prérequis pour les formats et outils d'édition
 
-=== Les prérequis
+=== Structuration
 
-- Séparation style et contenu;
-- Maintenable comme du code;
+[role="incremental"]
+
+* Séparation style et contenu.
+
+* Une source, plusieurs formats de publication.
+
+* Écriture sémantique vs. machine à écrire.
+
+=== Maintenable comme du code.
+
+[role="incremental"]
+
+* Versionné.
+
+* Gestion des conflits d'édition concurrente.
+
+=== Simplicité de la rédaction
+
+[role="incremental"]
+
+* Simplicité de la syntaxe vs. richesse des fonctionnalités.
+
+* Simple éditeur de texte vs. outil propriétaire. 
 
 == Formats et outils d'édition standards
 
-- Applications web;
-- OpenDocument;
-- LaTeX;
-- XML: Docbook, Dita;
-- Simple markup: rst, asciidoc.
+=== La sémantisation du contenu
+
+* Applications web.
+* OpenDocument.
+* LaTeX.
+* XML: Docbook, Dita.
+* Simple markup: reStructured text, asciidoc.
 
 === Les illustrations
 
-- Captures d'écran (avec parcimonie).
-- Graphiques sémantiques: graphviz.
+* Captures d'écran (avec parcimonie).
+* Graphiques sémantiques: graphviz.
 
-== Application web: CMS? Wiki?
+== Applications web, CMS, Wiki
 
-- Impossible de travailler offline.
+===  Un outil d'appoint ponctuel appréciable, pas l'outil de travail habituel.
 
-- Pénible gestion d'édition concurrente.
+[role="incremental"]
 
-- "Ma page n'a pas été sauvegardée!"
+* Online & synchrone vs offline & asynchrone
++
+____
+Ma page n'a pas été sauvegardée!
+____
 
-- Et le format papier ? Les exports PDF ne sont qu'un pis aller.
+* Pénible gestion d'édition concurrente.
 
-- Un outil d'appoint ponctuel appréciable, pas l'outil de travail habituel.
+* Pas adapté au format papier. Les exports PDF ne sont qu'un pis aller.
 
-- Ne pas dépendre d'un serveur de DB pour une documentation d'architecture.
+* Formats de balisage simple: ReStructured Text, Markdown, Textile.
 
-== Choix des outils : Opendocument ?
+* Rarement intégré aux outils habituels du projet.
 
-- Non adapté à la séparation du style et du contenu.
+.Le wiki de Redmine
+====
+image::images/redminewiki.png["Le wiki de Redmine"]
+====
 
-- Pénible à versionner.
+== Choix des outils : Opendocument et outils de PAO
 
-- Pas maintenable.
+===  Pas un format d'édition maintenable.
+
+[role="incremental"]
 
 - Impose un outil d'édition lourd.
 
+- Pas d'édition concurrente.
+
+- Pénible à versionner.
+
+- Non adapté à la séparation du style et du contenu.
+
 - La création de templates de mise en forme ne résout pas les problèmes.
 
-== Choix des outils : LaTeX ?
+.Le WYSYWIG par LibreOffice
+====
+image::images/wysiwyg.png["WYSIWYG"]
+====
 
-- Syntaxe pénible pour l'auteur.
+== LaTeX 
 
-- Impose de facto l'utilisation d'un éditeur spécialisé.
+===  L'incontournable format intermédiaire pour produire le format imprimable
 
-- Reste un incontournable format intermédiaire pour produire de la documentation à
-  imprimer.
+* Stabilité et qualité exemplaire.
+
+* Syntaxe pénible pour l'auteur.
+
+* Impose de facto l'utilisation d'un éditeur spécialisé.
+
+.LaTeX est complexe pour les auteurs
+====
+image::images/latex.png["Un morceau de LaTeX"]
+====
+
 
 == Choix des outils : XML ? Dita ? Docbook ?
 
-- Syntaxe pénible pour l'auteur.
+* Structuré, versionnable, réutilisable.
 
-- Impose de facto l'utilisation d'un éditeur lourd.
+* Notions clés: +topic+, +ditamap+.
 
-- Riche, trop riche.
+* Syntaxe pénible pour l'auteur.
 
-- Docbook : un bon format intermédiaire.
+* Impose de facto l'utilisation d'un éditeur lourd.
 
-.DITA XML dans un éditeur de texte 
+* Riche, trop riche.
+
+.DITA est complexe pour les auteurs
 ====
 image::images/ditafile.png["DITA XML"]
 ====
 
-=== DITA et Serna
+== Serna, éditeur libre pour DITA
 
-.Serna, éditeur libre pour DITA
+* Seul éditeur libre
+
+* Usine à gaz
+
+* Maintenu ? 
+
+* Disponible pour votre OS ?
+
 ====
-une version, qui évolue très lentement à côté d'une version entreprise, open
-source depuis peu, dont les paquets ne sont pas installable dans certaines
-distributions majeures (Fedora, Debian).
-
 image::images/serna.png["Serna, éditeur DITA"]
 ====
 
-== Choix des outils : Langages de markup simple : RST ? Asciidoc !
+== Docbook
+
+* Structuré, versionnable.
+
+* Un bon format intermédiaire.
+
+* Usage répandu.
+
+.Docbook est complexe pour les auteurs
+====
+image::images/docbook.png["Un morceau de Docbook"]
+====
+
+== Langages de markup simple : Asciidoc
+
+- Structuré, versionnable, réutilisable.
 
 - Syntaxe simple pour l'auteur.
 
-- Asciidoc + Graphviz, le duo gagnant.
+- Chaîne basée sur Docbook et LaTeX.
+
+- Support de Graphviz.
+
+.Chaîne de publication basée sur le format Asciidoc
+["graphviz", "asciidoc.svg", "dot", "svg"]
+----
+digraph asciidoc{
+node [shape=Mrecord, style=filled, color="#6699ff", fillcolor="#ececff"]; 
+asciidoc [label="asciidoc + graphviz + png"];
+xhtml [label="xhtml + svg + png"];
+docbook [label="docbook + svg + png"];
+latex [label="latex + pdf + png"];
+pdf [label="pdf"];
+asciidoc -> {docbook xhtml};
+docbook -> latex -> pdf;
+}
+----
 
 == Mise en oeuvre de Asciidoc
 
-- "include" rulez
+* Feuille de style pour la sortie XHTML.
 
-- utilisation de scripts pour ordonner le contenu et générer le document maître
+* Feuille de style pour la sortie PDF.
 
-- feuille de style pour la sortie XHTML
+* Structuration du texte.
 
-- feuille de style pour la sortie PDF
+* Structuration en fichiers.
 
-== L'impact qualité  pour le projet
+* Automatisation : Makefile, scripts.
 
-== Rapports de bugs
+.Documentation de Asciidoc
+====
+image::images/asciidocfaq.png["FAQ Asciidoc"]
+====
 
-- Tests extensifs de l'application.
+== La syntaxe asciidoc
+
+.La syntaxe asciidoc
+[source,shell]
+----
+= Titre
+Nom Auteur <email@auteur.tld>
+v1.0, octobre 2011: Remarque sur la version
+
+== Section
+=== Sous-section
+Ceci est du contenu.
+
+* Liste à puces
+* Liste à puces
+
+.Titre pour un exemple
+====
+Ceci est un exemple
+====
+
+.Titre pour une image
+image::images/illustration.png[]
+
+----
+
+== Structuration du texte avec Asciidoc
+
+.Sémantisation en sections, notes, code
+====
+image::images/asciidocexample.png["exemple de fichierAsciidoc"]
+====
+
+== Découpage en fichiers, génération du document maître
+
+.Utilisation de scripts externe et d'inclusions
+====
+image::images/asciidocinclude.png["Asciidoc avec script et include"]
+====
+
+== Organisation d'un projet en Asciidoc
+
+.Organisation des fichiers de la documentation de Rudder
+[source,shell]
+----
+
+include::rudderdoctree.txt[]
+
+----
+
+== Organisation d'un projet DITA
+
+.Organisation des fichiers de la documentation de GLPI
+[source,shell]
+----
+
+include::glpidoctree.txt[]
+
+----
+
+== Conclusion : L'impact qualité  pour le projet
+
+=== Rapports de bugs
 
 - Regard extérieur.
 
-== Ergonomie
+- Tests extensifs de l'application.
+
+=== Ergonomie
 
 - Une interface ergonomique demande moins d'explications.
 

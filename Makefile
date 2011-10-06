@@ -2,8 +2,7 @@
 
 PROJECTNAME = ecriredeladoc
 SOURCES = $(PROJECTNAME).txt
-TARGETS = html/$(PROJECTNAME).html $(PROJECTNAME).pdf slides/index.html
-
+TARGETS = slides/index.html html/$(PROJECTNAME).html $(PROJECTNAME).pdf 
 ## Asciidoc with general options
 ASCIIDOC = asciidoc --doctype=book -a docinfo2 -a lang=fr
 

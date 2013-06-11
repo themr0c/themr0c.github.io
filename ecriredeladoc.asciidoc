@@ -1,6 +1,8 @@
 = Ecrire de la documentation pour un projet libre
-Fabrice Flore-Thebault <fab@centsix.org>
-1, jeudi 6 octobre 2011: Jeudis du Libre de Bruxelles
+
+:author: Fabrice Flore-Thebault <fab@centsix.org>
+:version: Jeudis du Libre de Bruxelles
+:date: jeudi 6 octobre 2011
 :lang: fr
 :max-width: 45em
 //:data-uri: //broken

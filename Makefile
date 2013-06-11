@@ -1,7 +1,7 @@
 ## User Documentation Makefile
 
 PROJECTNAME = ecriredeladoc
-SOURCES = $(PROJECTNAME).txt
+SOURCES = $(PROJECTNAME).asciidoc
 TARGETS = slides/index.html html/$(PROJECTNAME).html $(PROJECTNAME).pdf 
 ## Asciidoc with general options
 ASCIIDOC = asciidoc --doctype=book -a docinfo2 -a lang=fr

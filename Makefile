@@ -19,14 +19,7 @@ ASCIIDOCHTMLOPTS = --backend xhtml11 \
 		   -a toc-title="Ecrire de la Documentation" 
 
 ## Specific asciidoc options for XHTML slides output
-ASCIIDOCSLIDESOPTS = --backend slidy \
-		   -a stylesdir=$(CURDIR)/style/html \
-		   -a theme=centsix \
-		   -a icons \
-		   -a lang=fr 
-
-
-#		   -a linkcss
+ASCIIDOCSLIDESOPTS = --backend deckjs 
 
 ## Generate PDF from docbook
 DOCBOOK2PDF = dblatex -tpdf

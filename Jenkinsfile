@@ -6,6 +6,7 @@ pipeline {
         parallel(
           "Build": {
             echo 'this is a test'
+            sh 'make'
             
           },
           "Parallel build": {

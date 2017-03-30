@@ -19,6 +19,7 @@ pipeline {
     stage('Another step') {
       steps {
         echo 'hello world 2'
+        archiveArtifacts(artifacts: 'slides/**', fingerprint: true)
       }
     }
   }

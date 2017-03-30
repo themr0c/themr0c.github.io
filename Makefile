@@ -35,16 +35,16 @@ SEE = see
 
 all: $(TARGETS)
 
-$(PROJECTNAME).pdf : $(PROJECTNAME).txt
+$(PROJECTNAME).pdf : $(PROJECTNAME).asciidoc
 	$(ASCIIDOC) --backend docbook $?
 	$(DOCBOOK2PDF) $(PROJECTNAME).xml
 
-html/$(PROJECTNAME).html : $(PROJECTNAME).txt
+html/$(PROJECTNAME).html : $(PROJECTNAME).asciidoc
 	mkdir -p html/graphs	
 	$(ASCIIDOC) $(ASCIIDOCHTMLOPTS) --out-file $@ $?
 	cp -Rf style/html/* images html/
 
-slides/index.html : $(PROJECTNAME).txt
+slides/index.html : $(PROJECTNAME).asciidoc
 	mkdir -p slides
 	$(ASCIIDOC)  $(ASCIIDOCSLIDESOPTS) --out-file slides/index.html  $?
 	cp -Rf style/html/* images slides/

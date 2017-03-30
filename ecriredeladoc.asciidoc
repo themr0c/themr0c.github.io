@@ -17,6 +17,8 @@
 
 Partout où il faut documenter les projets, les processus, les infrastructures.
 
+
+////
 ["graphviz", "author.svg", "dot", "svg"]
 ----
 digraph author{
@@ -34,6 +36,7 @@ Doc -> {Emakina Mediaxim GLPI CHJT Rudder Centsix};
 Sysadmin -> {Emakina Mediaxim CHJT};
 }
 ----
+////
 
 == La documentation utilisateur
 

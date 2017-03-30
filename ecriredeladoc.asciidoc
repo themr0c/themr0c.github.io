@@ -5,6 +5,14 @@
 :date: jeudi 6 octobre 2011
 :lang: fr
 :max-width: 45em
+:data-uri:
+:deckjs_theme: neon
+:deckjs_transition: horizontal-slide
+:pygments:
+:pygments_style: native
+:scrollable:
+:count_nested:
+
 //:data-uri: //broken
 //:incremental: //ugly when generalized
 

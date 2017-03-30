@@ -1,20 +1,17 @@
 = Ecrire de la documentation pour un projet libre
-
 :author: Fabrice Flore-Thebault <fab@centsix.org>
 :version: Jeudis du Libre de Bruxelles
 :date: jeudi 6 octobre 2011
 :lang: fr
 :max-width: 45em
 :data-uri:
+:backend: deckjs
 :deckjs_theme: neon
 :deckjs_transition: horizontal-slide
 :pygments:
 :pygments_style: native
 :scrollable:
 :count_nested:
-
-//:data-uri: //broken
-//:incremental: //ugly when generalized
 
 == L'auteur: Fabrice Flore-Thébault http://identi.ca/themr0c[@themr0c]
 

@@ -3,7 +3,21 @@ pipeline {
   stages {
     stage('Build') {
       steps {
-        echo 'this is a test'
+        parallel(
+          "Build": {
+            echo 'this is a test'
+            
+          },
+          "Parallel build": {
+            echo 'Another message'
+            
+          }
+        )
+      }
+    }
+    stage('Another step') {
+      steps {
+        echo 'hello world 2'
       }
     }
   }

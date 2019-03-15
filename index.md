@@ -1,4 +1,4 @@
-## CV
+## About
 
 * [CV](cv/cv.html)
 

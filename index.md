@@ -1,6 +1,6 @@
 ## About
 
-* [CV](cv/cv.html)
+* [CV](cv/cv.html) ([PDF](cv/cv.pdf))
 
 ## Presentations
 

@@ -1,0 +1,12 @@
+
+== image:id-card.svg[personal,25] Personal Details
+
+[no-bullet]
+* image:user.svg[user,25] Fabrice Flore-Thébault
+* image:envelope.svg[mail,25] fab@centsix.org
+* image:map.svg[map,25] https://www.openstreetmap.org/search?query=brussels#map=10/50.8468/4.3517["Brussels, Belgium", role="external", window="_blank"]
+* image:car.svg[car,25] Driving license
+* image:birthday-cake.svg[age,25] 43
+* image:github.svg[github,25] https://github.com/themr0c[role="external", window="_blank"]
+* image:linkedin.svg[linkedin,25] https://linkedin.com/in/fabriceflorethebault[role="external", window="_blank"]
+* image:slideshare.svg[slides,25] https://www.slideshare.net/themr0c/presentations[role="external", window="_blank"]

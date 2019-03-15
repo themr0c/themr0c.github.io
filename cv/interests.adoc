@@ -1,0 +1,8 @@
+
+== image:heartbeat.svg[Interests,25] Interests
+
+[no-bullet]
+* image:child.svg[child,25] My almost 2 year old girl!
+* image:carrot.svg[,25] Cooking, eating,
+* image:tree.svg[,25] Kayaking, Hiking, Biking,
+* image:book-reader.svg[,25] Books, Theater, Movies.

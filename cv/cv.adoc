@@ -1,0 +1,27 @@
+= Curriculum Vitae
+Fabrice Flore-Thébault <fab@centsix.org>
+{localdatetime}
+:data-uri:
+:imagesdir: resources/images
+:linkattrs:
+:sectlink:
+:source-language: asciidoc
+:toc2:
+:toclevels: 2
+:icons: font
+// :iconfont-cdn: https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css
+// :icon-set: fa
+// :icon-set: octicon
+
+== SENIOR CLOUD INFRASTRUCTURE ARCHITECT
+
+include::personal.adoc[]
+include::superpowers.adoc[]
+include::technologies.adoc[]
+include::experience.adoc[]
+include::opensource-contributions.adoc[]
+include::publications.adoc[]
+include::education.adoc[]
+include::languages.adoc[]
+include::interests.adoc[]
+include::recommendations.adoc[]

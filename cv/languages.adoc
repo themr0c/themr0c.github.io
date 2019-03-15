@@ -1,0 +1,8 @@
+
+== image:language.svg[Interests,25] Languages
+
+[no-bullet]
+* image:baby-carriage.svg[child,25] French: native
+* image:flag-usa.svg[,25] English: fluent
+* image:flag.svg[,25] German: fluent
+* image:flag-checkered.svg[,25] Dutch: notions

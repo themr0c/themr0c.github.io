@@ -1,0 +1,8 @@
+
+== image:superpowers.svg[self,25] What I can do
+
+I am a senior cloud infrastructure architect with an advanced experience of Ansible
+and Linux.
+I have a good knowledge of asciidoc and YAML and some other languages.
+I can understand or design complex infrastructure and like to trace issues.
+I’m also curious and willing to learn by myself.

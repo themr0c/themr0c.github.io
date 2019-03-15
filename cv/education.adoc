@@ -1,0 +1,8 @@
+
+== image:university.svg[education,25] EDUCATION & CERTIFICATIONS
+
+[no-bullet]
+* image:certificate.svg[,25] 2014 - PRINCE2 Foundation
+* image:certificate.svg[,25] 2008 - LPIC-1 Linux certified professional
+* image:user-graduate.svg[,25] 1999 - MA in History (“DEA”), University Lumière Lyon 2, France
+* image:user-graduate.svg[,25] 1997 - BA in French Literature (“Licence”), University Lumière Lyon 2, France

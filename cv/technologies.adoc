@@ -1,0 +1,13 @@
+
+== image:battery-full.svg[tech,25] TECHNOLOGIES
+
+[no-bullet]
+* image:pen.svg[user,25] Asciidoc, graphviz, LaTeX, docbook, plantuml.
+* image:code.svg[user,25] Ansible, YAML, Puppet, Bash, Hashicorp, goss
+* image:cloud.svg[user,25] AWS, Azure, Openstack, Docker, Kubernetes, Libvirt/KVM, Vmware
+* image:linux.svg[user,25] Debian, Ubuntu, CentOS, PFSense, MacOS X, Windows.
+* image:firefox.svg[user,25] Apache, Nginx, Varnish,  Nodejs, Php, Python
+* image:database.svg[user,25] MySQL, PostgreSQL, MongoDB, Redis, Elasticsearch
+* image:tape.svg[user,25] Backupninja, Rdiff-backup,  Btrfs snd/rcv
+* image:network-wired.svg[user,25] PFSense, OpenVPN, IPSec VPN
+* image:user-secret.svg[user,25] Arachni, Netsparker

@@ -1,0 +1,35 @@
+
+### Test multiple roles with `tox`
+
+* Molecule role == Tox named environment
+* Running platforms are not isolated!
+
+[source,ini]
+----
+[tox]
+envlist =
+  my_example_role
+  another_role
+skipsdist = true
+[testenv]
+basepython = python3
+commands = bash -c "(cd {toxinidir}/roles/{envname} && molecule --debug
+test --all)"
+description = molecule test role {envname}
+deps = -r {toxinidir}/requirements.txt
+setenv = MOLECULE_EPHEMERAL_DIRECTORY={envname}
+sitepackages = true
+whitelist_externals =
+  /bin/bash
+  /usr/bin/rubocop
+----
+
+### Execute tox tests
+
+----
+tox // <1>
+tox -e ${rolename} //<2>
+----
+
+<1> Execute all molecule tests on all roles
+<2> Same, limited to the named role ${rolename}

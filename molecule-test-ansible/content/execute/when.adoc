@@ -1,0 +1,10 @@
+
+## From molecule to delivery pipeline
+
+* Objective: validate that all roles are in a good shape, ready to deliver.
+
+### Scope definition
+
+* Test one role with `molecule`
+* Test multiple roles with `tox`
+* Automate on Continuous Integration platform

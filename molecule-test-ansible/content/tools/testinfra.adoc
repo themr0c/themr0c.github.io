@@ -1,0 +1,6 @@
+
+### Testinfra
+
+* Default verifier.
+* Write tests in python.
+* Public == developers.

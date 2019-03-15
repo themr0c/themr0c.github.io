@@ -1,0 +1,5 @@
+
+### prepare
+
+* Optional.
+* Executes actions which bring the system to a given state prior to converge.

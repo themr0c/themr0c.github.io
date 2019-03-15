@@ -1,0 +1,34 @@
+# Molecule test Ansible
+:author: Fabrice Flore-Thebault
+:backend: revealjs
+:data-uri:
+:icons: font
+:imagesdir: images
+:revdate: 2019-03-21
+// :revealjs_parallaxBackgroundImage: Ansible_logo.svgg
+:revealjs_parallaxBackgroundImage: https://s3.amazonaws.com/hakim-static/reveal-js/reveal-parallax-1.jpg
+:revealjs_parallaxBackgroundSize: 2100px 900px
+:revealjs_slideNumber: true
+:revealjs_theme: blood
+:source-highlighter: highlightjs
+:title-slide-background-image: atomium3.jpg
+:toc: preamble
+:toclevels: 
+// beige, black, league, night, serif, simple, sky, solarized, white
+// coderay, highlightjs, prettify, pygments
+
+Mons, 2019-03-21
+
+include::content/about/index.adoc[]
+
+include::content/stories/index.adoc[]
+
+include::content/scenario/index.adoc[]
+
+include::content/tools/index.adoc[]
+
+include::content/execute/index.adoc[]
+
+include::content/create/index.adoc[]
+
+include::content/example/index.adoc[]

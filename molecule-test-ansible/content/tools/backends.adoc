@@ -1,0 +1,15 @@
+
+### Backends
+
+#### (local) Virtualization
+
+* Docker, LXC, LXD, Vagrant.
+
+#### Cloud provider
+
+* Azure, EC2, GCE, Linode, Openstack.
+* Slow! Specific cloud features, Windows.
+
+#### Bake your own
+
+* Backend: Delegated.

@@ -1,0 +1,5 @@
+
+### side_effect
+
+* Optional 
+* Executes actions which are not in the role, after converge.

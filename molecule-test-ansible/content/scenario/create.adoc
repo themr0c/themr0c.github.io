@@ -1,0 +1,6 @@
+
+### create
+
+* Create the temporary platforms needed to execute the tests.
+* Faster and more reliable results are achieved with local drivers.
+* Remote drivers because are slow and error prone.

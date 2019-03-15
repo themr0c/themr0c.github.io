@@ -1,0 +1,27 @@
+
+## Molecule scenario dissected
+
+image::sequence.jpg[background, size=cover]
+
+[.notes]
+--
+The purpose of Molecule is to run tests scenarios against a role.
+--
+
+[source,shell]
+----
+$ molecule matrix -s default test
+--> Test matrix
+└── default
+    ├── lint
+    ├── destroy
+    ├── dependency
+    ├── syntax
+    ├── create
+    ├── prepare
+    ├── converge
+    ├── idempotence
+    ├── side_effect
+    ├── verify
+    └── destroy
+----

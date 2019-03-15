@@ -1,0 +1,19 @@
+
+### lint
+
+* Enforce syntax rules (Ansible-lint, Yamllint).
+* Kill opinion wars and improve the roles quality.
+
+----
+--> Executing Ansible Lint on molecule/default/playbook.yml...
+    [701] No 'galaxy_info' found
+    meta/main.yml:1
+    
+    [306] Shells that use pipes should set the pipefail option
+    molecule/default/playbook.yml:20
+    Task/Handler: shell | get version of common_linux
+    
+    [206] Variables should have spaces before and after: {{ var_name }}
+    tasks/task_60_cron.yml:19
+        path: "/etc/cron.{{cron_item}}"
+----

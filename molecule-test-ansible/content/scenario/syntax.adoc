@@ -1,0 +1,24 @@
+
+### syntax
+
+* Complementary to lint.
+* Perform a syntax check on the playbook.
+
+----
+ansible-playbook --syntax-check
+----
+
+----
+molecule syntax
+--> Validating schema molecule/default/molecule.yml.
+Validation completed successfully.
+--> Test matrix
+    
+└── default
+    └── syntax
+    
+--> Scenario: 'default'
+--> Action: 'syntax'
+    
+    playbook: molecule/default/playbook.yml
+----

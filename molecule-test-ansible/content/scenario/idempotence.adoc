@@ -1,0 +1,8 @@
+
+
+### idempotence
+
+* The idempotence sequence is key
+* The main role is executed again; the result should change nothing in order
+to achieve idempotence. 
+* Idempotence is a goal difficult to achieve, particularly on Windows. 

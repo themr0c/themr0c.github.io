@@ -1,0 +1,17 @@
+
+### Tox
+
+* Orchestrate tests on a collection of roles.
+
+* Isolated python virtual environments.
+
+[quote, https://tox.readthedocs.io]
+tox aims to automate and standardize testing in Python. It is part of a
+larger vision of easing the packaging, testing and release process of Python
+software.
+
+### Install tox
+
+----
+pip install tox virtualenv
+----

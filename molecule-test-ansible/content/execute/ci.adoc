@@ -1,0 +1,46 @@
+
+### Automation on a continuous integration server
+
+* On pull request. Never merge broken code!
+* At commit on release branches / tags.
+
+### Docker socket needed!
+
+We run molecule from a docker container, and from this docker container
+we need to create other container: we need access to the docker socket!
+
+Current implementation of docker support in Bamboo doesn't allow this
+(unsafe) behaviour.
+
+We had to bake our own docker orchestration sequence (handled by
+ansible/tests/tests_suite.sh)
+
+    Pull/Run the docker image containing molecule and friends,
+    Mount the playbooks and roles repository,
+    Run the desired test suite (handled by ansible/tests/detox_wrapper.sh)
+
+### Orchestration pitfalls aka. the monorepo nightmare
+
+We have one unique Git repository containing the complete collection of
+all roles. It means that when CI runs the tests, all roles should be
+tested. We would avoid a lot of complication if each role would have its
+own repository. It is a bad architectural choice, but a  business
+decision and we have to live with it.
+
+Tox is able to run the tests in parallel, instead of sequentially. But
+blind parallelization on one unique agent is a bad idea our usecase.
+
+To test the elasticsearch and redis roles for instance, we create
+complex topologies which use a lot of memory. As a consequence we need
+to fine tune the orchestration to avoid out of memory errors when
+running to many memory hungry tests in parallel.
+
+Given on CI platform (bamboo), the best approach we found was to group
+roles in multiple test suites, each suite being run on a different agent
+(handled by ansible/tests/detox_wrapper.sh).
+
+*    all elasticsearch related roles, to test sequentially
+*    all redis related roles, to test sequentially
+*    all other linux related roles, candidates to maximize parallelism
+*    all azure/windows bound roles, also candidates to maximize
+parallelism (and subject to high error rate)

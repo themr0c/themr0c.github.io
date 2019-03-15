@@ -1,0 +1,25 @@
+
+## User stories
+
+image::ansible-logo.svg[background, size=contain, opacity=0.9]
+
+* Day 2 routines: system patches, audit, inventory.
+* Reproductible provisioning, from hypervisor to apps.
+* Automated backup & restore data.
+* Maintain environments on shared hosting platforms.
+* Deploy software.
+* Build CI pipelines.
+* Manage everything API: network, cloud, kubernetes.
+
+### Common problem
+
+image::here-be-dragons.jpg[background, size=cover, opacity=0.9, alt="Credit: National Library of Sweden, shelfmark KoB 1 ab"]
+
+* Validate roles and playbooks before production
+* Instantiate temporary infrastructure
+
+### Solution
+
+image::molecule-logo.png[background, size=cover, opacity=0.9]
+
+* Molecule

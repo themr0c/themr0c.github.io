@@ -1,0 +1,6 @@
+# gem 'pygments'
+gem 'coderay'
+
+source 'https://rubygems.org'
+
+gem 'asciidoctor-revealjs' # latest released version

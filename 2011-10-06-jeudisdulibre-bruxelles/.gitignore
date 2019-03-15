@@ -1,7 +1,7 @@
 ecriredeladoc.xml
-*.pdf
+#*.pdf
 *.tex
-*.html
+#*.html
 *.swp
 *~
 *.bak

@@ -1,2 +1,2 @@
 #!/bin/bash
-bundle exec asciidoctor-revealjs ansible-pipeline.adoc
+bundle exec asciidoctor-revealjs index.adoc

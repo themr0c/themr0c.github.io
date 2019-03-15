@@ -2,6 +2,8 @@
 
 * [Molecule test Ansible](molecule-test-ansible), Jeudis du libre de Mons, 2019-03-21.
 
+* [Pipeline as code](pipeline-as-code-2017), Brussels, 2017-03-30.
+
 * [Ecrire de la documentation pour des projets libres](2011-10-06-jeudisdulibre-bruxelles), Jeudis du libre de Bruxelles, 2011-10-06.
 
 * [Asset management with FusionInventory and GLPI - Loadays version](https://www.slideshare.net/themr0c/loadays-2011-asset-management-with-fusioninventory-and-glpi), Loadays, 2011-04-17.

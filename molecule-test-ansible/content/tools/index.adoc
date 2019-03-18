@@ -1,6 +1,8 @@
 
 ## Tooling lanscape
 
+image::https://upload.wikimedia.org/wikipedia/commons/7/70/Deathvalleysky_nps_big.jpg[background]
+
 Molecule has many friends in the toolbox.
 
 * Ansible ecosystem
@@ -18,7 +20,3 @@ include::ansible-lint.adoc[]
 include::backends.adoc[]
 
 include::verifiers.adoc[]
-
-include::tox.adoc[]
-
-include::ci.adoc[]

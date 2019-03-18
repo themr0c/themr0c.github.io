@@ -1,8 +1,0 @@
-
-### Continuous integration
-
-image::jenkins-molecule-ansible.jpeg[background, size=cover, opacity=0.5]
-
-* Foresee long compute time !
-* Need to run privileged Docker containers: Travis, Zuul, Bamboo, Jenkins, not
-  Bitbucket Pipelines

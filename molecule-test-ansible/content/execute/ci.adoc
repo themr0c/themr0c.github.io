@@ -3,6 +3,8 @@
 
 * On pull request. Never merge broken code!
 * At commit on release branches / tags.
+* Foresee long compute time !
+* Need to run privileged Docker containers
 
 ### Docker socket needed!
 

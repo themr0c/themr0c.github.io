@@ -1,12 +1,17 @@
 
 == About the author
 
-image::molecule-men-berlin1.jpg[background, size=cover, opacity=0.9]
+//image::molecule-men-berlin1.jpg[background, size=cover, opacity=0.9]
+image::https://upload.wikimedia.org/wikipedia/commons/a/a7/Molecule_Man_Sunset.jpg[background, size=cover, opacity=0.2]
+// image::molecule-logo-promov2.png[width=100px]
 
-image::molecule-logo-promov2.png[width=100px]
+https://themr0c.github.io
 
-* Sysadmin/Infrastructure architect/Automation.
-* Believe in Free Software & Devops values.
-* Culture, Automation, Measurement, Sharing.
+image::https://avatars1.githubusercontent.com/u/243761[width=142]
+
 * User & contributor in Molecule / Ansible ecosystem.
-* https://github.com/themr0c
+* Free Software Infrastructure Automation.
+
+____
+Culture, Automation, Measurement, Sharing.
+____

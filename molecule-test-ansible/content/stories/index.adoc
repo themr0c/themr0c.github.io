@@ -1,7 +1,7 @@
 
 ## User stories
 
-image::ansible-logo.svg[background, size=contain, opacity=0.9]
+image::https://upload.wikimedia.org/wikipedia/commons/5/55/AlfredPalmerwelder1.jpg[background]
 
 * Day 2 routines: system patches, audit, inventory.
 * Reproductible provisioning, from hypervisor to apps.
@@ -13,13 +13,14 @@ image::ansible-logo.svg[background, size=contain, opacity=0.9]
 
 ### Common problem
 
-image::here-be-dragons.jpg[background, size=cover, opacity=0.9, alt="Credit: National Library of Sweden, shelfmark KoB 1 ab"]
+//image::here-be-dragons.jpg[background, size=cover, opacity=0.9, alt="Credit: National Library of Sweden, shelfmark KoB 1 ab"]
+image::here-be-dragons.jpg[alt="Credit: National Library of Sweden, shelfmark KoB 1 ab", height=300]
 
 * Validate roles and playbooks before production
 * Instantiate temporary infrastructure
 
 ### Solution
 
-image::molecule-logo.png[background, size=cover, opacity=0.9]
+image::molecule-logo.png[height=442]
 
-* Molecule
+https://molecule.readthedocs.io

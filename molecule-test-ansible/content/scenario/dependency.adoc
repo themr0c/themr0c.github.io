@@ -7,3 +7,31 @@
 ** galaxy
 ** gilt
 ** shell
+
+----
+--> Action: 'dependency'
+    - downloading role 'repo-remi', owned by geerlingguy
+    - downloading role from https://github.com/geerlingguy/ansible-role-repo-remi/archive/1.2.0.tar.gz
+    - extracting geerlingguy.repo-remi to /tmp/molecule/ansible-role-phpmyadmin/default/roles/geerlingguy.repo-remi
+    - geerlingguy.repo-remi (1.2.0) was installed successfully
+    - downloading role 'apache', owned by geerlingguy
+    - downloading role from https://github.com/geerlingguy/ansible-role-apache/archive/3.0.3.tar.gz
+    - extracting geerlingguy.apache to /tmp/molecule/ansible-role-phpmyadmin/default/roles/geerlingguy.apache
+    - geerlingguy.apache (3.0.3) was installed successfully
+    - downloading role 'mysql', owned by geerlingguy
+    - downloading role from https://github.com/geerlingguy/ansible-role-mysql/archive/2.9.4.tar.gz
+    - extracting geerlingguy.mysql to /tmp/molecule/ansible-role-phpmyadmin/default/roles/geerlingguy.mysql
+    - geerlingguy.mysql (2.9.4) was installed successfully
+    - downloading role 'php-versions', owned by geerlingguy
+    - downloading role from https://github.com/geerlingguy/ansible-role-php-versions/archive/3.0.0.tar.gz
+    - extracting geerlingguy.php-versions to /tmp/molecule/ansible-role-phpmyadmin/default/roles/geerlingguy.php-versions
+    - geerlingguy.php-versions (3.0.0) was installed successfully
+    - downloading role 'php', owned by geerlingguy
+    - downloading role from https://github.com/geerlingguy/ansible-role-php/archive/3.7.0.tar.gz
+    - extracting geerlingguy.php to /tmp/molecule/ansible-role-phpmyadmin/default/roles/geerlingguy.php
+    - geerlingguy.php (3.7.0) was installed successfully
+    - downloading role 'php-mysql', owned by geerlingguy
+    - downloading role from https://github.com/geerlingguy/ansible-role-php-mysql/archive/2.0.2.tar.gz
+    - extracting geerlingguy.php-mysql to /tmp/molecule/ansible-role-phpmyadmin/default/roles/geerlingguy.php-mysql
+    - geerlingguy.php-mysql (2.0.2) was installed successfully
+----

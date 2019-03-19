@@ -1,5 +1,11 @@
 
 ### side_effect
 
-* Optional 
+* Optional
 * Executes actions which are not in the role, after converge.
+
+----
+--> Scenario: 'default'
+--> Action: 'side_effect'
+Skipping, side_effect playbook not configured.
+----

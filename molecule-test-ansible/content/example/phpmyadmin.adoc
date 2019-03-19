@@ -1,0 +1,9 @@
+=== Phpmyadmin role from Galaxy
+
+----
+mkvirtualenv molecule
+pip install molecule docker
+git clone git@github.com:geerlingguy/ansible-role-phpmyadmin.git geerlingguy.phpmyadmin
+cd ansible-role-phpmyadmin.git
+molecule test
+----

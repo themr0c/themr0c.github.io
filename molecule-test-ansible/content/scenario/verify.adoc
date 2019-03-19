@@ -5,4 +5,20 @@
 * Supported backends:
 ** testinfra - default, python based.
 ** Goss - Linux only. Easy and fast.
-** Inspec - ruby DSL, works well for Windows targets. 
+** Inspec - ruby DSL, works well for Windows targets.
+
+----
+--> Scenario: 'default'
+--> Action: 'verify'
+--> Executing Testinfra tests found in /home/fab/src/themr0c/talk-jdl2019/examples/geerlingguy.phpmyadmin/molecule/default/tests/...
+    ============================= test session starts ==============================
+    platform linux2 -- Python 2.7.16, pytest-4.3.1, py-1.8.0, pluggy-0.9.0
+    rootdir: /home/fab/src/themr0c/talk-jdl2019/examples/geerlingguy.phpmyadmin/molecule/default, inifile:
+    plugins: testinfra-1.16.0
+collected 1 item
+
+    tests/test_default.py .                                                  [100%]
+
+    ========================== 1 passed in 12.76 seconds ===========================
+Verifier completed successfully.
+----

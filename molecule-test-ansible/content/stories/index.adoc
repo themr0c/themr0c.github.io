@@ -1,5 +1,5 @@
 
-## User stories
+## Ansible User stories
 
 image::https://upload.wikimedia.org/wikipedia/commons/5/55/AlfredPalmerwelder1.jpg[background]
 
@@ -11,16 +11,8 @@ image::https://upload.wikimedia.org/wikipedia/commons/5/55/AlfredPalmerwelder1.j
 * Build CI pipelines.
 * Manage everything API: network, cloud, kubernetes.
 
-### Common problem
+include::common-problem.adoc[]
 
-//image::here-be-dragons.jpg[background, size=cover, opacity=0.9, alt="Credit: National Library of Sweden, shelfmark KoB 1 ab"]
-image::here-be-dragons.jpg[alt="Credit: National Library of Sweden, shelfmark KoB 1 ab", height=300]
+include::solution.adoc[]
 
-* Validate roles and playbooks before production
-* Instantiate temporary infrastructure
-
-### Solution
-
-image::molecule-logo.png[height=442]
-
-https://molecule.readthedocs.io
+include::disclaimer.adoc[]

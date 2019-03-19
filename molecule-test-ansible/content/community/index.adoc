@@ -1,0 +1,44 @@
+== Molecule community update
+
+image::community-projects-ansiblefest.jpg[background]
+
+// === Molecule, a Red Hat Ansible project
+
+[quote, '@tima (Timothy Appnel)', 2018-09-26]
+____
+ansible-lint and molecule are great tools. They've been built and tested by the
+community that we see as essential parts of enhancing development of Ansible
+automation. By adopting these tools, Red Hat intends to invest resources working
+with the community to make them even better.
+____
+
+https://groups.google.com/forum/#!topic/ansible-project/ehrb6AEptzA
+
+=== Molecule working group
+
+image::workinggroup.png[]
+
+* https://github.com/ansible/community/issues/427[Molecule Working Group Agenda]
+
+=== Continuous integration
+
+image::ci.png[]
+
+https://travis-ci.com/ansible/molecule/
+
+=== Pre release 2.20a2
+
+image::release.png[]
+
+* https://groups.google.com/forum/#!topic/molecule-users/ynY9iW49Ul0
+* https://pypi.org/project/molecule/#history
+* https://quay.io/repository/ansible/molecule?tab=tags
+
+=== Ansible Collections
+
+[quote, '@thaumos (Dylan Sylva)', 2019-03-13]
+____
+We want molecule to become the defacto standard tool, or sdk if you will, for content creators.
+____
+
+https://meetbot.fedoraproject.org/ansible-molecule/2019-03-13/

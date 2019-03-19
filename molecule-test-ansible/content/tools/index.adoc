@@ -9,7 +9,6 @@ Molecule has many friends in the toolbox.
 * Platforms backends
 * Dependency backends
 * Verifiers
-* Automation helpers
 
 include::ansible.adoc[]
 

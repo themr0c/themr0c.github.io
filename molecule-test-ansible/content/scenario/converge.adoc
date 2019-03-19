@@ -2,3 +2,32 @@
 ### converge
 
 * Execute the main role.
+
+----
+--> Scenario: 'default'
+--> Action: 'converge'
+
+    PLAY [Converge] ****************************************************************
+
+    TASK [Gathering Facts] *********************************************************
+    ok: [instance]
+
+    TASK [Update apt cache.] *******************************************************
+    skipping: [instance]
+
+    TASK [geerlingguy.repo-remi : Install remi repo.] ******************************
+    changed: [instance]
+
+    TASK [geerlingguy.repo-remi : Import remi GPG key.] ****************************
+    changed: [instance]
+
+    TASK [geerlingguy.apache : Include OS-specific variables.] *********************
+    ok: [instance]
+
+    TASK [geerlingguy.apache : Include variables for Amazon Linux.] ****************
+    skipping: [instance]
+
+    TASK [geerlingguy.apache : Define apache_packages.] ****************************
+    ok: [instance]
+[...]
+----

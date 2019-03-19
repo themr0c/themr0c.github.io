@@ -3,3 +3,9 @@
 
 * Optional.
 * Executes actions which bring the system to a given state prior to converge.
+
+----
+--> Scenario: 'default'
+--> Action: 'prepare'
+Skipping, prepare playbook not configured.
+----

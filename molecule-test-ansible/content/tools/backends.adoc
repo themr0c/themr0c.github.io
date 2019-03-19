@@ -1,15 +1,27 @@
 
 ### Backends
 
-#### (local) Virtualization
+* (local) Virtualization
+* Cloud provider
+* Bake your own
 
-* Docker, LXC, LXD, Vagrant.
+### (local) Virtualization
 
-#### Cloud provider
+* Docker
+* LXC
+* LXD
+* Vagrant
 
-* Azure, EC2, GCE, Linode, Openstack.
-* Slow! Specific cloud features, Windows.
+### Cloud provider
 
-#### Bake your own
+* Azure
+* EC2
+* GCE
+* Linode
+* Openstack
 
-* Backend: Delegated.
+WARNING: Slow! Keep it for specific cloud features, Windows.
+
+### Bake your own
+
+* Delegated

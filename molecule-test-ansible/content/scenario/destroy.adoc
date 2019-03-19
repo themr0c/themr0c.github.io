@@ -6,27 +6,19 @@
 ----
 molecule destroy
 --> Action: 'destroy'
-    
+
     PLAY [Destroy] *****************************************************************
-    
+
     TASK [Destroy molecule instance(s)] ********************************************
-    Wednesday 13 March 2019  17:04:36 +0100 (0:00:01.008)       0:00:01.008 *******
-    Wednesday 13 March 2019  17:04:36 +0100 (0:00:00.998)       0:00:00.998 *******
-    changed: [localhost] => (item=None)
-    changed: [localhost] => (item=None)
     changed: [localhost] => (item=None)
     changed: [localhost]
-    
+
+    TASK [Wait for instance(s) deletion to complete] *******************************
+    ok: [localhost] => (item=None)
+    ok: [localhost]
+
+    TASK [Delete docker network(s)] ************************************************
+
     PLAY RECAP *********************************************************************
-    localhost                  : ok=1    changed=1    unreachable=0    failed=0
-    
-    Wednesday 13 March 2019  17:04:44 +0100 (0:00:07.842)       0:00:08.850 *******
-    ===============================================================================
-    docker_container -------------------------------------------------------- 7.84s
-    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-    total ------------------------------------------------------------------- 7.84s
-    Wednesday 13 March 2019  17:04:44 +0100 (0:00:07.842)       0:00:08.841 *******
-    ===============================================================================
-    Destroy molecule instance(s) -------------------------------------------- 7.84s
-    Playbook run took 0 days, 0 hours, 0 minutes, 8 seconds
+    localhost                  : ok=2    changed=1    unreachable=0    failed=0    
 ----

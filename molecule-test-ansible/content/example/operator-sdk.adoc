@@ -36,11 +36,22 @@ make dep
 make install
 ----
 
-=== Create new project
+=== Create new operator-sdk project
 
 ----
 operator-sdk new memcached-operator --api-version=cache.example.com/v1alpha1 --kind=Memcached --type=ansible
 cd memcached-operator
 ----
 
-=== Molecule test
+=== Prepare dedicated virtualenv
+
+----
+mkvirtualenv -p /usr/bin/python3 operator-sdk
+pip install docker openshift git+https://github.com/ansible/molecule.git
+----
+
+=== Test the new project
+
+----
+molecule test
+----

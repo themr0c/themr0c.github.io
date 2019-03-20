@@ -1,7 +1,7 @@
 
 ### converge
 
-* Execute the main role.
+NOTE: Execute the main role.
 
 ----
 --> Scenario: 'default'
@@ -10,24 +10,30 @@
     PLAY [Converge] ****************************************************************
 
     TASK [Gathering Facts] *********************************************************
-    ok: [instance]
+    ok: [localhost]
 
-    TASK [Update apt cache.] *******************************************************
-    skipping: [instance]
+    PLAY [Verify] ******************************************************************
 
-    TASK [geerlingguy.repo-remi : Install remi repo.] ******************************
-    changed: [instance]
+    TASK [Gathering Facts] *********************************************************
+    ok: [localhost]
 
-    TASK [geerlingguy.repo-remi : Import remi GPG key.] ****************************
-    changed: [instance]
+    TASK [Get all pods in osdk-test] ***********************************************
+    ok: [localhost]
 
-    TASK [geerlingguy.apache : Include OS-specific variables.] *********************
-    ok: [instance]
+    TASK [Output pods] *************************************************************
+    ok: [localhost] => {
+        "pods": {
+            "changed": false,
+            "failed": false,
+            "resources": []
+        }
+    }
 
-    TASK [geerlingguy.apache : Include variables for Amazon Linux.] ****************
-    skipping: [instance]
+    PLAY RECAP *********************************************************************
+    localhost                  : ok=4    changed=0    unreachable=0    failed=0
 
-    TASK [geerlingguy.apache : Define apache_packages.] ****************************
-    ok: [instance]
-[...]
+
+--> Scenario: 'default'
+--> Action: 'idempotence'
+Idempotence completed successfully.
 ----

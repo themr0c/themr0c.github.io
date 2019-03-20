@@ -14,8 +14,10 @@ The purpose of Molecule is to run tests scenarios against a role.
 ----
 $ molecule matrix -s default test
 --> Test matrix
+
 └── default
     ├── lint
+    ├── cleanup
     ├── destroy
     ├── dependency
     ├── syntax
@@ -25,5 +27,6 @@ $ molecule matrix -s default test
     ├── idempotence
     ├── side_effect
     ├── verify
+    ├── cleanup
     └── destroy
 ----

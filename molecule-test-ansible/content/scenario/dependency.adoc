@@ -2,11 +2,13 @@
 
 ### dependency
 
-* Ensure the external requirements are installed
-* Supported backends:
-** galaxy
-** gilt
-** shell
+NOTE: Install external requirements with supported backends:
+
+TIP: `galaxy`: default. Lots of WIP in the air.
+
+TIP: `gilt`: nice overlays on top of git.
+
+TIP: `shell`: your own.
 
 ----
 --> Action: 'dependency'

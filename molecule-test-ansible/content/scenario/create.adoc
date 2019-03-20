@@ -1,9 +1,11 @@
 
 ### create
 
-* Create the temporary platforms needed to execute the tests.
-* Faster and more reliable results are achieved with local drivers.
-* Remote drivers because are slow and error prone.
+NOTE: Create the temporary platforms.
+
+TIP: Local backends are faster and more reliable.
+
+CAUTION: Cloud backends: abuse of `retry`, be patient
 
 ----
 --> Scenario: 'default'
@@ -12,70 +14,29 @@
     PLAY [Create] ******************************************************************
 
     TASK [Log into a Docker registry] **********************************************
-    skipping: [localhost] => (item=None)
+    skipping: [localhost] => (item={'name': 'kind-default', 'groups': ['k8s'], 'image': 'bsycorp/kind:latest-1.12', 'privileged': True, 'override_command': False, 'exposed_ports': ['8443/tcp', '10080/tcp'], 'published_ports': ['0.0.0.0:9443:8443/tcp'], 'pre_build_image': True})
 
     TASK [Create Dockerfiles from image names] *************************************
-    skipping: [localhost] => (item=None)
+    skipping: [localhost] => (item={'name': 'kind-default', 'groups': ['k8s'], 'image': 'bsycorp/kind:latest-1.12', 'privileged': True, 'override_command': False, 'exposed_ports': ['8443/tcp', '10080/tcp'], 'published_ports': ['0.0.0.0:9443:8443/tcp'], 'pre_build_image': True})
 
     TASK [Discover local Docker images] ********************************************
-    ok: [localhost] => (item=None)
-    ok: [localhost]
+    ok: [localhost] => (item={'changed': False, 'skipped': True, 'skip_reason': 'Conditional result was False', '_ansible_no_log': False, 'item': {'name': 'kind-default', 'groups': ['k8s'], 'image': 'bsycorp/kind:latest-1.12', 'privileged': True, 'override_command': False, 'exposed_ports': ['8443/tcp', '10080/tcp'], 'published_ports': ['0.0.0.0:9443:8443/tcp'], 'pre_build_image': True}, '_ansible_item_result': True, '_ansible_ignore_errors': None, '_ansible_item_label': {'name': 'kind-default', 'groups': ['k8s'], 'image': 'bsycorp/kind:latest-1.12', 'privileged': True, 'override_command': False, 'exposed_ports': ['8443/tcp', '10080/tcp'], 'published_ports': ['0.0.0.0:9443:8443/tcp'], 'pre_build_image': True}})
 
     TASK [Build an Ansible compatible image] ***************************************
-    skipping: [localhost] => (item=None)
+    skipping: [localhost] => (item={'changed': False, 'skipped': True, 'skip_reason': 'Conditional result was False', '_ansible_no_log': False, 'item': {'name': 'kind-default', 'groups': ['k8s'], 'image': 'bsycorp/kind:latest-1.12', 'privileged': True, 'override_command': False, 'exposed_ports': ['8443/tcp', '10080/tcp'], 'published_ports': ['0.0.0.0:9443:8443/tcp'], 'pre_build_image': True}, '_ansible_item_result': True, '_ansible_ignore_errors': None, '_ansible_item_label': {'name': 'kind-default', 'groups': ['k8s'], 'image': 'bsycorp/kind:latest-1.12', 'privileged': True, 'override_command': False, 'exposed_ports': ['8443/tcp', '10080/tcp'], 'published_ports': ['0.0.0.0:9443:8443/tcp'], 'pre_build_image': True}})
 
     TASK [Create docker network(s)] ************************************************
 
+    TASK [Determine the CMD directives] ********************************************
+    skipping: [localhost] => (item={'name': 'kind-default', 'groups': ['k8s'], 'image': 'bsycorp/kind:latest-1.12', 'privileged': True, 'override_command': False, 'exposed_ports': ['8443/tcp', '10080/tcp'], 'published_ports': ['0.0.0.0:9443:8443/tcp'], 'pre_build_image': True})
+
     TASK [Create molecule instance(s)] *********************************************
-    changed: [localhost] => (item=None)
-    changed: [localhost]
+    changed: [localhost] => (item={'name': 'kind-default', 'groups': ['k8s'], 'image': 'bsycorp/kind:latest-1.12', 'privileged': True, 'override_command': False, 'exposed_ports': ['8443/tcp', '10080/tcp'], 'published_ports': ['0.0.0.0:9443:8443/tcp'], 'pre_build_image': True})
 
     TASK [Wait for instance(s) creation to complete] *******************************
     FAILED - RETRYING: Wait for instance(s) creation to complete (300 retries left).
-    FAILED - RETRYING: Wait for instance(s) creation to complete (299 retries left).
-    FAILED - RETRYING: Wait for instance(s) creation to complete (298 retries left).
-    FAILED - RETRYING: Wait for instance(s) creation to complete (297 retries left).
-    FAILED - RETRYING: Wait for instance(s) creation to complete (296 retries left).
-    FAILED - RETRYING: Wait for instance(s) creation to complete (295 retries left).
-    FAILED - RETRYING: Wait for instance(s) creation to complete (294 retries left).
-    FAILED - RETRYING: Wait for instance(s) creation to complete (293 retries left).
-    FAILED - RETRYING: Wait for instance(s) creation to complete (292 retries left).
-    FAILED - RETRYING: Wait for instance(s) creation to complete (291 retries left).
-    FAILED - RETRYING: Wait for instance(s) creation to complete (290 retries left).
-    FAILED - RETRYING: Wait for instance(s) creation to complete (289 retries left).
-    FAILED - RETRYING: Wait for instance(s) creation to complete (288 retries left).
-    FAILED - RETRYING: Wait for instance(s) creation to complete (287 retries left).
-    FAILED - RETRYING: Wait for instance(s) creation to complete (286 retries left).
-    FAILED - RETRYING: Wait for instance(s) creation to complete (285 retries left).
-    FAILED - RETRYING: Wait for instance(s) creation to complete (284 retries left).
-    FAILED - RETRYING: Wait for instance(s) creation to complete (283 retries left).
-    FAILED - RETRYING: Wait for instance(s) creation to complete (282 retries left).
-    FAILED - RETRYING: Wait for instance(s) creation to complete (281 retries left).
-    FAILED - RETRYING: Wait for instance(s) creation to complete (280 retries left).
-    FAILED - RETRYING: Wait for instance(s) creation to complete (279 retries left).
-    FAILED - RETRYING: Wait for instance(s) creation to complete (278 retries left).
-    FAILED - RETRYING: Wait for instance(s) creation to complete (277 retries left).
-    FAILED - RETRYING: Wait for instance(s) creation to complete (276 retries left).
-    FAILED - RETRYING: Wait for instance(s) creation to complete (275 retries left).
-    FAILED - RETRYING: Wait for instance(s) creation to complete (274 retries left).
-    FAILED - RETRYING: Wait for instance(s) creation to complete (273 retries left).
-    FAILED - RETRYING: Wait for instance(s) creation to complete (272 retries left).
-    FAILED - RETRYING: Wait for instance(s) creation to complete (271 retries left).
-    FAILED - RETRYING: Wait for instance(s) creation to complete (270 retries left).
-    FAILED - RETRYING: Wait for instance(s) creation to complete (269 retries left).
-    FAILED - RETRYING: Wait for instance(s) creation to complete (268 retries left).
-    FAILED - RETRYING: Wait for instance(s) creation to complete (267 retries left).
-    FAILED - RETRYING: Wait for instance(s) creation to complete (266 retries left).
-    FAILED - RETRYING: Wait for instance(s) creation to complete (265 retries left).
-    FAILED - RETRYING: Wait for instance(s) creation to complete (264 retries left).
-    FAILED - RETRYING: Wait for instance(s) creation to complete (263 retries left).
-    FAILED - RETRYING: Wait for instance(s) creation to complete (262 retries left).
-    FAILED - RETRYING: Wait for instance(s) creation to complete (261 retries left).
-    FAILED - RETRYING: Wait for instance(s) creation to complete (260 retries left).
-    changed: [localhost] => (item=None)
-    changed: [localhost]
+    changed: [localhost] => (item={'started': 1, 'finished': 0, 'ansible_job_id': '57155955616.7787', 'results_file': '/home/fab/.ansible_async/57155955616.7787', '_ansible_parsed': True, 'changed': True, '_ansible_no_log': False, 'failed': False, 'item': {'name': 'kind-default', 'groups': ['k8s'], 'image': 'bsycorp/kind:latest-1.12', 'privileged': True, 'override_command': False, 'exposed_ports': ['8443/tcp', '10080/tcp'], 'published_ports': ['0.0.0.0:9443:8443/tcp'], 'pre_build_image': True}, '_ansible_item_result': True, '_ansible_ignore_errors': None, '_ansible_item_label': {'name': 'kind-default', 'groups': ['k8s'], 'image': 'bsycorp/kind:latest-1.12', 'privileged': True, 'override_command': False, 'exposed_ports': ['8443/tcp', '10080/tcp'], 'published_ports': ['0.0.0.0:9443:8443/tcp'], 'pre_build_image': True}})
 
     PLAY RECAP *********************************************************************
     localhost                  : ok=3    changed=2    unreachable=0    failed=0
-
 ----

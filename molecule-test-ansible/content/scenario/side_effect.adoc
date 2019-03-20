@@ -1,8 +1,7 @@
 
 ### side_effect
 
-* Optional
-* Executes actions which are not in the role, after converge.
+NOTE: Optional actions which are not in the role, after converge.
 
 ----
 --> Scenario: 'default'

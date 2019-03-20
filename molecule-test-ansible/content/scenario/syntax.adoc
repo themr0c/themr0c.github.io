@@ -1,24 +1,14 @@
 
 ### syntax
 
-* Complementary to lint.
-* Perform a syntax check on the playbook.
+NOTE: `ansible-playbook --syntax-check`
 
-----
-ansible-playbook --syntax-check
-----
+NOTE: Complementary to lint, but need the external roles to work.
 
 ----
 molecule syntax
---> Validating schema molecule/default/molecule.yml.
-Validation completed successfully.
---> Test matrix
-    
-└── default
-    └── syntax
-    
 --> Scenario: 'default'
 --> Action: 'syntax'
-    
+
     playbook: molecule/default/playbook.yml
 ----

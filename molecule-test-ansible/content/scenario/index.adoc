@@ -3,6 +3,8 @@ include::matrix.adoc[]
 
 include::lint.adoc[]
 
+include::cleanup.adoc[]
+
 include::destroy.adoc[]
 
 include::dependency.adoc[]

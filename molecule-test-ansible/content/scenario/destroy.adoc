@@ -1,24 +1,25 @@
 
 ### destroy
 
-* Destroy the temporary platforms.
+NOTE: Destroy the temporary platforms.
 
 ----
 molecule destroy
+--> Scenario: 'default'
 --> Action: 'destroy'
 
     PLAY [Destroy] *****************************************************************
 
     TASK [Destroy molecule instance(s)] ********************************************
-    changed: [localhost] => (item=None)
-    changed: [localhost]
+    changed: [localhost] => (item={'name': 'kind-default', 'groups': ['k8s'], 'image': 'bsycorp/kind:latest-1.12', 'privileged': True, 'override_command': False, 'exposed_ports': ['8443/tcp', '10080/tcp'], 'published_ports': ['0.0.0.0:9443:8443/tcp'], 'pre_build_image': True})
 
     TASK [Wait for instance(s) deletion to complete] *******************************
-    ok: [localhost] => (item=None)
-    ok: [localhost]
+    FAILED - RETRYING: Wait for instance(s) deletion to complete (300 retries left).
+    changed: [localhost] => (item={'started': 1, 'finished': 0, 'ansible_job_id': '498157453262.13184', 'results_file': '/home/fab/.ansible_async/498157453262.13184', '_ansible_parsed': True, 'changed': True, '_ansible_no_log': False, 'failed': False, 'item': {'name': 'kind-default', 'groups': ['k8s'], 'image': 'bsycorp/kind:latest-1.12', 'privileged': True, 'override_command': False, 'exposed_ports': ['8443/tcp', '10080/tcp'], 'published_ports': ['0.0.0.0:9443:8443/tcp'], 'pre_build_image': True}, '_ansible_item_result': True, '_ansible_ignore_errors': None, '_ansible_item_label': {'name': 'kind-default', 'groups': ['k8s'], 'image': 'bsycorp/kind:latest-1.12', 'privileged': True, 'override_command': False, 'exposed_ports': ['8443/tcp', '10080/tcp'], 'published_ports': ['0.0.0.0:9443:8443/tcp'], 'pre_build_image': True}})
 
     TASK [Delete docker network(s)] ************************************************
 
     PLAY RECAP *********************************************************************
-    localhost                  : ok=2    changed=1    unreachable=0    failed=0    
+    localhost                  : ok=2    changed=2    unreachable=0    failed=0
+
 ----

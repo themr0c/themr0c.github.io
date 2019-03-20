@@ -1,11 +1,13 @@
 
 ### verify
 
-* Executing an audit tool to verify that the final state is meeting expectations.
-* Supported backends:
-** testinfra - default, python based.
-** Goss - Linux only. Easy and fast.
-** Inspec - ruby DSL, works well for Windows targets.
+NOTE: Execute an audit tool to verify that the final state is meeting expectations.
+
+CAUTION: testinfra - default, python based.
+
+TIP: Goss - Linux only. Easy and fast.
+
+WARNING:  Inspec - ruby DSL, works well for Windows targets.
 
 ----
 --> Scenario: 'default'

@@ -3,6 +3,7 @@
 
 * Complex, ruby based, with a feature full DSL.
 * Linux, MacOS and Windows support.
+* Public == ruby developers.
 
 [quote, https://www.inspec.io/]
 InSpec is compliance as code. Turn your compliance, security, and other

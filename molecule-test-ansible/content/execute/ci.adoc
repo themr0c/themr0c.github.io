@@ -6,8 +6,26 @@
 * Foresee long compute time !
 * Need to run privileged Docker containers
 
-### Docker socket needed!
+### Use molecule docker image
 
+----
+docker_image_name="quay.io/ansible/molecule:2.19" // <1>
+gid_map="$(grep docker /etc/group |cut -d: -f3,3)" // <2>
+local_playbooks_absolute_path="$(readlink -f "$(dirname "${BASH_SOURCE[0]}")")" // <3>
+docker run \
+  -e "WORKDIR=${molecule_workdir}" \ // <3>
+  -v /var/run/docker.sock:/var/run/docker.sock \ // <4>
+  -v "${local_playbooks_absolute_path}:${molecule_workdir}" // <3>
+  "${docker_image_name}" bash "molecule test"
+----
+
+<1> Docker image from https://quay.io/repository/ansible/molecule
+<2> Map local user
+<3> Mount the code
+<4> Share docker socket
+
+[.notes]
+--
 We run molecule from a docker container, and from this docker container
 we need to create other container: we need access to the docker socket!
 
@@ -20,9 +38,17 @@ ansible/tests/tests_suite.sh)
     Pull/Run the docker image containing molecule and friends,
     Mount the playbooks and roles repository,
     Run the desired test suite (handled by ansible/tests/detox_wrapper.sh)
+--
 
-### Orchestration pitfalls aka. the monorepo nightmare
+### Orchestration pitfalls
 
+TIP: 1 repository == 1 role
+CAUTION: multiple roles => external orchestration
+* scenarios => sequential
+* platforms => parallel
+
+[.notes]
+--
 We have one unique Git repository containing the complete collection of
 all roles. It means that when CI runs the tests, all roles should be
 tested. We would avoid a lot of complication if each role would have its
@@ -46,3 +72,4 @@ roles in multiple test suites, each suite being run on a different agent
 *    all other linux related roles, candidates to maximize parallelism
 *    all azure/windows bound roles, also candidates to maximize
 parallelism (and subject to high error rate)
+--

@@ -1,6 +1,6 @@
 == Molecule community update
 
-image::community-projects-ansiblefest.jpg[background]
+image::community-projects-ansiblefest-dark.jpg[background]
 
 // === Molecule, a Red Hat Ansible project
 

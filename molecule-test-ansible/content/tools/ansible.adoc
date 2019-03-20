@@ -14,6 +14,7 @@ pull modes as alternatives), and a language that is designed around
 auditability by humans–even those not familiar with the program.
 ////
 
+////
 ### Ansible Installation
 
 * Requirements: Python 2.7 or >= 3.6
@@ -22,3 +23,4 @@ auditability by humans–even those not familiar with the program.
 sudo apt-get install -y python-pip libssl-dev
 pip install --user ansible
 ----
+////

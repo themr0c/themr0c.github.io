@@ -3,4 +3,9 @@
 
 * Default verifier.
 * Write tests in python.
-* Public == developers.
+* Public == python developers.
+
+[quote, https://testinfra.readthedocs.io]
+____
+With Testinfra you can write unit tests in Python to test actual state of your servers configured by management tools.
+____

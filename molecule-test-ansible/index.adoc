@@ -5,6 +5,7 @@
 :icons: font
 :imagesdir: images
 :revdate: 2019-03-21
+:revealjs_defaultTiming: 60
 :revealjs_parallaxBackgroundImage: https://upload.wikimedia.org/wikipedia/commons/2/21/Atomium_Evening_BrusselsB.jpg
 :revealjs_parallaxBackgroundSize: 3072px 2304px
 :revealjs_slideNumber: true
@@ -20,6 +21,8 @@ include::content/about/index.adoc[]
 include::content/stories/index.adoc[]
 
 include::content/tools/index.adoc[]
+
+include::content/first-demo/index.adoc[]
 
 include::content/scenario/index.adoc[]
 

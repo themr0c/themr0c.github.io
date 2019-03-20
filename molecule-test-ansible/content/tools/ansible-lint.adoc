@@ -3,7 +3,7 @@
 
 * Improve the roles quality.
 * Kill opinion wars.
-* Installed as a molecule dependency.
+// * Installed as a molecule dependency.
 
 [quote, https://docs.ansible.com/ansible-lint]
 Ansible Lint is a commandline tool for linting playbooks. Use it to detect

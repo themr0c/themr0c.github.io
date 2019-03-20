@@ -1,8 +1,18 @@
 
 == Example: Kubernetes Operator SDK
 
-https://github.com/operator-framework/operator-sdk/blob/master/doc/ansible/user-guide.md
 
+NOTE: building a simple memcached-operator powered by Ansible using tools and libraries provided by the Operator SDK
+
+NOTE: https://github.com/operator-framework/operator-sdk/blob/master/doc/ansible/user-guide.md
+
+[quote, https://coreos.com/operators/]
+____
+Enables developers to build Operators based on their expertise without requiring knowledge of Kubernetes API complexities.
+____
+
+[.notes]
+--
 === Prerequisites
 
 *    git
@@ -14,7 +24,7 @@ https://github.com/operator-framework/operator-sdk/blob/master/doc/ansible/user-
 *    dep version v0.5.0+.
 *    go version v1.10+.
 *    Access to a Kubernetes v.1.9.0+ cluster.
-
+--
 ////
 ----
 apt install go-dep golang

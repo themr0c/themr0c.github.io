@@ -1,0 +1,7 @@
+== ansible-role-virt-lightning
+
+----
+git clone git@github.com:virt-lightning/ansible-role-virt-lightning.git
+----
+
+CAUTION: No molecule tests yet!

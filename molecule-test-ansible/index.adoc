@@ -30,6 +30,6 @@ include::content/execute/index.adoc[]
 
 include::content/create/index.adoc[]
 
-include::content/example/index.adoc[]
+include::content/examples/index.adoc[]
 
 include::content/community/index.adoc[]

@@ -1,0 +1,56 @@
+
+## Create a new role
+
+----
+Usage: molecule init [OPTIONS] COMMAND [ARGS]...
+
+  Initialize a new role or scenario.
+
+Options:
+  --help  Show this message and exit.
+
+Commands:
+  role      Initialize a new role for use with Molecule.
+  scenario  Initialize a new scenario for use with...
+  template  Initialize a new role from a Cookiecutter...
+----
+
+=== Molecule init demo
+
+----
+molecule  init role --driver-name docker --verifier-name goss  --role-name jdl
+--> Initializing new role jdl...
+Initialized role in /home/fab/src/jdl-2019/jdl successfully.
+----
+
+=== Default values need to be changed
+
+----
+--> Executing Ansible Lint on /home/fab/src/jdl-2019/jdl/molecule/default/playbook.yml...
+    [701] Role info should contain platforms
+    /home/fab/src/jdl-2019/jdl/meta/main.yml:1
+    {'meta/main.yml': {'galaxy_info': {'author': 'your name', 'description': 'your description', 'company': 'your company (optional)', 'license': 'license (GPLv2, CC-BY, etc)', 'min_ansible_version': 1.2, 'galaxy_tags': [], '__line__': 2, '__file__': '/home/fab/src/jdl-2019/jdl/meta/main.yml'}, 'dependencies': [], '__line__': 1, '__file__': '/home/fab/src/jdl-2019/jdl/meta/main.yml'}}
+
+    [703] Should change default metadata: author
+    /home/fab/src/jdl-2019/jdl/meta/main.yml:1
+    {'meta/main.yml': {'galaxy_info': {'author': 'your name', 'description': 'your description', 'company': 'your company (optional)', 'license': 'license (GPLv2, CC-BY, etc)', 'min_ansible_version': 1.2, 'galaxy_tags': [], '__line__': 2, '__file__': '/home/fab/src/jdl-2019/jdl/meta/main.yml'}, 'dependencies': [], '__line__': 1, '__file__': '/home/fab/src/jdl-2019/jdl/meta/main.yml'}}
+
+    [703] Should change default metadata: description
+    /home/fab/src/jdl-2019/jdl/meta/main.yml:1
+    {'meta/main.yml': {'galaxy_info': {'author': 'your name', 'description': 'your description', 'company': 'your company (optional)', 'license': 'license (GPLv2, CC-BY, etc)', 'min_ansible_version': 1.2, 'galaxy_tags': [], '__line__': 2, '__file__': '/home/fab/src/jdl-2019/jdl/meta/main.yml'}, 'dependencies': [], '__line__': 1, '__file__': '/home/fab/src/jdl-2019/jdl/meta/main.yml'}}
+
+    [703] Should change default metadata: company
+    /home/fab/src/jdl-2019/jdl/meta/main.yml:1
+    {'meta/main.yml': {'galaxy_info': {'author': 'your name', 'description': 'your description', 'company': 'your company (optional)', 'license': 'license (GPLv2, CC-BY, etc)', 'min_ansible_version': 1.2, 'galaxy_tags': [], '__line__': 2, '__file__': '/home/fab/src/jdl-2019/jdl/meta/main.yml'}, 'dependencies': [], '__line__': 1, '__file__': '/home/fab/src/jdl-2019/jdl/meta/main.yml'}}
+
+    [703] Should change default metadata: license
+    /home/fab/src/jdl-2019/jdl/meta/main.yml:1
+    {'meta/main.yml': {'galaxy_info': {'author': 'your name', 'description': 'your description', 'company': 'your company (optional)', 'license': 'license (GPLv2, CC-BY, etc)', 'min_ansible_version': 1.2, 'galaxy_tags': [], '__line__': 2, '__file__': '/home/fab/src/jdl-2019/jdl/meta/main.yml'}, 'dependencies': [], '__line__': 1, '__file__': '/home/fab/src/jdl-2019/jdl/meta/main.yml'}}
+
+----
+
+=== Successful test
+
+----
+
+----

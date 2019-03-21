@@ -1,7 +1,7 @@
 [%notitle]
 == First demo
 
-image::pip-install-molecule.gif[background]
+image::molecule-init-big.cast.gif[background, size=contain]
 
 === Usage
 

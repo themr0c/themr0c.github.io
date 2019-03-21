@@ -44,6 +44,8 @@ cd operator-sdk
 git checkout master
 make dep
 make install
+mkvirtualenv -p /usr/bin/python3 operator-sdk
+pip install docker molecule openshift
 ----
 
 === Create new operator-sdk project
@@ -51,17 +53,8 @@ make install
 ----
 operator-sdk new memcached-operator --api-version=cache.example.com/v1alpha1 --kind=Memcached --type=ansible
 cd memcached-operator
-----
-
-=== Prepare dedicated virtualenv
-
-----
-mkvirtualenv -p /usr/bin/python3 operator-sdk
-pip install docker openshift git+https://github.com/ansible/molecule.git
-----
-
-=== Test the new project
-
-----
 molecule test
 ----
+
+image::memcached-operator-create.cast.gif[background, size=contain]
+

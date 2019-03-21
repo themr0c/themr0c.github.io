@@ -43,8 +43,11 @@ ansible/tests/tests_suite.sh)
 ### Orchestration pitfalls
 
 TIP: 1 repository == 1 role
+
 CAUTION: multiple roles => external orchestration
+
 * scenarios => sequential
+
 * platforms => parallel
 
 [.notes]

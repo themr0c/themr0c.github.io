@@ -1,7 +1,6 @@
 
 == Example: Kubernetes Operator SDK
 
-
 NOTE: building a simple memcached-operator powered by Ansible using tools and libraries provided by the Operator SDK
 
 NOTE: https://github.com/operator-framework/operator-sdk/blob/master/doc/ansible/user-guide.md
@@ -32,6 +31,11 @@ pip install ansible ansible-runner ansible-runner-http
 ----
 ////
 
+[.notitle]
+=== Demo
+
+image::memcached-operator-create.cast.gif[background, size=contain]
+
 === Install Operator SDK
 
 //[source]
@@ -55,6 +59,4 @@ operator-sdk new memcached-operator --api-version=cache.example.com/v1alpha1 --k
 cd memcached-operator
 molecule test
 ----
-
-image::memcached-operator-create.cast.gif[background, size=contain]
 

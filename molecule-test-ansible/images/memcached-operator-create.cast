@@ -1,4 +1,4 @@
-{"version": 2, "width": 104, "height": 26, "timestamp": 1553164471, "idle_time_limit": 1.0, "env": {"SHELL": "/bin/bash", "TERM": "xterm-256color"}}
+{"version": 2, "width": 105, "height": 24, "timestamp": 1553164471, "idle_time_limit": 1.0, "env": {"SHELL": "/bin/bash", "TERM": "xterm-256color"}}
 [1.116691, "o", "\u001b[0;38;5;231;48;5;31;1m fft \u001b[0;38;5;31;48;5;74;22m \u001b[0;38;5;231;48;5;74m(e) ansible \u001b[0;38;5;74;48;5;240;22m \u001b[0;38;5;252;48;5;240;1m~ \u001b[0;38;5;240;49;22m \u001b[0m"]
 [2.29195, "o", "operator-sdk new memcached-operator --api-version=cache.example.com/v1alpha1 --kind=Memcached --type=ansible"]
 [3.131684, "o", "\r\n"]

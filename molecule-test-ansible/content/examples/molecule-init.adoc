@@ -1,7 +1,6 @@
 
 ## Create a new role
 
-image::molecule-init-big.cast.gif[background, size=contain]
 
 ----
 Usage: molecule init [OPTIONS] COMMAND [ARGS]...
@@ -16,6 +15,13 @@ Commands:
   scenario  Initialize a new scenario for use with...
   template  Initialize a new role from a Cookiecutter...
 ----
+
+[%notitle]
+=== Demo
+
+image::molecule-init.cast.gif[background, size=contain]
+
+https://asciinema.org/a/235388
 
 === Molecule init demo
 

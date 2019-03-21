@@ -1,9 +1,5 @@
-[%notitle]
-== First demo
 
-image::molecule-init-big.cast.gif[background, size=contain]
-
-=== Usage
+== Usage
 
 ----
 Usage: molecule [OPTIONS] COMMAND [ARGS]...
@@ -49,3 +45,8 @@ Commands:
   test         Test (lint, destroy, dependency, syntax,...
   verify       Run automated tests against instances.
 ----
+
+[%notitle]
+=== Demo
+
+image::phpmyadmin.cast.gif[background, size=contain]

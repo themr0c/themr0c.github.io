@@ -18,13 +18,14 @@ encourage an approach that results in consistently developed roles that
 are well-written, easily understood and maintained.
 ////
 
-//// 
+////
 ### Molecule Installation
 
 * Requirements: Ansible
 
 ----
-sudo apt-get install -y python-pip libssl-dev
+# sudo apt install python-pip libssl-dev
+sudo dnf install python3-pip openssl-devel
 pip install --user molecule
 ----
 ////

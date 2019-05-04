@@ -14,7 +14,9 @@
 :title-slide-background-image: atomium.jpg
 :toc: preamble
 
-Mons, 2019-03-21
+Loadays, Antwerp, 2019-05-04
+
+Jeudis du Libre, Mons, 2019-03-21
 
 include::content/about/index.adoc[]
 

@@ -11,7 +11,10 @@ image::https://avatars1.githubusercontent.com/u/243761[width=142]
 
 * User & contributor in Molecule / Ansible ecosystem.
 * Free Software Infrastructure Automation.
+* Technical writer @ Red Hat.
 
+////
 ____
 Culture, Automation, Measurement, Sharing.
 ____
+////

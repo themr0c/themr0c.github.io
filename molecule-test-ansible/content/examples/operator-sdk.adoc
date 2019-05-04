@@ -26,7 +26,8 @@ ____
 --
 ////
 ----
-apt install go-dep golang
+# sudo apt install go-dep golang
+sudo dnf install golang dep docker
 pip install ansible ansible-runner ansible-runner-http
 ----
 ////
@@ -49,14 +50,15 @@ git checkout master
 make dep
 make install
 mkvirtualenv -p /usr/bin/python3 operator-sdk
-pip install docker molecule openshift
+pip install docker molecule openshift docker
 ----
 
 === Create new operator-sdk project
 
 ----
+export PATH="$HOME/.go/bin:$PATH"
+workon operator-sdk
 operator-sdk new memcached-operator --api-version=cache.example.com/v1alpha1 --kind=Memcached --type=ansible
 cd memcached-operator
 molecule test
 ----
-

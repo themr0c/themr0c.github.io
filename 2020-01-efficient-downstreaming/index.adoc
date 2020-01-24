@@ -23,6 +23,8 @@ include::content/about.adoc[leveloffset=+1]
 
 include::content/context.adoc[leveloffset=+1]
 
+include::content/metaphor.adoc[leveloffset=+1]
+
 include::content/modular.adoc[leveloffset=+1]
 
 include::content/build.adoc[leveloffset=+1]

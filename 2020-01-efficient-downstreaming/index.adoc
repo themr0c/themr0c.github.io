@@ -1,4 +1,4 @@
-# Documentation with Efficient Downstreaming in Mind
+# Docs with Efficient Downstreaming in Mind
 :author: Fabrice Flore-Thebault
 :backend: revealjs
 :data-uri:
@@ -17,7 +17,10 @@
 // https://upload.wikimedia.org/wikipedia/commons/c/c4/Kayak_Sailing_on_the_Columbia_River.jpg
 :toc: preamble
 
+https://themr0c.github.io/2020-01-efficient-downstreaming/
+
 Devconf.cz, Brno, 2020-01-24
+
 
 include::content/about.adoc[leveloffset=+1]
 

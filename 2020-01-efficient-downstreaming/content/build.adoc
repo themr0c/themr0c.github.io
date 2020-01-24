@@ -1,0 +1,108 @@
+= Build & test
+
+> Tox: https://tox.readthedocs.io
+
+image::tox.png[]
+
+== Build docs, validate links
+
+----
+[testenv]
+
+description = 
+    Build and validate internal links for {envname}.
+
+commands =
+    which asciidoctor ccutil linkchecker
+    asciidoctor --version
+    ccutil --version
+    linkchecker --version
+    asciidoctor --doctype book --section-numbers --attribute toc=left \
+      --attribute sectanchors --out-file master.html master.adoc
+    ccutil clean
+    ccutil compile --lang en-US
+    linkchecker --ignore-url 'images/icons/*' master.html
+    linkchecker --ignore-url /Common_Content/css/lang.css "./build/tmp/en-US/html-single/index.html"
+    linkie "{toxinidir}/tools/downstreaming-crw/linkie.yaml"
+
+changedir =
+    crw-administration-guide: {toxinidir}/docs/titles/crw/administration-guide
+    crw-end-user-guide: {toxinidir}/docs/titles/crw/end-user-guide
+    crw-installation-guide: {toxinidir}/docs/titles/crw/installation-guide
+    crw-release_notes: {toxinidir}/docs/titles/crw/release_notes
+
+basepython =
+    python3
+
+deps =
+    linkie
+
+parallel_show_output =
+    False
+
+whitelist_externals =
+    asciidoctor
+    ccutil
+    linkchecker
+    which
+----
+
+== Downstreaming filters
+
+----
+[testenv:crw-filters]
+
+description =
+    Run downstreaming process for CRW (copy, parse, substitute from upstream to downstream).
+
+commands =
+    which grep jinja2 sed
+    ; execute the filters
+    {toxinidir}/tools/downstreaming-crw/downstreaming.sh -f
+    ; build and validate the docs
+    tox -p auto -e crw-administration-guide,crw-end-user-guide,crw-installation-guide,crw-release_notes
+
+changed
+    {toxinidir}
+
+deps =
+    jinja2-cli[yaml]
+
+whitelist_externals =
+    tox
+    which
+    {toxinidir}/tools/downstreaming-crw/downstreaming.sh
+----
+
+
+== Get fresh upstream
+
+----
+[testenv:crw-update]
+
+description =
+    Update CRW upstream documentation.
+
+commands =
+    ; clone the upstream repository if necessary
+    bash -c "test -d {toxinidir}/tools/downstreaming-crw/upstream \
+        || git clone git@github.com:eclipse/che-docs.git {toxinidir}/tools/downstreaming-crw/upstream"
+    ; update the upstream directory
+    bash -c "cd {toxinidir}/tools/downstreaming-crw/upstream \
+        && git checkout 7.3.x \
+        && git pull --rebase git@github.com:eclipse/che-docs.git 7.3.x --force --prune"
+    tox -ecrw-filters
+
+changedir =
+    {toxinidir}/tools/downstreaming-crw/
+
+deps =
+
+passenv =
+    *
+
+whitelist_externals =
+    bash
+    tox
+    git
+----

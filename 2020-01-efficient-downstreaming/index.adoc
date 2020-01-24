@@ -1,0 +1,40 @@
+# Documentation with Efficient Downstreaming in Mind
+:author: Fabrice Flore-Thebault
+:backend: revealjs
+:data-uri:
+:icons: font
+:imagesdir: images
+:revdate: 2019-03-21
+:revealjs_defaultTiming: 60
+:revealjs_parallaxBackgroundImage: images/bigstock-Minke-Whale-808743.jpg 
+// https://www.voyageretdecouvrir.com/voyage-au-canada/wp-content/uploads/2015/08/bigstock-Minke-Whale-808743.jpg
+//  https://upload.wikimedia.org/wikipedia/commons/e/e7/Kayaks_on_the_Brokenhead_River_MB_5_June_2016.jpg
+:revealjs_parallaxBackgroundSize: 2194px 1224px
+:revealjs_slideNumber: true
+:revealjs_theme: league
+:source-highlighter: highlightjs
+:title-slide-background-image: Kayak_Sailing_on_the_Columbia_River.jpg
+// https://upload.wikimedia.org/wikipedia/commons/c/c4/Kayak_Sailing_on_the_Columbia_River.jpg
+:toc: preamble
+
+Devconf.cz, Brno, 2020-01-24
+
+include::content/about.adoc[leveloffset=+1]
+
+include::content/context.adoc[leveloffset=+1]
+
+include::content/modular.adoc[leveloffset=+1]
+
+include::content/build.adoc[leveloffset=+1]
+
+include::content/generated-outline.adoc[leveloffset=+1]
+
+include::content/static-outline.adoc[leveloffset=+1]
+
+include::content/substitutions.adoc[leveloffset=+1]
+
+include::content/contextual-content.adoc[leveloffset=+1]
+
+include::content/community.adoc[leveloffset=+1]
+
+//include::content/wip.adoc[]

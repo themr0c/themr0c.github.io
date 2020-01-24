@@ -1,0 +1,12 @@
+= Community
+
+> Most content is written by contributors from the community who are not professional writers.
+>
+> How to help them?
+
+== Linters
+
+> https://github.com/errata-ai/vale
+> https://github.com/testthedocs/vale-styles
+> https://github.com/testthedocs/vscode-vale/
+> https://github.com/emender

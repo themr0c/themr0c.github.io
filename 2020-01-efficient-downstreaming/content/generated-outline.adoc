@@ -1,0 +1,97 @@
+= Generating the outline
+
+----
+\include::meta/attributes.adoc[]
+\include::product-meta/product-attributes.adoc[]
+\include::title-attributes.adoc[]
+
+[id="{title-id}"]
+= {title-short}
+
+// This file is generated during downstreaming process.
+// Manual modifications are not allowed.
+
+\include::topics/crw/end-user-guide/assembly_navigating-che-using-the-dashboard.adoc[leveloffset=+1]
+\include::topics/crw/end-user-guide/assembly_che-theia-ide-basics.adoc[leveloffset=+1]
+\include::topics/crw/end-user-guide/con_workspaces-overview.adoc[leveloffset=+1]
+\include::topics/crw/end-user-guide/assembly_customizing-developer-environments.adoc[leveloffset=+1]
+----
+
+== Excerpt from upstream outline
+
+----
+entries:
+- title: End-user Guide
+  folders:
+  - title: "Navigating Che: dashboard"
+    url: che-7/navigating-che-using-the-dashboard
+    output: web
+  - title: Che-Theia IDE basics
+    output: web
+    folderitems:
+    - title: Overview
+      url: che-7/che-theia-ide-basics
+      output: web
+    - title: Defining custom commands for Che-Theia
+      url: che-7/defining-custom-commands-for-che-theia
+      output: web
+----
+
+== Templating with jinja
+
+----
+jinja2 generate-master.j2 \
+  upstream/src/main/_data/sidebars/che_7_docs.yml \
+  -D target="${GUIDE}" \
+  > "${DOWNSTREAM_TITLES}/${GUIDE}/master.adoc"
+----
+
+.Excerpt from the jinja template
+[source,jinja2,subs="none"]
+----
+{%- for guide in entries|sort(attribute='title') -%}
+    {%- if guide.title | lower | replace(" ", "-") == target %}
+        {%- for chapter in guide.folders -%}
+            {%- if chapter.url -%}
+                {%- set url = chapter.url | replace('che-7/','') %}
+\include::topics/crw/{{ target }}/XXX{{ url }}XXX[leveloffset=+1]
+            {%- endif -%}
+            {%- if chapter.folderitems -%}
+                {% for section in chapter.folderitems -%}
+                    {%- if section.title == "Overview" -%}
+                        {%- set url = section.url | replace('che-7/','') %}
+\include::topics/crw/{{ target }}/XXX{{ url }}XXX[leveloffset=+1]
+                    {%- endif %}
+                {%- endfor %}
+            {%- endif -%}
+        {%- endfor %}
+   {%- endif %}
+{%- endfor %}
+----
+
+== Jekyll headers vs. file name
+
+----
+---
+title: Che-Theia IDE basics
+keywords:
+tags: []
+sidebar: che_7_docs
+permalink: che-7/che-theia-ide-basics/
+folder: che-7/end-user-guide
+summary:
+---
+----
+
+
+== Finding the file names
+
+----
+grep "permalink:" -T "${UPSTREAM_ROOTDIR}"/src/main/pages/che-7/*/*.adoc \
+  | sed 's@^.*7/.*/\(.*\):.*:.*7\/\(.*\)\/@s\@XXX\2XXX \1\@@; s@\ @\@@g; s@.*.html@@' \
+  | sort \
+  | uniq \
+  > filesmap.sed
+sed -i -f filesmap.sed \
+  "${DOWNSTREAM_TITLES}/${GUIDE}/master.adoc"
+----

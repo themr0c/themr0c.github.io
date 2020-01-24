@@ -1,0 +1,32 @@
+= Context
+
+== Upstream project
+
+> Asciidoc + Jekyll -> HTML, WAR
+
+`https://github.com/eclipse/che-docs/`
+
+image::che-docs-website.png[]
+
+== Downstream product
+
+> Asciidoc -> XML -> HTML, ePub, PDF
+
+`https://access.redhat.com/documentation/en-us/red_hat_codeready_workspaces/2.0/`
+
+image::crw-docs-portal.png[]
+
+== State of downstreaming
+
+> * Ad-hoc script for previous release
+> * Objective: be creative & automate
+
+== People
+
+> * Technical writers: 3-
+> * Developers: 30+
+
+== Development speed
+
+.Ludicrous speed
+image::ludicrous-speed.jpg[]

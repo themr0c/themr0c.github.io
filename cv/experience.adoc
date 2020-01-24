@@ -1,13 +1,18 @@
 
 == image:suitcase.svg[xp,25] EXPERIENCE
 
+=== image:pen.svg[user,25] Technical Writer (Red Hat, Remote) since 2019
+
+- User documentation writing and tooling in the Red Hat Developer Tools Team.
+- Focus on Eclipse Che / CodeReady Workspaces.
+
 === image:cloud.svg[user,25] Cloud Infrastructure Architect (Stylelabs, Cloud software editor, Brussels, Belgium) 2017-2019
 
 - Lead development of automation tools (Ansible TDD, goss),
 - Mentoring and empowering colleagues,
 - R&D to onboard new technologies (molecule, golang, Kubernetes, AWX).
 
-=== image:code.svg[user,25] Senior Devops (Emakina, Digital agency, Brussels, Belgium) 2015-2017
+=== image:code.svg[user,25] Senior DevOps (Emakina, Digital agency, Brussels, Belgium) 2015-2017
 
 - Infrastructure as code (Ansible, Puppet),
 - Security assessments (Arachni, Netsparker),
@@ -16,12 +21,12 @@
 
 === image:linux.svg[user,25] Linux System Administrator (Antidot, Web software editor, Brussels, Belgium) 2012-2015
 
-- Systems and network administration (Debian, Centos, Pfsense),
+- Systems and network administration (Debian, CentOS, PFSense),
 - Technical project management (infrastructure revamp/migration, Scrum meets Prince2),
 - Infrastructure as code (Rudder, then Ansible),
 - Devops instrumentation: git, continuous integration, monitoring.
 
-=== image:pen.svg[user,25] Technical writer for Rudder project (Normation, Paris, remote) 2011
+=== image:pen.svg[user,25] Technical Writer for Rudder project (Normation, Paris, remote) 2011
 
 - User documentation tooling (single source, multiple outputs automation).
 - User documentation writing (asciidoc, hand crafted graphviz),

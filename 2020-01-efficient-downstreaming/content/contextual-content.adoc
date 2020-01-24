@@ -1,0 +1,32 @@
+= Context specific content
+
+== Examples
+
+----
+├── administration-guide
+│   ├── examples
+│   │   ├── che-build-the-devfile-registry.sh
+│   │   ├── che-build-the-plug-in-registry.sh
+│   │   ├── che-clone-the-devfile-registry-repository.sh
+│   │   ├── che-clone-the-plug-in-registry-repository.sh
+│   │   ├── che-devfile-meta.yml
+│   │   ├── crw-build-the-devfile-registry.sh
+│   │   ├── crw-build-the-plug-in-registry.sh
+│   │   ├── crw-clone-the-devfile-registry-repository.sh
+│   │   ├── crw-clone-the-plug-in-registry-repository.sh
+│   │   └── system-variables.adoc
+----
+
+
+== Screenshots
+
+----
+image::workspaces/{project-context}-select-workpace.png[Select a stack from the list]
+----
+
+
+----
+src/main/images/workspaces/
+...
+├── che-select-workpace.png
+----

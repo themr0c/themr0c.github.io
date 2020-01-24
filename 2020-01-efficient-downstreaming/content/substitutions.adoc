@@ -1,0 +1,193 @@
+= Words substitutions
+
+== Iteration #1: sed, downstream
+
+----
+#!/bin/sed -i -f
+
+# Remove jekyll headers
+1 s/^---$/---===ooo===---/; /---===ooo===---/,/^---$/d
+
+# Cleanup links (must happen before other substitutions)
+# In link, remove {site-baseurl}che-7/ and transform into xref.
+s@link:\({site-baseurl}che-7/\|#\)\(.*\?\)\[.*\?\]@xref:\2\[\]@
+# In xref, remove trailing slash.
+s@\(xref:.*\?\)/\[@\1\[@
+# In xref, remove directory before dash
+s@xref:.*\?/#\?\(.*\?\[\)@xref:\1@
+
+# Replace project name by product name
+s/\(Eclipse \)\?\bChe\b$/{prod-short}/g
+
+# Replace project name by product name in the id all references to them
+# Yes we have up to 2 occurences of 'che' in an id ...
+s/\(\(\[id=\|xref\|<<\).*\)\bche\b/\1{prod-id-short}/g
+s/\(\(\[id=\|xref\|<<\).*\)\bche\b/\1{prod-id-short}/g
+
+# Revert back Che-Theia
+s/{prod-short}-Theia/Che-Theia/g 
+s/{prod-id-short}-theia/che-theia/g
+
+# Same with hardcoded result for attributes definitions because they can't include attributes
+s/\(:\(parent-\|\)context.*\)\bche\b/\1codeready-workspaces/g
+s/\(:\(parent-\|\)context.*\)\bche\b/\1codeready-workspaces/g
+
+# Remove product name where not necessary
+s/\({prod-id-short}-\|codeready-workspaces-\|{prod-short} \)\([Ww]\)orkspace/\2orkspace/g
+
+# Replace version numbers
+s/\({prod-id-short}-\|{prod-short} \|{prod} \)6/\1{prod-prev-ver}/g
+s/\({prod-id-short}-\|{prod-short} \|{prod} \)7/\1{prod-ver}/g
+
+# FIXME (broken, it match too many other things) Cleanup link:#modular-documentation-reference-guide
+#s/link:[^#]*#\([^\[]*\)\[/link:#\1[/g
+
+# fix include from overview
+s@include::\.\.\/overview@include::\.\./end-user-guide@
+
+# Replace CLI name wisely (not in file names to include)
+s/`chectl`/`{prod-cli}`/g
+s/\$ chectl/\$ {prod-cli}/g
+s/using chectl/using {prod-cli}/g
+s/chectl devfile/{prod-cli} devfile/g
+s/chectl-generated/{prod-cli}-generated/g
+
+s/\bchectl\b/{prod-cli}/g
+
+# Revert back chectl in file names
+s/\(include::.*\?\){prod-cli}/\1chectl/g
+
+# Replace `che` project name
+s/`che`/`{prod-projectname}`/g
+s/oc project che/oc project {prod-projectname}/g
+
+# Replace `eclipse-che` cluster name 
+s/`eclipse-che`/`{prod-clustername}`/g
+
+s/ECLIPSE CHE URL/{prod} URL/g
+
+# Replace OpenShift
+# s/Open[S|s]hift Container Platform/{ocp}/g
+# s/Open[S|s]hift Dedicated/{osd}/g
+# s/Open[S|s]hift/OpenShift/g
+
+# Replace Kubernetes (context matters)
+s/Kubernetes [a-z]* OpenShift/OpenShift/g
+s/Kubernetes/OpenShift/g
+# Revert back Kubernetes in AG
+s/<4> OpenShift/<4> Kubernetes/g
+s/namespace_ (OpenShift)/namespace_ (Kubernetes)/
+s/OpenShift Ingresses/Kubernetes Ingresses/
+
+s/kubectl /oc /g
+
+s/Minishift or Minikube/Minikube/g
+
+# Obsolete
+# s/[Mm]ulti-user {prod-short}/{prod-short}/g
+
+# EUG: Fix broken xref
+s/\(xref:making-a-workspace-portable-using-a-devfile\)\(\[\]\)/\1_crw\2/
+s/\(xref:making-a-workspace-portable-using-a-devfile\)_using-developer-environments-workspaces\(\[\]\)/\1_crw\2/
+s/\(xref:navigating-{prod-id-short}-using-the-dashboard\)\(\[\]\)/\1_crw\2/
+s/\(xref:configuring-a-workspace-using-a-devfile\)\(\[\]\)/\1_crw\2/
+
+# EUG: Remove undesired xref
+s/xref:notes\[understood\]/understood/
+
+s/nip.io/mycluster.mycompany.com/g
+
+s/CHE_HOST/CODEREADY_HOST/g
+s/CHE_PORT/CODEREADY_PORT/g
+
+# Fix cross guides references: replace xref by a link
+
+#s/the Installation Guide/link:{prod-ig-url}\[the {prod-ig}\]/g
+
+# Fix cross guides references: AG -> EUG
+s@\(For a detailed description of the devfile format, see the \)xref:\(making-a-workspace-portable-using-a-devfile_crw\[\)\(\] section\)@\1link:{prod-eug-url}/index#\2Making a workspace portable using a devfile section of the {prod-eug}\]@
+
+# Fix cross guides references: EUG -> IG
+s@xref:{prod-id-short}-quick-starts\[\]@link:{prod-ig-url}\[the {prod-ig}\]@
+s@xref:running-{prod-id-short}-locally\[\]@link:{prod-ig-url}\[the {prod-ig}\]@
+s@xref:installing-the-chectl-management-tool\[\]@link:{prod-ig-url}\[the {prod-ig}\]@
+
+# Fix cross guides references: IG -> AG
+s/\(For additional information, see \)xref:\(building-and-running-a-custom-registry-image\[\)\]/\1link:{prod-ag-url}\2the {prod-ag}\]/
+
+# Fix cross guides references: IG -> EUG
+s/\(Use the devfile to start the new workspace. See \)xref:\(configuring-a-workspace-using-a-devfile_crw\[\)\]\.\?/\1link:{prod-eug-url}\/index#\2the {prod-eug}\]./
+s/\(For each workspace, create a devfile that represent your workspace. See \)xref.*\?\[\]/\1the {prod-eug}/
+
+# Fix cross guides references: IG -> nonexistent (overview)
+s/ See xref:{prod-id-short}-plug-in-broker_che-workspace-components\[\].//
+s/ See xref:workspace-jwt-proxy_che-workspace-components\[\].//
+s/\(To avoid issues when only a subset of the images described below is needed, remove unnecessary plug-ins and devfiles when building custom registries (see \)xref:customizing-the-devfile-and-plug-in-registries\[/\1link:{prod-ag-url}\[the {prod-ag}/
+
+# Remove undesired parts
+# EUG: references to local Installation
+s/See xref:installing-the-{prod-cli}-management-tool\[/See link:{prod-ig-url}\[the {prod-ig}/
+s/follow instructions for xref:uninstalling-{prod-id-short}\[/see link:{prod-ig-url}\[the {prod-ig}/
+
+s/* xref:converting-a-{prod-id-short}-{prod-prev-ver}-workspace-to-a-{prod-id-short}-{prod-ver}-devfile\[\].*/See link:{prod-eug-url}\[the {prod-eug}\]./
+s/* xref:configuring-a-workspace-using-a-devfile_crw\[\].*//
+
+# Remove font-awesome instructions
+s/(icon:fa-ellipsis-v\[\])//g
+
+s/${CHE_LOCAL_GIT_REPO/$\\{CHE_LOCAL_GIT_REPO/
+
+s/The steps to check are similar to the OpenShift steps. For details, see the .*\? section. The only difference is that, on OpenShift, Ingresses are replaced with routes.//
+----
+
+==  Iteration #2: attributes upstream
+
+----
+asciidoc_attributes: &asciidoc_attributes
+  project-context: che
+  prod: Eclipse Che
+  prod-short: Che
+  prod-id: eclipse-che
+  prod-id-short: che
+  prod-prev-ver: 6.x
+  prod-ver: 7.3
+  prod-cli: chectl
+  prod-checluster: eclipse-che
+  prod-namespace: default
+  prod-url: http(s)://che-host:che-port
+  prod-host: che-host
+  ocp: OpenShift Container Platform
+----
+
+== Iteration #3: enforce attributes upstream
+
+----
+#!/bin/sed -i -f
+
+# Replace long and short project name by an attribute
+s/Eclipse Che\b/{prod}/g
+s/\bChe\b/{prod-short}/g
+
+# Put back hardcoded project name in Jekyll headers which doesn't understand attributes
+# Run twice: we may have 2 occurences in a title
+s/\(\(title:\|tags:\)\(.*\?\)\){prod-short}/\1Che/
+s/\(\(title:\|tags:\)\(.*\?\)\){prod-short}/\1Che/
+s/\(\(title:\|tags:\)\(.*\?\)\){prod}/\1Eclipse Che/
+s/\(\(title:\|tags:\)\(.*\?\)\){prod}/\1Eclipse Che/
+
+# Replace project id by an attribute
+# Run twice: we may have 2 occurences in the same id
+s/\(\(\[id=\|xref\|<<\).*\)\bche\b/\1{prod-id-short}/g
+s/\(\(\[id=\|xref\|<<\).*\)\bche\b/\1{prod-id-short}/g
+
+# Replace version numbers
+s/\({prod-id-short}-\|{prod-short} \|{prod} \)6/\1{prod-prev-ver}/g
+s/\({prod-id-short}-\|{prod-short} \|{prod} \)7/\1{prod-ver}/g
+
+# Revert back baseurl in xref to hardcoded values
+s/{site-baseurl}{prod-id-short}-{prod-ver}/{site-baseurl}che-7/g
+
+# Revert back Che-Theia
+s/{prod-short}-Theia/Che-Theia/g
+s/{prod-id-short}-theia/che-theia/g
+----

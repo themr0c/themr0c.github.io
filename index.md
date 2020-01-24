@@ -6,6 +6,8 @@
 
 This is the list of some presentations for which I was the speaker, with link to the slides.
 
+* [Documentation with Efficient Downstreaming in Mind](2020-01-efficient-downstreaming), Devconf.CZ, 2020-01-24.
+
 * [Molecule test Ansible](molecule-test-ansible), Jeudis du libre de Mons, 2019-03-21.
 
 * [Pipeline as code](pipeline-as-code-2017), Brussels, 2017-03-30.

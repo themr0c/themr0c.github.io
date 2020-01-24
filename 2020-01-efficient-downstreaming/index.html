@@ -122,7 +122,13 @@ whitelist_externals =
     asciidoctor
     ccutil
     linkchecker
-    which</code></pre></div></div></section><section id="_downstreaming_filters"><h2>Downstreaming filters</h2><div class="listingblock"><div class="content"><pre class="highlightjs highlight"><code class="language-none hljs" data-noescape="true">[testenv:crw-filters]
+    which</code></pre></div></div></section><section id="_building_some_guides"><h2>Building some guides</h2><div class="listingblock"><div class="content"><pre class="highlightjs highlight"><code class="language-none hljs" data-noescape="true">tox -e crw-installation-guide,crw-administration-guide -p auto
+✔ OK crw-administration-guide in 20.997 seconds
+✔ OK crw-installation-guide in 23.842 seconds
+________________________ summary _________________________
+  crw-installation-guide: commands succeeded
+  crw-administration-guide: commands succeeded
+  congratulations :)</code></pre></div></div></section><section id="_downstreaming_filters"><h2>Downstreaming filters</h2><div class="listingblock"><div class="content"><pre class="highlightjs highlight"><code class="language-none hljs" data-noescape="true">[testenv:crw-filters]
 
 description =
     Run downstreaming process for CRW (copy, parse, substitute from upstream to downstream).
@@ -143,7 +149,20 @@ deps =
 whitelist_externals =
     tox
     which
-    {toxinidir}/tools/downstreaming-crw/downstreaming.sh</code></pre></div></div></section><section id="_get_fresh_upstream"><h2>Get fresh upstream</h2><div class="listingblock"><div class="content"><pre class="highlightjs highlight"><code class="language-none hljs" data-noescape="true">[testenv:crw-update]
+    {toxinidir}/tools/downstreaming-crw/downstreaming.sh</code></pre></div></div></section><section id="_running_filters"><h2>Running filters</h2><div class="listingblock"><div class="content"><pre class="highlightjs highlight"><code class="language-none hljs" data-noescape="true">tox -e crw-filters
+...
+
+✖ FAIL crw-end-user-guide in 13.299 seconds
+✔ OK crw-installation-guide in 17.319 seconds
+✔ OK crw-administration-guide in 22.544 seconds
+___________________________ summary __________________________________________________________________________
+  crw-administration-guide: commands succeeded
+ERROR:   crw-end-user-guide: parallel child exit code 1
+  crw-installation-guide: commands succeeded
+  crw-release_notes: commands succeeded
+ERROR: InvocationError for command /home/remote/ffloreth/.local/bin/tox -p auto -e crw-administration-guide,crw-end-user-guide,crw-installation-guide,crw-release_notes (exited with code 1)
+___________________________ summary __________________________________________________________________________
+ERROR:   crw-filters: commands failed</code></pre></div></div></section><section id="_get_fresh_upstream"><h2>Get fresh upstream</h2><div class="listingblock"><div class="content"><pre class="highlightjs highlight"><code class="language-none hljs" data-noescape="true">[testenv:crw-update]
 
 description =
     Update CRW upstream documentation.
@@ -169,7 +188,30 @@ passenv =
 whitelist_externals =
     bash
     tox
-    git</code></pre></div></div></section></section>
+    git</code></pre></div></div></section><section id="_runnning_update"><h2>Runnning update</h2><div class="listingblock"><div class="content"><pre class="highlightjs highlight"><code class="language-none hljs" data-noescape="true">tox -e crw-update
+...
+Current branch 7.3.x is up to date.
+...
+crw-filters run-test: commands[1] | /home/remote/ffloreth/src/gl-cee/ffloreth/red-hat-devtools/tools/downstreaming-crw/downstreaming.sh -f
+...
+
+⠋ [4] crw-administration-guide | crw-end-user-guide | crw-installation-guide | crw-release_notes
+...
+✖ FAIL crw-end-user-guide in 7.105 seconds
+✔ OK crw-release_notes in 14.164 seconds
+✔ OK crw-installation-guide in 15.802 seconds
+✔ OK crw-administration-guide in 29.013 seconds
+__________________________________________________________________________ summary __________________________________________________________________________
+  crw-administration-guide: commands succeeded
+ERROR:   crw-end-user-guide: parallel child exit code 1
+  crw-installation-guide: commands succeeded
+  crw-release_notes: commands succeeded
+ERROR: InvocationError for command /home/remote/ffloreth/.local/bin/tox -p auto -e crw-administration-guide,crw-end-user-guide,crw-installation-guide,crw-release_notes (exited with code 1)
+__________________________________________________________________________ summary __________________________________________________________________________
+ERROR:   crw-filters: commands failed
+ERROR: InvocationError for command /home/remote/ffloreth/.local/bin/tox -ecrw-filters (exited with code 1)
+__________________________________________________________________________ summary __________________________________________________________________________
+ERROR:   crw-update: commands failed</code></pre></div></div></section></section>
 <section><section id="_generating_the_outline"><h2>Generating the outline</h2><div class="listingblock"><div class="content"><pre class="highlightjs highlight"><code class="language-none hljs" data-noescape="true">include::meta/attributes.adoc[]
 include::product-meta/product-attributes.adoc[]
 include::title-attributes.adoc[]
@@ -378,7 +420,9 @@ s/(icon:fa-ellipsis-v\[\])//g
 
 s/${CHE_LOCAL_GIT_REPO/$\\{CHE_LOCAL_GIT_REPO/
 
-s/The steps to check are similar to the OpenShift steps. For details, see the .*\? section. The only difference is that, on OpenShift, Ingresses are replaced with routes.//</code></pre></div></div></section><section id="_iteration_2_attributes_upstream"><h2>Iteration #2: attributes upstream</h2><div class="listingblock"><div class="content"><pre class="highlightjs highlight"><code class="language-none hljs" data-noescape="true">asciidoc_attributes: &amp;asciidoc_attributes
+s/The steps to check are similar to the OpenShift steps. For details, see the .*\? section. The only difference is that, on OpenShift, Ingresses are replaced with routes.//</code></pre></div></div></section><section id="_iteration_2_attributes_upstream"><h2>Iteration #2: attributes upstream</h2><div class="listingblock"><div class="content"><pre class="highlightjs highlight"><code class="language-none hljs" data-noescape="true">This section describes how to view the state of the {prod-short}
+cluster deployment using OpenShift 4 CLI tools.</code></pre></div></div>
+<div class="listingblock"><div class="content"><pre class="highlightjs highlight"><code class="language-none hljs" data-noescape="true">asciidoc_attributes: &amp;asciidoc_attributes
   project-context: che
   prod: Eclipse Che
   prod-short: Che
@@ -419,7 +463,8 @@ s/{site-baseurl}{prod-id-short}-{prod-ver}/{site-baseurl}che-7/g
 # Revert back Che-Theia
 s/{prod-short}-Theia/Che-Theia/g
 s/{prod-id-short}-theia/che-theia/g</code></pre></div></div></section></section>
-<section><section id="_context_specific_content"><h2>Context specific content</h2></section><section id="_examples"><h2>Examples</h2><div class="listingblock"><div class="content"><pre class="highlightjs highlight"><code class="language-none hljs" data-noescape="true">├── administration-guide
+<section><section id="_context_specific_content"><h2>Context specific content</h2></section><section id="_examples"><h2>Examples</h2><div class="listingblock"><div class="content"><pre class="highlightjs highlight"><code class="language-none hljs" data-noescape="true">include::examples/{project-context}-build-the-devfile-registry.sh[]</code></pre></div></div>
+<div class="listingblock"><div class="content"><pre class="highlightjs highlight"><code class="language-none hljs" data-noescape="true">├── administration-guide
 │   ├── examples
 │   │   ├── che-build-the-devfile-registry.sh
 │   │   ├── che-build-the-plug-in-registry.sh
@@ -433,12 +478,19 @@ s/{prod-id-short}-theia/che-theia/g</code></pre></div></div></section></section>
 │   │   └── system-variables.adoc</code></pre></div></div></section><section id="_screenshots"><h2>Screenshots</h2><div class="listingblock"><div class="content"><pre class="highlightjs highlight"><code class="language-none hljs" data-noescape="true">image::workspaces/{project-context}-select-workpace.png[Select a stack from the list]</code></pre></div></div>
 <div class="listingblock"><div class="content"><pre class="highlightjs highlight"><code class="language-none hljs" data-noescape="true">src/main/images/workspaces/
 ...
-├── che-select-workpace.png</code></pre></div></div></section></section>
-<section><section id="_community"><h2>Community</h2><div class="quoteblock"><blockquote><div class="paragraph"><p>Most content is written by contributors from the community who are not professional writers.</p></div>
-<div class="paragraph"><p>How to help them?</p></div></blockquote></div></section><section id="_linters"><h2>Linters</h2><div class="quoteblock"><blockquote><div class="paragraph"><p><a href="https://github.com/errata-ai/vale" class="bare">https://github.com/errata-ai/vale</a>
-<a href="https://github.com/testthedocs/vale-styles" class="bare">https://github.com/testthedocs/vale-styles</a>
-<a href="https://github.com/testthedocs/vscode-vale/" class="bare">https://github.com/testthedocs/vscode-vale/</a>
-<a href="https://github.com/emender" class="bare">https://github.com/emender</a></p></div></blockquote></div></section></section></div></div><script src="reveal.js/lib/js/head.min.js"></script><script src="reveal.js/js/reveal.js"></script><script>Array.prototype.slice.call(document.querySelectorAll('.slides section')).forEach(function(slide) {
+├── che-select-workpace.png</code></pre></div></div></section><section id="_paragraphs"><h2>Paragraphs</h2><div class="listingblock"><div class="content"><pre class="highlightjs highlight"><code class="language-none hljs" data-noescape="true">ifeval::["{project-context}" == "che"]
+* For installations that did not use the `-n` argument, the created namespace is named `{prod-id-short}` by default.
+endif::[]
+
+ifeval::["{project-context}" == "crw"]
+* For installations that did not use the `-n` argument, the created namespace is named `workspaces` by default.
+endif::[]</code></pre></div></div></section></section>
+<section><section id="_challenges"><h2>Challenges</h2></section><section id="_fail_faster"><h2>Fail faster</h2><div class="quoteblock"><blockquote><div class="ulist"><ul><li><p>XML validation &gt;= jekyll / asciidoctor</p></li><li><p>TODO: validation steps upstream</p></li></ul></div></blockquote></div>
+<div class="listingblock"><div class="content"><pre class="highlightjs highlight"><code class="language-none hljs" data-noescape="true">https://github.com/redhat-documentation/tools/tree/master/newdoc
+https://github.com/jhradilek/check-links</code></pre></div></div></section><section id="_automate_feedback"><h2>Automate feedback</h2><div class="quoteblock"><blockquote><div class="ulist"><ul><li><p>Contributors != professional writers.</p></li><li><p>Automate basic language rules checks</p></li></ul></div></blockquote></div>
+<div class="listingblock"><div class="content"><pre class="highlightjs highlight"><code class="language-none hljs" data-noescape="true">https://github.com/errata-ai/vale
+https://github.com/testthedocs/vale-styles
+https://github.com/testthedocs/vscode-vale/</code></pre></div></div></section></section></div></div><script src="reveal.js/lib/js/head.min.js"></script><script src="reveal.js/js/reveal.js"></script><script>Array.prototype.slice.call(document.querySelectorAll('.slides section')).forEach(function(slide) {
   if (slide.getAttribute('data-background-color')) return;
   // user needs to explicitly say he wants CSS color to override otherwise we might break custom css or theme (#226)
   if (!(slide.classList.contains('canvas') || slide.classList.contains('background'))) return;

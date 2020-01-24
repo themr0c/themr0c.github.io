@@ -143,6 +143,11 @@ s/The steps to check are similar to the OpenShift steps. For details, see the .*
 ==  Iteration #2: attributes upstream
 
 ----
+This section describes how to view the state of the {prod-short}
+cluster deployment using OpenShift 4 CLI tools.
+----
+
+----
 asciidoc_attributes: &asciidoc_attributes
   project-context: che
   prod: Eclipse Che

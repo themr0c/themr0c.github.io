@@ -47,6 +47,18 @@ whitelist_externals =
     which
 ----
 
+== Building some guides
+
+----
+tox -e crw-installation-guide,crw-administration-guide -p auto
+✔ OK crw-administration-guide in 20.997 seconds
+✔ OK crw-installation-guide in 23.842 seconds
+________________________ summary _________________________
+  crw-installation-guide: commands succeeded
+  crw-administration-guide: commands succeeded
+  congratulations :)
+----
+
 == Downstreaming filters
 
 ----
@@ -72,6 +84,25 @@ whitelist_externals =
     tox
     which
     {toxinidir}/tools/downstreaming-crw/downstreaming.sh
+----
+
+== Running filters
+
+----
+tox -e crw-filters 
+...
+
+✖ FAIL crw-end-user-guide in 13.299 seconds
+✔ OK crw-installation-guide in 17.319 seconds
+✔ OK crw-administration-guide in 22.544 seconds
+___________________________ summary __________________________________________________________________________
+  crw-administration-guide: commands succeeded
+ERROR:   crw-end-user-guide: parallel child exit code 1
+  crw-installation-guide: commands succeeded
+  crw-release_notes: commands succeeded
+ERROR: InvocationError for command /home/remote/ffloreth/.local/bin/tox -p auto -e crw-administration-guide,crw-end-user-guide,crw-installation-guide,crw-release_notes (exited with code 1)
+___________________________ summary __________________________________________________________________________
+ERROR:   crw-filters: commands failed
 ----
 
 
@@ -105,4 +136,34 @@ whitelist_externals =
     bash
     tox
     git
+----
+
+
+== Runnning update
+
+----
+tox -e crw-update
+...
+Current branch 7.3.x is up to date.
+...
+crw-filters run-test: commands[1] | /home/remote/ffloreth/src/gl-cee/ffloreth/red-hat-devtools/tools/downstreaming-crw/downstreaming.sh -f
+...
+
+⠋ [4] crw-administration-guide | crw-end-user-guide | crw-installation-guide | crw-release_notes
+...
+✖ FAIL crw-end-user-guide in 7.105 seconds
+✔ OK crw-release_notes in 14.164 seconds
+✔ OK crw-installation-guide in 15.802 seconds
+✔ OK crw-administration-guide in 29.013 seconds
+__________________________________________________________________________ summary __________________________________________________________________________
+  crw-administration-guide: commands succeeded
+ERROR:   crw-end-user-guide: parallel child exit code 1
+  crw-installation-guide: commands succeeded
+  crw-release_notes: commands succeeded
+ERROR: InvocationError for command /home/remote/ffloreth/.local/bin/tox -p auto -e crw-administration-guide,crw-end-user-guide,crw-installation-guide,crw-release_notes (exited with code 1)
+__________________________________________________________________________ summary __________________________________________________________________________
+ERROR:   crw-filters: commands failed
+ERROR: InvocationError for command /home/remote/ffloreth/.local/bin/tox -ecrw-filters (exited with code 1)
+__________________________________________________________________________ summary __________________________________________________________________________
+ERROR:   crw-update: commands failed
 ----

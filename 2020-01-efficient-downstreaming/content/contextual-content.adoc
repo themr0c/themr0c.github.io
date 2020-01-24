@@ -3,6 +3,10 @@
 == Examples
 
 ----
+\include::examples/{project-context}-build-the-devfile-registry.sh[]
+----
+
+----
 ├── administration-guide
 │   ├── examples
 │   │   ├── che-build-the-devfile-registry.sh
@@ -29,4 +33,16 @@ image::workspaces/{project-context}-select-workpace.png[Select a stack from the 
 src/main/images/workspaces/
 ...
 ├── che-select-workpace.png
+----
+
+== Paragraphs
+
+----
+\ifeval::["{project-context}" == "che"]
+* For installations that did not use the `-n` argument, the created namespace is named `{prod-id-short}` by default.
+\endif::[]
+
+\ifeval::["{project-context}" == "crw"]
+* For installations that did not use the `-n` argument, the created namespace is named `workspaces` by default.
+\endif::[]
 ----

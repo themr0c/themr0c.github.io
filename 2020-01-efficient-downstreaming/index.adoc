@@ -35,6 +35,6 @@ include::content/substitutions.adoc[leveloffset=+1]
 
 include::content/contextual-content.adoc[leveloffset=+1]
 
-include::content/community.adoc[leveloffset=+1]
+// include::content/community.adoc[leveloffset=+1]
 
-//include::content/wip.adoc[]
+include::content/challenges.adoc[leveloffset=+1]

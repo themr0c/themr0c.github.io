@@ -1,14 +1,12 @@
 
-== image:bullhorn.svg[xp,25] Opensource contributions
+== image:bullhorn.svg[xp,25] Open Source Software
 
 [no-bullet]
-* image:github.svg[xp,25] Contributed to ansible, modoboa, arachni, wpscan:
-  https://github.com/themr0c
-* image:pen.svg[user,25] Contributed to Rudder documentation, 2012:
-  https://issues.rudder.io/activity?from=2012-01-24&user_id=13
-* image:calendar-alt.svg[,25] Organisation of monthly talks about free software,
+* image:github.svg[GitHub,25] Eclipse Che docs, Vale linter rules, Antora guidelines ... https://github.com/themr0c
+* image:chalkboard-teacher.svg[,25] OSS presentations: https://themr0c.github.io/
+* image:gitlab.svg[Gitlab,25] Antora: https://gitlab.com/ffloreth
+* image:pen.svg[Writer,25] Rudder documentation, 2012:
+  https://issues.rudder.io/users/13
+* image:calendar-alt.svg[,25] Organising monthly OSS meetups,
   2009-2012: http://jeudisdulibre.be/
-* image:microphone.svg[,25]Participation in weekly radio show about free
-  software, 2012-2013: http://www.radiopanik.org/recherche/?q=good+morning+stallman
-* image:chalkboard-teacher.svg[,25] Various talks about open source solutions:
-  http://www.slideshare.net/search/slideshow?searchfrom=header&q=themr0c[Slideshare page]
+* image:microphone.svg[,25] OSS radio show, 2012-2013: http://www.radiopanik.org/recherche/?q=good+morning+stallman

@@ -3,10 +3,12 @@
 
 [no-bullet]
 * image:user.svg[user,25] Fabrice Flore-Thébault
-* image:envelope.svg[mail,25] fab@centsix.org
+* image:envelope.svg[mail,25] ffloreth@redhat.com
 * image:map.svg[map,25] https://www.openstreetmap.org/search?query=brussels#map=10/50.8468/4.3517["Brussels, Belgium", role="external", window="_blank"]
-* image:car.svg[car,25] Driving license
-* image:birthday-cake.svg[age,25] 43
+// * image:car.svg[car,25] Driving license
+// * image:birthday-cake.svg[age,25] 
 * image:github.svg[github,25] https://github.com/themr0c[role="external", window="_blank"]
+* image:gitlab.svg[Gitlab,25] https://gitlab.com/ffloreth
+* image:sun.svg[Eclipse,25] https://accounts.eclipse.org/users/fflorethbault
 * image:linkedin.svg[linkedin,25] https://linkedin.com/in/fabriceflorethebault[role="external", window="_blank"]
-* image:slideshare.svg[slides,25] https://www.slideshare.net/themr0c/presentations[role="external", window="_blank"]
+// * image:slideshare.svg[slides,25] https://www.slideshare.net/themr0c/presentations[role="external", window="_blank"]

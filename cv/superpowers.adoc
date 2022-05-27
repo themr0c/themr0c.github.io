@@ -1,8 +1,9 @@
 
 == image:superpowers.svg[self,25] What I can do
 
-I am a senior cloud infrastructure architect with an advanced experience of Ansible
-and Linux.
-I have a good knowledge of asciidoc and YAML and some other languages.
-I can understand or design complex infrastructure and like to trace issues.
-I’m also curious and willing to learn by myself.
+I am a senior technical writer and cloud infrastructure architect with an advanced experience of Linux, Ansible, Antora, and collaboration in Open Source Software.
+I mainly write in AsciiDoc, Bash and YAML.
+I enjoy other languages too.
+I can understand or design complex workloads and trace issues.
+I am also curious and willing to learn by myself.
+I can lead a team and challenge people to get the best of themselves.

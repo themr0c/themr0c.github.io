@@ -1,16 +1,23 @@
 
-== image:suitcase.svg[xp,25] EXPERIENCE
+== image:suitcase.svg[xp,25] Experience
 
-=== image:pen.svg[user,25] Technical Writer (Red Hat, Remote) since 2019
+=== image:redhat.svg[user,25] Red Hat (remote, Brussels, Belgium) since 2019
 
-- User documentation writing and tooling in the Red Hat Developer Tools Team.
-- Focus on Eclipse Che / CodeReady Workspaces.
+==== Senior Technical Writer since 2021
+==== Technical Writer 2019-2021
+
+- Leading, authoring and automating for *Red Hat Developer* and *Customer Content Services*.
+- Cloud IDE: link:https://www.eclipse.org/che/docs/[Eclipse Che] and link:https://access.redhat.com/documentation/en-us/red_hat_codeready_workspaces[CodeReady Workspaces].
+- Writers enablement: link:https://redhat-documentation.github.io/vale-at-red-hat/[Vale for writers at Red Hat] style guide automation project.
+- Antora guidelines: https://antora-for-modular-docs.github.io/[Starting an Antora project compatible with modular documentation].
+- Main technologies: Antora, AsciiDoc, GitHub, GitLab, Jenkins, Kubernetes, OpenShift, Vale.
+
 
 === image:cloud.svg[user,25] Cloud Infrastructure Architect (Stylelabs, Cloud software editor, Brussels, Belgium) 2017-2019
 
-- Lead development of automation tools (Ansible TDD, goss),
+- Leading development of automation tools (Ansible test driven developmen for Azure),
 - Mentoring and empowering colleagues,
-- R&D to onboard new technologies (molecule, golang, Kubernetes, AWX).
+- R&D to onboard new technologies (Ansible Molecule, Golang, Goss, Kubernetes, AWX).
 
 === image:code.svg[user,25] Senior DevOps (Emakina, Digital agency, Brussels, Belgium) 2015-2017
 
@@ -26,13 +33,13 @@
 - Infrastructure as code (Rudder, then Ansible),
 - Devops instrumentation: git, continuous integration, monitoring.
 
-=== image:pen.svg[user,25] Technical Writer for Rudder project (Normation, Paris, remote) 2011
+=== image:pen.svg[user,25] Technical Writer for Rudder project (Normation, Paris; remote, Brussels, Belgium) 2011
 
 - User documentation tooling (single source, multiple outputs automation).
 - User documentation writing (asciidoc, hand crafted graphviz),
 - QA : user experience improvements, bug reporting, usability tests.
 
-=== image:linux.svg[user,25] Opensource consultant (Inuits, Antwerp, IT services, Belgium) 2010-2011
+=== image:linux.svg[user,25] Open Source consultant (Inuits, IT services, Antwerp & Charleroi, Belgium) 2010-2011
 
 - Missions for: OFO-IFA, Centre Hospitalier Jean Titeca.
 - Technical projects management, analysis, implementation,

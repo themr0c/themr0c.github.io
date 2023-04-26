@@ -21,7 +21,7 @@
 ////
 
 ifndef::loader-assembler[]
-link:cv-résumé.pdf[PDF]
+link:../cv-résumé.pdf[PDF]
 endif::[]
 
 include::partial$personal.adoc[]

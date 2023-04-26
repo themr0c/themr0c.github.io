@@ -12,6 +12,8 @@
 :revealjs_theme: league
 :source-highlighter: highlightjs
 :title-slide-background-image: atomium.jpg
+:revealjs_width: 1920
+:revealjs_height: 1080
 :toc: preamble
 
 Loadays, Antwerp, 2019-05-04

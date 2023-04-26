@@ -1,0 +1,9 @@
+:page-layout: passthrough
+:navtitle: Molecule test Ansible
+:title: Molecule test Ansible
+
+ifndef::loader-assembler[]
+++++
+include::../attachments/molecule-test-ansible/index.html[]
+++++
+endif::[]

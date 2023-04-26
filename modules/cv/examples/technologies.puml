@@ -1,0 +1,72 @@
+@startmindmap
+'!theme toy
+* /
+
+left side
+
+** Authoring
+*** Markup
+****_ AsciiDoc
+****_ LaTeX
+****_ Markdown
+*** Visualization
+****_ Graphviz
+****_ Kroki
+****_ PlantUML
+*** Publication
+****_ Antora
+****_ Docusaurus
+****_ Jekyll
+*** Validation
+****_ Htmltest
+****_ Markdownlint
+****_ Vale
+
+** Automating
+*** Containers
+****_ Podman, Docker
+****_ Kubernetes/OpenShift
+*** Frameworks
+****_ Ansible
+****_ Tox
+*** Languages
+****_ Bash
+****_ Python
+*** Platforms
+****_ GitHub
+****_ GitLab
+****_ Jenkins
+
+right side
+
+** Infrastructure
+*** Hosting
+****_ Bare-metal
+****_ Cloud: AWS, Azure
+*** Orchestrating
+****_ Kubernetes/OpenShift
+****_ Libvirt/KVM
+*** Operating systems
+****_ Fedora, CentOS, RHEL
+****_ Debian, Ubuntu
+' ****_ Pfsense
+*** Web applications
+' *** Delivery
+****_ Apache, Nginx
+****_ Varnish
+' *** Application
+****_ Nodejs, PHP, Python
+*** Data
+****_ MySQL, PostgreSQL
+****_ MongoDB, Redis
+****_ Elasticsearch
+
+*** Security
+' *** Networking
+****_ IPSec VPN, OpenVPN
+****_ PFSense
+****_ Arachni, Netsparker
+*** Backups
+****_ Backupninja, Rdiff-backup
+****_ Btrfs snd/rcv
+@endmindmap

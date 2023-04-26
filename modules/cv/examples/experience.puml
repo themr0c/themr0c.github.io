@@ -1,0 +1,117 @@
+@startmindmap experience
+'!theme toy
+
+
+@startmindmap
+
+
+<style>
+rootNode {
+    MinimumWidth 220
+    MaximumWidth 220
+}
+node {
+    MinimumWidth 220
+    MaximumWidth 220
+}
+boxless {
+    MaximumWidth 600
+}
+</style>
+
+* <b>Red Hat</b> \nSoftware editor \nRemote, Brussels, Belgium \nSince 2019
+** <b>Senior Technical Writer</b> \nSince 2019\n<b>Technical Writer</b> \n2019-1021
+***_ Lead documentation team\nAuthored content \nDeveloped automation
+****_ Podman Desktop
+****_ CRC/OpenShift Local
+****_ Eclipse Che/OpenShift Dev Spaces
+***_ Enablement
+****_ Vale linter style guide rules
+****_ Antora guidelines
+/'***_ Technologies
+****_ Antora + AsciiDoc, Docusaurus + Markdown
+****_ Htmltest, Vale
+****_ Podman Desktop, Podman, Kubernetes, OpenShift'/
+
+* <b>Stylelabs</b> \nCloud software editor \nBrussels, Belgium \n2017-2019
+** <b>Cloud Infrastructure Architect</b>
+***_ Lead and developed infrastructure automation: Ansible playbooks for Azure
+***_ Researched new technologies (Molecule, Goss, Kubernetes, AWX)
+'***_ Mentored colleagues
+'***_ Technologies
+'****_ Ansible, Golang, Goss
+'****_ Azure, Kubernetes
+'
+* <b>Emakina</b> \nDigital agency \nBrussels, Belgium \n2015-2017
+** <b>Senior DevOps</b>
+***_ Lead and implemented
+****_ Continuous deployment (Jenkins, Artifactory, systemd)
+****_ Infrastructure as code (Ansible, Puppet)
+****_ Performance assessments (Taurus)
+****_ Security assessments (Arachni, Netsparker)
+'***_ Platforms: CentOS, Debian, PFSense, Windows
+'end note
+'
+* <b>Antidot</b> \nWeb software editor \nBrussels, Belgium \n2012-2015
+** <b>Linux System Administrator</b>
+'note right
+***_ Managed customer-bound infrastructure projects: Scrum meets Prince2
+***_ Lead and implemented
+****_ Developer enablement (Gitlab, Jenkins)
+****_ Observability (percona-toolkit, Zabbix)
+****_ Infrastructure as code (Rudder, Ansible)
+'***_ Platforms: CentOS, Debian, PFSense
+'end note
+'
+'note right
+* <b>Normation</b> \nSoftware editor \nRemote, Brussels, Belgium \n2011
+** <b>Technical Writer</b>
+***_ Developed documentation automation (single-sourcing, make)
+***_ Authored content (AsciiDoc, Graphviz)
+***_ Ran usability tests, reported bugs, and proposed user experience improvements
+'end note
+'
+* <b>Inuits</b> \nOpen Source services \nRemote, Brussels, Belgium \n2010-2011
+** <b>Open Source consultant</b>
+'note right
+***_ Managed, analyzed, and implemented technical projects
+***_ Presented at technical conferences in Paris, Antwerpen, Leeds
+***_ Missions for governement agencies and healthcare organizations
+'end note
+'
+'note right
+* <b>Mediaxim</b> \nSoftware editor \nBrussels, Belgium \n2010
+** <b>System Administrator</b>
+***_ Conceived an IT strategy and translated it into an operational plan
+***_ Promoted and lead improvement initiatives
+***_ Platforms: Linux, 400 servers, 100 desktops
+'end note
+'
+'note right
+* <b>Emakina</b> \nWeb agency \nBrussels, Belgium \n2008-2009
+** <b>System Administrator</b>
+***_ Designed and implemented
+****_ Automated desktop deployment: WPKG
+****_ IT asset management: GLPI
+***_ Managed incidents and users requests (ITIL Level 1-2-3)
+***_ Platforms: 150 macOS & Windows, 50 Linux servers
+'end note
+'
+':System Administrator;
+'note right
+* <b>FIJ Saint-Gilles</b> \nTraining center \nBrussels, Belgium \n2007
+** <b>System Administrator</b>
+***_ Participated and presented projects in weekly team meetings
+***_ Designed and implemented automated desktops deployment
+***_ Platforms: Linux, Windows
+'end note
+'
+':System Administrator;
+'note right
+* <b>Instituts Saint-Luc</b> \nArt school \nBrussels, Belgium \n2006-2007
+** <b>System Administrator</b>
+***_ Audited the infrastructure and proposed evolution
+***_ Platforms: 50 macOS X, 150 Windows
+'end note
+
+@endmindmap

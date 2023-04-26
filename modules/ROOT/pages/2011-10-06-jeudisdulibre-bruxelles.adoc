@@ -1,0 +1,9 @@
+:page-layout: passthrough
+:navtitle: Écrire de la documentation pour des projets libres
+:title: Écrire de la documentation pour des projets libres
+
+ifndef::loader-assembler[]
+++++
+include::../attachments/2011-10-06-jeudisdulibre-bruxelles/index.html[]
+++++
+endif::[]

@@ -1,0 +1,35 @@
+---
+site:
+  robots: allow
+  title: Fabrice Flore-Thebault
+  start_page: ROOT::index.adoc
+  url: https://themr0c.github.io
+content:
+  sources:
+    - url: ./
+      branches: HEAD
+      edit_url: https://github.com/themr0c/themr0c.github.io
+output:
+  destinations:
+    - clean: true
+      path: build/site
+      provider: fs
+runtime:
+  cache_dir: ./.cache/antora
+ui:
+  bundle:
+    url: https://gitlab.com/antora/antora-ui-default/-/jobs/artifacts/HEAD/raw/build/ui-bundle.zip?job=bundle-stable
+    snapshot: true
+  supplemental_files: ./supplemental-ui
+urls:
+  html_extension_style: indexify
+  redirect_facility: static
+antora:
+  extensions:
+    - '@antora/collector-extension'
+    - '@antora/lunr-extension'
+    - '@antora/pdf-extension'
+asciidoc:
+  extensions:
+    - asciidoctor-emoji
+    - asciidoctor-kroki

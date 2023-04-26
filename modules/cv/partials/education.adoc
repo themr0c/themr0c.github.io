@@ -1,0 +1,17 @@
+== image:university.svg[education,25] Education & certifications
+
+2020:: link:https://www.youracclaim.com/badges/bf1253f9-d96c-46b4-a309-0e9a63240ce9[Impact Tilt -
+Change Catalyst]
+//- Skills: Activating Innovation, Applied Creativity, Change Management, Confidence, Drive Results, Inspirational Leadership, Leading & Managing Change, Visionary Thinking.
+2019:: link:https://accounts.eclipse.org/users/fflorethbault[Eclipse Foundation Committer]
+2014:: PRINCE2 Foundation
+2008:: LPIC-1 Linux certified professional
+1999:: MA in History (“DEA”), University Lumière Lyon 2, France
+// * *1997* BA in French Literature (“Licence”), University Lumière Lyon 2, France
+
+
+// .image:university.svg[education,25] Education & certifications
+// [plantuml,svg,align=left]
+// ....
+// include::example$education.puml[]
+// ....

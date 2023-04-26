@@ -1,0 +1,13 @@
+---
+extends: default
+role:
+  red:
+    font-color: #FF0000
+page:
+  margin: [0.5in, 0.67in, 0.5in, 0.67in]
+heading:
+  h1_font_size: $base_font_size_large
+  h2_font_size: $base_font_size_large
+  h3_font_size: $base_font_size_large
+  h4_font_size: $base_font_size_large
+  min-height-after: auto

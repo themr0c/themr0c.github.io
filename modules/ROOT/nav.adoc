@@ -1,0 +1,6 @@
+* xref:index.adoc[]
+// * Presentations
+// ** xref:2020-01-efficient-downstreaming.adoc[]
+// ** xref:molecule-test-ansible.adoc[]
+// ** xref:pipeline-as-code-2017.adoc[]
+// ** xref:2011-10-06-jeudisdulibre-bruxelles.adoc[]

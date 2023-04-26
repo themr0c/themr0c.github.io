@@ -1,0 +1,6 @@
+// Fabrice Flore-Thébault
+* fab@centsix.org
+* Brussels, Belgium
+* image:linkedin.svg[linkedin,25,link=https://linkedin.com/in/fabriceflorethebault,25,role="external", window="_blank",] https://linkedin.com/in/fabriceflorethebault
+* image:github.svg[github,25,link=https://github.com/themr0c,role="external", window="_blank"] https://github.com/themr0c
+

@@ -4,20 +4,32 @@
 :revdate: 2017-03-30
 :revnumber:  0.1
 :data-uri:
-:max-width: 45em
-:backend: deckjs
-//:deckjs_theme: web-2.0
-///////////////////////
-	Themes that you can choose includes:
-	web-2.0, swiss, neon beamer
-///////////////////////
-:deckjs_theme: neon
-:deckjs_transition: horizontal-slide
-:pygments:
-//:pygments_style: native
-:pygments_style: native
-:scrollable:
-:count_nested:
+// // :max-width: 45em
+// :backend: deckjs
+// //:deckjs_theme: web-2.0
+// ///////////////////////
+// 	Themes that you can choose includes:
+// 	web-2.0, swiss, neon beamer
+// ///////////////////////
+// :deckjs_theme: neon
+// :deckjs_transition: horizontal-slide
+// :pygments:
+// //:pygments_style: native
+// :pygments_style: native
+// :scrollable:
+// :count_nested:
+
+:backend: revealjs
+:icons: font
+:revealjs_defaultTiming: 60
+:revealjs_slideNumber: true
+:revealjs_theme: league
+:source-highlighter: highlightjs
+:revealjs_width: 1920
+:revealjs_height: 1440
+
+https://themr0c.github.io/pipeline-as-code-2017
+Brussels, 2017-03-30.
 
 == About me
 

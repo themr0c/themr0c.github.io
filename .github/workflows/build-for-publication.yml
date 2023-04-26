@@ -1,0 +1,31 @@
+---
+name: Build for publication
+on:
+  push:
+    branches:
+      - main
+      - master
+jobs:
+  publication-builder:
+    name: Build and publish to publication branch
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v2
+      - name: Install Node.js packages
+        run: npm install
+      - name: Install system packages
+        run: sudo apt-get install -y bundler
+      - name: Configure Ruby package manager
+        run: bundle config --local path .bundle/gems
+      - name: Install Ruby packages
+        run: bundle
+      - name: Build the website with Antora
+        run: antora antora-playbook.yml --stacktrace
+      - name: Commit artifact to publication branch
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          force_orphan: true # publish branch with only the latest commit
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_branch: publication
+          publish_dir: build/site

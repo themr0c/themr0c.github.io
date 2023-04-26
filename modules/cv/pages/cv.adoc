@@ -1,0 +1,36 @@
+= Fabrice Flore-Thébault CV / Résumé
+// Fabrice Flore-Thébault <fab@centsix.org>
+// {localdatetime}
+:description: Fabrice Flore-Thébault CV / Résumé
+:navtitle: CV / Résumé
+// :page-aliases:
+
+////
+:data-uri:
+:diagramsdir: {docdir}/diagrams
+:figure-caption!:
+:icons: font
+:imagesdir: {docdir}/images
+:linkattrs:
+:pdf-fontsdir: {docdir}/fonts
+:pdf-style: cv
+:pdf-stylesdir: {docdir}/styles
+:sectlink:
+:source-language: asciidoc
+:stylesdir: {docdir}/styles
+////
+
+ifndef::loader-assembler[]
+link:cv-résumé.pdf[PDF]
+endif::[]
+
+include::partial$personal.adoc[]
+include::partial$superpowers.adoc[]
+include::partial$experience.adoc[]
+include::partial$education.adoc[]
+include::partial$languages.adoc[]
+include::partial$technologies.adoc[]
+include::partial$opensource-contributions.adoc[]
+include::partial$publications.adoc[]
+// include::interests.adoc[]
+// include::recommendations.adoc[]

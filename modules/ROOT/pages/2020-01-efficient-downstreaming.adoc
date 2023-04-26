@@ -1,0 +1,9 @@
+:page-layout: passthrough
+:navtitle: Documentation with Efficient Downstreaming in Mind
+:title: Documentation with Efficient Downstreaming in Mind
+
+ifndef::loader-assembler[]
+++++
+include::../attachments/2020-01-efficient-downstreaming/index.html[]
+++++
+endif::[]

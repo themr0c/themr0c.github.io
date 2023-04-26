@@ -1,0 +1,9 @@
+:page-layout: passthrough
+:navtitle: Pipeline as Code
+:title: Pipeline as Code
+
+ifndef::loader-assembler[]
+++++
+include::../attachments/pipeline-as-code-2017/index.html[]
+++++
+endif::[]

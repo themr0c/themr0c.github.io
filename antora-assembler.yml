@@ -1,0 +1,16 @@
+---
+# Create one PDF per top-level entry in the navigation tree of each component version
+root_level: 1
+component_versions: '@*'
+section_merge_strategy: fuse
+build:
+  command: asciidoctor-pdf --attribute toclevels=5 --attribute antora-assembler=true --trace --sourcemap -r asciidoctor-kroki -a optimize
+  keep_aggregate_source: true
+asciidoc:
+  attributes:
+    allow-uri-read: ''
+    doctype: article
+    kroki-fetch-diagram: ~
+    pdf-theme: ./pdf-theme.yml
+    source-highlighter: rouge
+    loader-assembler: ''

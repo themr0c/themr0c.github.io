@@ -1,1 +1,0 @@
-cmd: bundle exec asciidoctor-revealjs index.adoc

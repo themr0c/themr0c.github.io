@@ -1,0 +1,33 @@
+pipeline {
+  agent any
+  stages {
+    stage('Build') {
+      steps {
+        sh '''
+          rm -f *.html
+          asciidoc --backend list | grep deckjs ||  asciidoc  --backend install deckjs-1.6.3.zip
+          for file in *.asciidoc
+          do
+            asciidoc $file
+          done
+        '''
+      }
+    }
+    stage('Tests') {
+      steps {
+        sh 'file pipeline-as-code.html'
+      }
+    }
+    stage('Deploy') {
+      steps {
+        echo 'Hello World'
+      }
+    }
+  }
+  post {
+    always {
+      archive '*.html'
+      echo 'I will always say Hello again!'
+    }
+  }
+}

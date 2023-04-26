@@ -1,0 +1,76 @@
+@startuml recommendations
+!theme toy
+
+:Sebastien Le Grand, CEO at Antidot s.a.;
+note right
+I had the chance to work with Fabrice on several critical and complex projects.
+From new infrastructure design & implementation projects to operations' day to
+day management: I was delighted by his long term vision, attention to details,
+ability to anticipate and avoid problems, on top of his very broad knowledge of
+Linux systems, configuration management and application servers.
+end note
+
+:Brice Le Blévennec, CEO at Emakina Group;
+note right
+Fabrice is a very nice human person, he is funny, always positive and really a
+pleasure to work with. He he is a knowledgeable expert in Unix, Linux, MacOS X
+and Network administration and has an attention to details. He enjoy tweaking
+OpenSource software and solving problems by himself, thanks to the community.
+By duty, he knows also a bit about Microsoft Windows administration. He is
+always looking to being useful, always ready to help, and think proactively,
+anticipating the problems before they happens.
+end note
+
+:Sophie Vandenbussche, Developer and Project manager;
+note right
+Fabrice is a solution driven person, always looking for the best solution for
+the end-user. Moreover he constantly tries to improve the way of working.
+Unix/Linux lover & expert, he can jump into Windows environment like a fish in
+water :-)
+end note
+
+:Anne Bourguignon, Creativity Department Director;
+note right
+Fabrice always find a solution to your problem, at any time. He's wiling to help
+and go one step further. You can count on him during stress.
+end note
+
+:Pierre Vanliefland, Full-stack developer and analyst;
+note right
+Fabrice is a competent and enthusiast system administrator. Always looking to
+find smarter and cleaner solutions to IT challenges or problems, his positive
+spirit, coupled to a strong open-source culture, is definitely an asset in the
+ever-changing world of software development.  His kindness and his ability to
+explain infrastructure issues to non-experts makes him even more valuable.
+end note
+
+:Yannick Lemin, Android developer fanatic - GDG Organiser - Podcaster;
+note right
+Fabrice always works in a very professional way, trying to do things right the
+first time around rather than following the "quick and dirty" road, which to me
+is a very good thing. Fabrice is also very friendly and a nice person to be
+around.
+end note
+
+:Régine Lagasse de Locht, Receptionist - Office management at Emakina;
+note right
+Fabrice is a cheerfull colleague to work with and allways was very helpfull on
+the professional level. He is an openminded person, passionate by different
+aspects of IT support, mostly by all the open source side of internet.
+end note
+
+:Kim Ausloos, DevOps at Cegeka;
+note right
+Fabrice is a good and hard worker, a real nice person with whom you can share a
+laugh. He also thinks out of the box and sees problems as challenges. He likes
+to plan things and is not short sighted but thinks about his solutions to issues
+now, but also in the future.
+end note
+
+:Michaël Froidebise, System administrator at PwC Luxembourg;
+note right
+Very good knowledge of Linux systems, good job while compiling smb packages and
+wpkg, GLPI configuration
+end note
+
+@enduml

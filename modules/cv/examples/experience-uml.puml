@@ -1,0 +1,100 @@
+@startuml experience
+!theme toy
+skinparam ArrowColor transparent
+
+:Senior Technical Writer;
+note right
+<b>Red Hat</b> - Software editor - Remote, Brussels, Belgium - Since 2021
+* Leading documentation, authoring content and automation pipelines for:
+** Podman Desktop
+** Cloud IDE: Eclipse Che and Red Hat OpenShift Dev Spaces
+** Guidelines: Starting an Antora project compatible with modular documentation
+** Writer enablement: Vale for writers at Red Hat style guide automation
+* Technologies: Antora, AsciiDoc, Docusaurus, GitHub, GitLab, Kubernetes, OpenShift, Vale
+end note
+
+:Technical Writer;
+note right
+<b>Red Hat</b> - Software editor - Remote, Brussels, Belgium - 2019-2021
+* Lead, authored content, code, and automation pipelines for:
+** Cloud IDE documentation: Eclipse Che and Red Hat CodeReady Workspaces
+* Identified needs: Style guide implementation for the Vale linter, Antora guidelines
+* Technologies: Antora, AsciiDoc, GitHub, GitLab, Jenkins, Kubernetes, OpenShift, Vale
+end note
+
+:Cloud Infrastructure Architect;
+note right
+<b>Stylelabs</b> - Cloud software editor - Brussels, Belgium - 2017-2019
+* Lead and developed infrastructure automation: TDD Ansible playbooks for Azure
+* Researched to onboard new technologies: Ansible Molecule, Goss, Kubernetes, AWX
+* Mentored colleagues
+* Technologies: Ansible, Azure, Golang, Goss, Kubernetes
+end note
+
+:Senior DevOps;
+note right
+<b>Emakina</b> - Digital agency - Brussels, Belgium - 2015-2017
+* Lead and implemented continuous deployment for projects: Jenkins pipeline, Artifactory
+* Lead and implemented infrastructure as code: Ansible, Puppet
+* Designed and ran security assessments: Arachni, Netsparker
+* System and network administration: CentOS, Debian, PFSense
+end note
+
+:Linux System Administrator;
+note right
+<b>Antidot</b> - Web software editor - Brussels, Belgium - 2012-2015
+* Managed customer-bound infrastructure related projects, Scrum meets Prince2
+* Lead and implemented developer enablement: Git, Jenkins, Zabbix
+* Lead and implemented infrastructure as code: Rudder, Ansible
+* System and network administration: CentOS, Debian, PFSense
+end note
+
+:Technical Writer;
+note right
+<b>Normation</b> - Software editor - Remote, Brussels, Belgium - 2011
+* Created user documentation automation pipeline: single source, multiple outputs
+* Authored content for the user documentation: AsciiDoc, Graphviz
+* Ran usability tests, reported bugs, and proposed user experience improvements
+end note
+
+:Open Source consultant;
+note right
+<b>Inuits</b> - Open Source services - Remote, Brussels, Belgium - 2010-2011
+* Managed, analyzed, and implemented technical projects
+* Presented at technical conferences in Paris, Antwerpen, Leeds
+* Missions for: _OFO-IFA_, _Centre Hospitalier Jean Titeca_
+end note
+
+:Linux System Administrator;
+note right
+<b>Mediaxim</b> - Software editor - Brussels, Belgium - 2010
+* Conceived an IT strategy and translated it into an operational plan
+* Promoted and lead improvement initiatives
+* System and network administration: Debian, 400 Linux servers, 100 desktops
+end note
+
+:System Administrator;
+note right
+<b>Emakina</b> - Web agency - Brussels, Belgium - 2008-2009
+* Designed and implemented automated desktop deployment and maintenance: WPKG
+* Designed and implemented IT asset management: GLPI
+* Managed incidents and users requests, ITIL Level 1-2-3
+* System administration: 150+ macOS X & Windows, 50 Linux servers
+end note
+
+:System Administrator;
+note right
+<b>FIJ Saint-Gilles</b> - Training center - Brussels, Belgium - 2007
+* Participated and presented projects in weekly team meetings
+* Designed and implemented automated desktops deployment: 100 Windows and Linux
+* System administration: Linux
+end note
+
+:System Administrator;
+note right
+<b>Instituts Saint-Luc</b> - Art school - Brussels, Belgium - 2006-2007
+* Audited the infrastructure and proposed evolution
+* System administration: 50 macOS X, 150 Windows
+end note
+
+@enduml

@@ -1,0 +1,16 @@
+
+// == image:heartbeat.svg[Interests,25] Interests
+
+////
+[no-bullet]
+* image:child.svg[child,25] Proud father!
+* image:carrot.svg[,25] Cooking, eating,
+* image:tree.svg[,25] Hiking, Biking,
+* image:book-reader.svg[,25] Books, Theater, Movies.
+////
+.image:heartbeat.svg[Interests,25] Interests
+// vega::interests.vega[svg,width=50%]
+[plantuml,svg]
+....
+include::example$/interests.puml[]
+....

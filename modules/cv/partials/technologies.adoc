@@ -1,0 +1,22 @@
+[%unbreakable]
+== image:terminal.svg[tech,25] Technologies
+
+// [no-bullet]
+// * image:pen.svg[user,25] Antora, AsciiDoc, Graphviz, LaTeX, Docbook, PlantUML.
+// * image:code.svg[user,25] Ansible, Bash, Containers, Python, Tox, YAML
+// * image:cloud.svg[user,25] Podman, Kubernetes/OpenShift, Libvirt/KVM, AWS, Azure
+// * image:linux.svg[user,25] Linux (Fedora, CentOS, Debian, Ubuntu), MacOS X, Windows
+// * image:firefox.svg[user,25] Apache, Nginx, Varnish,  Nodejs, Php, Python
+// * image:database.svg[user,25] MySQL, PostgreSQL, MongoDB, Redis, Elasticsearch
+// * image:tape.svg[user,25] Backupninja, Rdiff-backup,  Btrfs snd/rcv
+// * image:network-wired.svg[user,25] PFSense, OpenVPN, IPSec VPN
+// * image:user-secret.svg[user,25] Arachni, Netsparker
+
+// puml:technologies.puml[]
+
+// vega::technologies.vega[svg]
+// .image:battery-full.svg[tech,25] Technologies
+[plantuml,technologies,svg,align=center]
+....
+include::example$/technologies.puml[]
+....

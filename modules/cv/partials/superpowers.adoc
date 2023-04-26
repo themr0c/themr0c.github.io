@@ -1,0 +1,13 @@
+
+// == image:superpowers.svg[self,25] What I can do
+
+I am a senior technical writer and cloud infrastructure architect with an advanced experience of Linux, Ansible, Antora, and collaboration in Open Source Software.
+
+I mainly write in AsciiDoc, Bash and YAML.
+I enjoy other languages too.
+
+I can understand or design complex workloads and trace issues.
+I am a keen independent learner.
+
+I can lead a team and challenge people to get the best of themselves.
+

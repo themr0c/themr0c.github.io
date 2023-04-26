@@ -1,0 +1,19 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "description": "A simple bar chart with embedded data.",
+  "data": {
+    "values": [
+      {"a": "French", "b": 100},
+      {"a": "English", "b": 95},
+      {"a": "German", "b": 60},
+      {"a": "Dutch", "b": 5}
+    ]
+  },
+  "width": "container",
+  "height": 100,
+  "mark": "bar",
+  "encoding": {
+    "x": {"field": "a", "type": "nominal", "axis": {"labelAngle": 0}, "title": "Language"},
+    "y": {"field": "b", "type": "quantitative", "title": "Proficiency"}
+  }
+}

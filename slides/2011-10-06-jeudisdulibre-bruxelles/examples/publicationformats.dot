@@ -1,0 +1,8 @@
+digraph workflow{
+node [shape=Mrecord, style=filled, color="#6699ff", fillcolor="#ececff"];
+FormatP [label="Formats de publication"];
+FormatP -> {Web Papier Console};
+Web -> XHTML;
+Papier -> PDF;
+Console -> "Man pages";
+}

@@ -1,0 +1,11 @@
+digraph workflow{
+node [shape=Mrecord, style=filled, color="#6699ff", fillcolor="#ececff"];
+FormatE [label="Format d'écriture"];
+OutilsE [label="Outils d'édition"];
+FlowE [label="Flux de production"];
+FormatP [label="Formats de publication"];
+OutilsP [label="Outils de publication"];
+FlowP [label="Chaîne de publication"];
+FormatE -> OutilsE -> FlowE;
+FormatE -> FormatP -> OutilsP -> FlowP;
+}

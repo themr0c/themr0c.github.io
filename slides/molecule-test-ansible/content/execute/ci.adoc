@@ -1,0 +1,69 @@
+=== Automation on a continuous integration server
+
+* On pull request.
+Never merge broken code!
+* At commit time on release branches / tags.
+* Foresee long compute time!
+* Need to run privileged Docker containers
+
+=== Use molecule docker image
+
+----
+docker_image_name="quay.io/ansible/molecule:2.19" // <1>
+gid_map="$(grep docker /etc/group |cut -d: -f3,3)" // <2>
+local_playbooks_absolute_path="$(readlink -f "$(dirname "${BASH_SOURCE[0]}")")" // <3>
+docker run \
+  -e "WORKDIR=${molecule_workdir}" \ // <3>
+  -v /var/run/docker.sock:/var/run/docker.sock \ // <4>
+  -v "${local_playbooks_absolute_path}:${molecule_workdir}" // <3>
+  "${docker_image_name}" bash "molecule test"
+----
+
+<1> Docker image from https://quay.io/repository/ansible/molecule
+<2> Map local user
+<3> Mount the code
+<4> Share docker socket
+
+[.notes]
+--
+We run molecule from a docker container, and from this docker container we need to create another container: we need access to the docker socket!
+
+The current implementation of docker support in Bamboo doesn't allow this (unsafe) behaviour.
+
+We had to bake our own docker orchestration sequence (handled by ansible/tests/tests_suite.sh)
+
+    Pull/Run the docker image containing molecule and friends,
+    Mount the playbooks and roles repository,
+    Run the desired test suite (handled by ansible/tests/detox_wrapper.sh)
+--
+
+=== Orchestration pitfalls
+
+TIP: 1 repository == 1 role
+
+CAUTION: multiple roles => external orchestration
+
+* scenarios => sequential
+
+* platforms => parallel
+
+[.notes]
+--
+We have one unique Git repository containing the complete collection of all roles.
+It means that when CI runs the tests, all roles should be tested.
+We would avoid a lot of complications if each role had its own repository.
+It is a bad architectural choice, but a business decision, and we have to live with it.
+
+Tox is able to run the tests in parallel, instead of sequentially.
+But blind parallelization on one unique agent is a bad idea our usecase.
+
+To test the elasticsearch and redis roles, for instance, we create complex topologies, which use a lot of memory.
+As a consequence, we need to fine-tune the orchestration to avoid memory errors when running to many memory hungry tests in parallel.
+
+Given on CI platform (bamboo), the best approach we found was to group roles in multiple test suites, each suite being run on a different agent (handled by ansible/tests/detox_wrapper.sh).
+
+* All elasticsearch related roles to test sequentially
+* All redis related roles to test sequentially
+* All other Linux related roles, candidates to maximize parallelism
+* All Azure/Windows bound roles, also candidates to maximize parallelism (and subject to high error rate)
+--

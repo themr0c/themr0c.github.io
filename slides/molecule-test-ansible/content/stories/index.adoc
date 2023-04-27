@@ -1,0 +1,18 @@
+
+## Ansible User stories
+
+image::https://upload.wikimedia.org/wikipedia/commons/5/55/AlfredPalmerwelder1.jpg[background]
+
+* Day 2 routines: system patches, audit, inventory.
+* Reproductible provisioning, from hypervisor to apps.
+* Automated backup & restore data.
+* Maintain environments on shared hosting platforms.
+* Deploy software.
+* Build CI pipelines.
+* Manage everything API: network, cloud, kubernetes.
+
+include::common-problem.adoc[]
+
+include::solution.adoc[]
+
+include::disclaimer.adoc[]

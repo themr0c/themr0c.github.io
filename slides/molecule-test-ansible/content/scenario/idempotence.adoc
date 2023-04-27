@@ -1,0 +1,15 @@
+
+
+### idempotence
+
+NOTE: The main role is executed again; the result should change nothing in order
+to achieve idempotence.
+
+TIP: Key feature!
+
+WARNING: Idempotence is a goal difficult to achieve, particularly on Windows.
+
+----
+--> Action: 'idempotence'
+Idempotence completed successfully.
+----

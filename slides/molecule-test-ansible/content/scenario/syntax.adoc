@@ -1,0 +1,14 @@
+
+### syntax
+
+NOTE: `ansible-playbook --syntax-check`
+
+NOTE: Complementary to lint, but need the external roles to work.
+
+----
+molecule syntax
+--> Scenario: 'default'
+--> Action: 'syntax'
+
+    playbook: molecule/default/playbook.yml
+----

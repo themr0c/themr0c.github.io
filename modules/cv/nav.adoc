@@ -1,1 +1,1 @@
-* xref:cv.adoc[]
+* xref:index.adoc[]

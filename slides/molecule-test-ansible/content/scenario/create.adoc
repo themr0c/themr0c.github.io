@@ -1,0 +1,42 @@
+
+### create
+
+NOTE: Create the temporary platforms.
+
+TIP: Local backends are faster and more reliable.
+
+CAUTION: Cloud backends: abuse of `retry`, be patient
+
+----
+--> Scenario: 'default'
+--> Action: 'create'
+
+    PLAY [Create] ******************************************************************
+
+    TASK [Log into a Docker registry] **********************************************
+    skipping: [localhost] => (item={'name': 'kind-default', 'groups': ['k8s'], 'image': 'bsycorp/kind:latest-1.12', 'privileged': True, 'override_command': False, 'exposed_ports': ['8443/tcp', '10080/tcp'], 'published_ports': ['0.0.0.0:9443:8443/tcp'], 'pre_build_image': True})
+
+    TASK [Create Dockerfiles from image names] *************************************
+    skipping: [localhost] => (item={'name': 'kind-default', 'groups': ['k8s'], 'image': 'bsycorp/kind:latest-1.12', 'privileged': True, 'override_command': False, 'exposed_ports': ['8443/tcp', '10080/tcp'], 'published_ports': ['0.0.0.0:9443:8443/tcp'], 'pre_build_image': True})
+
+    TASK [Discover local Docker images] ********************************************
+    ok: [localhost] => (item={'changed': False, 'skipped': True, 'skip_reason': 'Conditional result was False', '_ansible_no_log': False, 'item': {'name': 'kind-default', 'groups': ['k8s'], 'image': 'bsycorp/kind:latest-1.12', 'privileged': True, 'override_command': False, 'exposed_ports': ['8443/tcp', '10080/tcp'], 'published_ports': ['0.0.0.0:9443:8443/tcp'], 'pre_build_image': True}, '_ansible_item_result': True, '_ansible_ignore_errors': None, '_ansible_item_label': {'name': 'kind-default', 'groups': ['k8s'], 'image': 'bsycorp/kind:latest-1.12', 'privileged': True, 'override_command': False, 'exposed_ports': ['8443/tcp', '10080/tcp'], 'published_ports': ['0.0.0.0:9443:8443/tcp'], 'pre_build_image': True}})
+
+    TASK [Build an Ansible compatible image] ***************************************
+    skipping: [localhost] => (item={'changed': False, 'skipped': True, 'skip_reason': 'Conditional result was False', '_ansible_no_log': False, 'item': {'name': 'kind-default', 'groups': ['k8s'], 'image': 'bsycorp/kind:latest-1.12', 'privileged': True, 'override_command': False, 'exposed_ports': ['8443/tcp', '10080/tcp'], 'published_ports': ['0.0.0.0:9443:8443/tcp'], 'pre_build_image': True}, '_ansible_item_result': True, '_ansible_ignore_errors': None, '_ansible_item_label': {'name': 'kind-default', 'groups': ['k8s'], 'image': 'bsycorp/kind:latest-1.12', 'privileged': True, 'override_command': False, 'exposed_ports': ['8443/tcp', '10080/tcp'], 'published_ports': ['0.0.0.0:9443:8443/tcp'], 'pre_build_image': True}})
+
+    TASK [Create docker network(s)] ************************************************
+
+    TASK [Determine the CMD directives] ********************************************
+    skipping: [localhost] => (item={'name': 'kind-default', 'groups': ['k8s'], 'image': 'bsycorp/kind:latest-1.12', 'privileged': True, 'override_command': False, 'exposed_ports': ['8443/tcp', '10080/tcp'], 'published_ports': ['0.0.0.0:9443:8443/tcp'], 'pre_build_image': True})
+
+    TASK [Create molecule instance(s)] *********************************************
+    changed: [localhost] => (item={'name': 'kind-default', 'groups': ['k8s'], 'image': 'bsycorp/kind:latest-1.12', 'privileged': True, 'override_command': False, 'exposed_ports': ['8443/tcp', '10080/tcp'], 'published_ports': ['0.0.0.0:9443:8443/tcp'], 'pre_build_image': True})
+
+    TASK [Wait for instance(s) creation to complete] *******************************
+    FAILED - RETRYING: Wait for instance(s) creation to complete (300 retries left).
+    changed: [localhost] => (item={'started': 1, 'finished': 0, 'ansible_job_id': '57155955616.7787', 'results_file': '/home/fab/.ansible_async/57155955616.7787', '_ansible_parsed': True, 'changed': True, '_ansible_no_log': False, 'failed': False, 'item': {'name': 'kind-default', 'groups': ['k8s'], 'image': 'bsycorp/kind:latest-1.12', 'privileged': True, 'override_command': False, 'exposed_ports': ['8443/tcp', '10080/tcp'], 'published_ports': ['0.0.0.0:9443:8443/tcp'], 'pre_build_image': True}, '_ansible_item_result': True, '_ansible_ignore_errors': None, '_ansible_item_label': {'name': 'kind-default', 'groups': ['k8s'], 'image': 'bsycorp/kind:latest-1.12', 'privileged': True, 'override_command': False, 'exposed_ports': ['8443/tcp', '10080/tcp'], 'published_ports': ['0.0.0.0:9443:8443/tcp'], 'pre_build_image': True}})
+
+    PLAY RECAP *********************************************************************
+    localhost                  : ok=3    changed=2    unreachable=0    failed=0
+----

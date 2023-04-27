@@ -1,8 +1,0 @@
-
-=== Disclaimer
-
-image::https://upload.wikimedia.org/wikipedia/commons/8/89/Wiki_Loves_Jules_Verne_Gustav_Meyrink_Der_Golem_1915_%28Gerd_Kueveler%29.jpg[height=300]
-
-CAUTION: Ansible is NOT a programing language
-
-TIP: https://docs.ansible.com/ansible/latest/user_guide/playbooks_best_practices.html

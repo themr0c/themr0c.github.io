@@ -1,0 +1,10 @@
+digraph asciidoc {
+node [shape=Mrecord, style=filled, color="#6699ff", fillcolor="#ececff"];
+asciidoc [label="asciidoc + graphviz + png"];
+xhtml [label="xhtml + svg + png"];
+docbook [label="docbook + svg + png"];
+latex [label="latex + pdf + png"];
+pdf [label="pdf"];
+asciidoc -> {docbook xhtml};
+docbook -> latex -> pdf;
+}

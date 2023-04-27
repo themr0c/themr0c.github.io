@@ -1,6 +1,7 @@
 source 'https://rubygems.org'
 
-gem 'asciidoctor-revealjs'
-gem 'asciidoctor-pdf'
+gem 'asciidoctor-diagram'
 gem 'asciidoctor-kroki'
+gem 'asciidoctor-pdf'
+gem 'asciidoctor-revealjs'
 gem 'rghost'

@@ -1,0 +1,11 @@
+== Implementation examples
+
+* Galaxy role example: geerlingguy.phpmyadmin
+* Initialize our own role
+* `molecule` in Kubernetes Operator SDK
+
+include::phpmyadmin.adoc[]
+
+include::molecule-init.adoc[]
+
+include::operator-sdk.adoc[]

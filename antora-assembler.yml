@@ -4,7 +4,7 @@ root_level: 1
 component_versions: '@*'
 section_merge_strategy: fuse
 build:
-  command: bundle exec asciidoctor-pdf --attribute toclevels=5 --attribute antora-assembler=true --trace --sourcemap -r asciidoctor-kroki -a optimize
+  command: time bundle exec asciidoctor-pdf --require asciidoctor-diagram --attribute toclevels=5 --attribute antora-assembler=true --attribute optimize --sourcemap --timings --trace --verbose --warnings
   keep_aggregate_source: true
 asciidoc:
   attributes:

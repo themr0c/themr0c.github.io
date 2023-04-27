@@ -1,0 +1,20 @@
+
+### Goss
+
+* Easy. YAML syntax, fit well in the Ansible ecosystem.
+* Fast. Near instantaneous.
+* Small. <10MB single self-contained binary.
+* Linux only.
+
+[quote, https://goss.rocks]
+Goss is a YAML based serverspec alternative tool for validating a server’s
+configuration. 
+
+//// 
+Goss is EASY! Goss is FAST! - small-medium test suits are near
+instantaneous. Goss is SMALL! - <10MB single self-contained binary
+
+Goss is a compliance audit tool suitable for Linux platforms, with a
+very simple yaml syntax, that fit well in the Ansible ecosystem. It is
+blazing fast at validating the state of a running node.
+////

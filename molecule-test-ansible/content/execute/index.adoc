@@ -1,8 +1,0 @@
-
-include::when.adoc[]
-
-include::user.adoc[]
-
-include::tox.adoc[]
-
-include::ci.adoc[]

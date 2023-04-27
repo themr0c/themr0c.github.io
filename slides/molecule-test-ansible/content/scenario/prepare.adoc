@@ -1,0 +1,37 @@
+
+### prepare
+
+NOTE: Optional actions which bring the system to a given state prior to converge.
+
+TIP: remote database connections
+
+TIP: user accounts
+
+TIP: kubeconfig
+
+----
+--> Scenario: 'default'
+--> Action: 'prepare'
+
+    PLAY [Prepare] *****************************************************************
+
+    TASK [delete the kubeconfig if present] ****************************************
+    ok: [kind-default -> localhost]
+
+    TASK [Fetch the kubeconfig] ****************************************************
+    changed: [kind-default]
+
+    TASK [Change the kubeconfig port to the proper value] **************************
+    changed: [kind-default -> localhost]
+
+    TASK [Wait for the Kubernetes API to become available (this could take a minute)] ***
+    FAILED - RETRYING: Wait for the Kubernetes API to become available (this could take a minute) (60 retries left).
+    FAILED - RETRYING: Wait for the Kubernetes API to become available (this could take a minute) (59 retries left).
+    FAILED - RETRYING: Wait for the Kubernetes API to become available (this could take a minute) (58 retries left).
+    FAILED - RETRYING: Wait for the Kubernetes API to become available (this could take a minute) (57 retries left).
+    FAILED - RETRYING: Wait for the Kubernetes API to become available (this could take a minute) (56 retries left).
+    ok: [kind-default]
+
+    PLAY RECAP *********************************************************************
+    kind-default               : ok=4    changed=2    unreachable=0    failed=0
+----

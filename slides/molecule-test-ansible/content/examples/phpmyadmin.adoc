@@ -1,0 +1,18 @@
+== Example: Galaxy role geerlingguy.phpmyadmin
+
+----
+# sudo apt install python3 python3-dev python3-psutil
+sudo dnf install python3 python3-devel python3-psutil
+mkvirtualenv -p /usr/bin/python3 molecule-python3
+pip install molecule docker
+git clone git@github.com:geerlingguy/ansible-role-phpmyadmin.git geerlingguy.phpmyadmin
+cd geerlingguy.phpmyadmin
+molecule test
+----
+
+NOTE: https://asciinema.org/a/235212
+
+[%notitle]
+=== Demo
+
+image::phpmyadmin.cast.gif[background,size=contain]

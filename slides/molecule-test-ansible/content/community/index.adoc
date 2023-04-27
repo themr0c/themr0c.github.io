@@ -1,0 +1,104 @@
+== Molecule community update
+
+image::community-projects-ansiblefest-dark.jpg[background]
+
+[.notes]
+--
+Molecule became a Red Hat Ansible project in september 2018
+--
+
+[quote,'@tima (Timothy Appnel)',2018-09-26]
+____
+`ansible-lint` and `molecule` are great tools.
+The community that we see as essential parts of enhancing development of Ansible automation has built and tested them.
+By adopting these tools, Red Hat intends to invest resources working with the community to make them even better.
+____
+
+https://groups.google.com/forum/#!topic/ansible-project/ehrb6AEptzA
+
+=== Release 2.20.0
+
+image::release-pip.png[height=300]
+
+----
+$ pip install molecule==2.20.0
+----
+
+* https://pypi.org/project/molecule/#history
+
+=== Docker images on quay
+
+image::release-quay.png[height=250]
+
+----
+$ docker pull quay.io/ansible/molecule:2.20 // <1>
+----
+
+<1> Use named tags
+
+WARNING: latest == master == unstable
+
+https://quay.io/repository/ansible/molecule?tab=tags
+
+=== Changelog
+
+image::release-changelog.png[size=contain]
+
+=== Molecule working group
+
+image::workinggroup.png[]
+
+* https://github.com/ansible/community/issues/427[Molecule Working Group Agenda]
+
+=== Continuous integration
+
+image::ci.png[]
+
+https://travis-ci.com/ansible/molecule/
+
+=== Docker images
+
+TIP: No longer requires `sudo`.
+
+TIP: No longer specifies USER molecule.
+
+NOTE: And more.
+
+=== Lint
+
+NOTE: ansible-lint >=4.0.2,<5
+
+WARNING: Major release of `ansible-lint`
+
+=== Backends
+
+TIP: New backend: Linode
+
+TIP: Customise the location of the Dockerfile.j2
+
+TIP: New options for docker: `purge_networks`, `pid_mode`, `buildargs`, `override_command`
+
+=== Python module
+
+TIP: You can call Molecule as a Python module.
+
+----
+$ python -m molecule
+----
+
+=== Documentation
+
+NOTE: Lots of improvements.
+
+TIP: New ‘Getting Started’ guide.
+
+TIP: Example for using systemd enabled Docker images
+
+=== Next: Ansible Collections
+
+[quote,'@thaumos (Dylan Sylva)',2019-03-13]
+____
+We want `molecule` to become the de facto standard tool, or SDK if you will, for content creators.
+____
+
+https://meetbot.fedoraproject.org/ansible-molecule/2019-03-13/

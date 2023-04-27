@@ -1,9 +1,0 @@
-= The stream metaphor
-
-== Upstream?
-
-image::kayak-cascade.jpg[]
-
-== Downstream?
-
-image::Kayak_Sailing_on_the_Columbia_River.jpg[]

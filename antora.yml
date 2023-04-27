@@ -8,22 +8,23 @@ title: Fabrice Flore-Thebault
 ext:
   collector:
     - run:
-        command: bundle exec asciidoctor-revealjs -a revealjsdir=https://cdn.jsdelivr.net/npm/reveal.js@3.9.2 2020-01-efficient-downstreaming/index.adoc
+        command: bundle exec asciidoctor-revealjs -a revealjsdir=https://cdn.jsdelivr.net/npm/reveal.js@3.9.2 slides/2020-01-efficient-downstreaming/index.adoc --destination-dir modules/ROOT/attachments/2020-01-efficient-downstreaming/ --trace --timings --verbose --warnings
+      scan:
+        dir: modules/ROOT/attachments/2020-01-efficient-downstreaming/
+        files: index.html
     - run:
-        command: bundle exec asciidoctor-revealjs -a revealjsdir=https://cdn.jsdelivr.net/npm/reveal.js@3.9.2 molecule-test-ansible/index.adoc
+        command: bundle exec asciidoctor-revealjs -a revealjsdir=https://cdn.jsdelivr.net/npm/reveal.js@3.9.2 slides/molecule-test-ansible/index.adoc --destination-dir modules/ROOT/attachments/molecule-test-ansible/ --trace --timings --verbose --warnings
+      scan:
+        dir: modules/ROOT/attachments/molecule-test-ansible/
+        files: index.html
     - run:
-        command: bundle exec asciidoctor-revealjs -a revealjsdir=https://cdn.jsdelivr.net/npm/reveal.js@3.9.2 pipeline-as-code-2017/index.adoc
+        command: bundle exec asciidoctor-revealjs -a revealjsdir=https://cdn.jsdelivr.net/npm/reveal.js@3.9.2 slides/2017-pipeline-as-code/index.adoc --destination-dir modules/ROOT/attachments/pipeline-as-code-2017/ --trace --timings --verbose --warnings
+        scan:
+          dir: modules/ROOT/attachments/pipeline-as-code-2017/
+          files: index.html
     - run:
-        command: bundle exec asciidoctor-revealjs -a revealjsdir=https://cdn.jsdelivr.net/npm/reveal.js@3.9.2 2011-10-06-jeudisdulibre-bruxelles/index.adoc
-    - run:
-        command: cp 2020-01-efficient-downstreaming/index.html modules/ROOT/attachments/2020-01-efficient-downstreaming/index.html
-    - run:
-        command: cp molecule-test-ansible/index.html modules/ROOT/attachments/molecule-test-ansible/index.html
-    - run:
-        command: cp pipeline-as-code-2017/index.html modules/ROOT/attachments/pipeline-as-code-2017/index.html
-    - run:
-        command: cp 2011-10-06-jeudisdulibre-bruxelles/index.html modules/ROOT/attachments/2011-10-06-jeudisdulibre-bruxelles/index.html
+        command: bundle exec asciidoctor-revealjs -a revealjsdir=https://cdn.jsdelivr.net/npm/reveal.js@3.9.2 slides/2011-10-06-jeudisdulibre-bruxelles/index.adoc --destination-dir modules/ROOT/attachments/2011-10-06-jeudisdulibre-bruxelles/ --trace --timings --verbose --warnings
+        scan:
+          dir: modules/ROOT/attachments/2011-10-06-jeudisdulibre-bruxelles/
+          files: index.html
 
-#      scan:
-#        dir: build/site/2020-01-efficient-downstreaming
-#        files: efficient.html

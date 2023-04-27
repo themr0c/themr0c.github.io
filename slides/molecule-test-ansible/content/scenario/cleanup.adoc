@@ -1,0 +1,16 @@
+
+=== cleanup
+
+
+NOTE:  To be used in conjunction with `prepare`
+
+NOTE: Cleanup changes that were made outside of Molecule’s test platforms.
+
+TIP: remote database connections
+
+TIP: user accounts
+
+----
+--> Action: 'cleanup'
+Skipping, cleanup playbook not configured.
+----

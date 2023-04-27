@@ -1,0 +1,48 @@
+=== Tox
+
+* Orchestrate tests on a collection of roles.
+
+* Isolated python virtual environments.
+
+[quote,https://tox.readthedocs.io]
+Tox aims to automate and standardize testing in Python.
+It is part of a larger vision of easing the packaging, testing and release process of Python software.
+
+----
+$ pip install tox virtualenv
+----
+
+=== Configure `tox.ini`
+
+* Molecule role == Tox named environment
+* Running platforms are not isolated!
+
+[source,ini]
+----
+[tox]
+envlist =
+  my_example_role
+  another_role
+skipsdist = true
+[testenv]
+basepython = python3
+commands = bash -c "(cd {toxinidir}/roles/{envname} && molecule --debug
+test --all)"
+description = molecule test role {envname}
+deps = -r {toxinidir}/requirements.txt
+setenv = MOLECULE_EPHEMERAL_DIRECTORY={envname}
+sitepackages = true
+whitelist_externals =
+  /bin/bash
+  /usr/bin/rubocop
+----
+
+=== Run tox tests
+
+----
+$ tox <1>
+$ tox -e ${rolename} <2>
+----
+
+<1> Run all molecule tests on all roles
+<2> Same, limited to the named role ${rolename}

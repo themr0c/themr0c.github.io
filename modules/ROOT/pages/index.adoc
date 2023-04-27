@@ -2,25 +2,35 @@
 
 == About
 
-* xref:cv:cv.adoc[CV / Résumé] (link:cv-résumé.pdf[PDF])
+* xref:cv:index.adoc[CV / Résumé] (link:cv-résumé.pdf[PDF])
 
 == Presentations
 
 This is the list of some presentations for which I was the speaker, with link to the slides.
 
-* link:2020-01-efficient-downstreaming[Documentation with Efficient Downstreaming in Mind], Devconf.CZ, 2020-01-24.
+Creating a content pipeline with Antora::
+With link:https://www.ahus1.de[Alexander Schwartz]
+* xref:attachment$Creating_a_content_pipeline_with_Antora_fosdem2023.pdf[Slides], link:https://fosdem.org/2023/schedule/event/collab_antora/[FOSDEM: 2023-02-05]
+* link:https://video.fosdem.org/2023/D.collab/collab_antora.webm[Video recording (WebM/VP9)]
+* link:https://video.fosdem.org/2023/D.collab/collab_antora.mp4[Video recording (mp4/aac)]
 
-* link:molecule-test-ansible[Molecule test Ansible], Jeudis du libre de Mons, 2019-03-21.
+Documentation with Efficient Downstreaming in Mind::
+* xref:2020-01-efficient-downstreaming.adoc[Slides], link:https://devconfcz2020a.sched.com/event/YOvO/documentation-with-efficient-downstreaming-in-mind[Devconf.CZ: 2020-01-24]
 
-* link:pipeline-as-code-2017[Pipeline as code], Brussels, 2017-03-30.
+Molecule test Ansible::
+** xref:molecule-test-ansible.adoc[Slides], Jeudis du libre, Mons, Belgium, 2019-03-21
 
-* link:2011-10-06-jeudisdulibre-bruxelles[Ecrire de la documentation pour des projets libres], Jeudis du libre de Bruxelles, 2011-10-06.
+Pipeline as code::
+* xref:pipeline-as-code-2017.adoc[Slides], Brussels, 2017-03-30
 
-* https://www.slideshare.net/themr0c/loadays-2011-asset-management-with-fusioninventory-and-glpi[Asset management with FusionInventory and GLPI - Loadays version], Loadays, 2011-04-17.
+Ecrire de la documentation pour des projets libres::
 
-* https://www.slideshare.net/themr0c/asset-management-with-fusioninventory-and-glpi[Asset management with FusionInventory and GLPI - UKUUG version],
-UKUUG Spring 2011 Conference, 2011-03-23.
+* xref:2011-10-06-jeudisdulibre-bruxelles.adoc[Slides], Jeudis du libre, Brussels, Belgium 2011-10-06
 
-* https://www.slideshare.net/themr0c/wpkg-jdll2010[Wpkg - Gestion libre de paquets pour Windows], JDLL (Journées des Logiciels Libres de Lyon), 2010-10-14.
+Asset management with FusionInventory and GLPI::
+* https://www.slideshare.net/themr0c/loadays-2011-asset-management-with-fusioninventory-and-glpi[Slides - Loadays version], link:https://loadays.org[Loadays], 2011-04-17.
+* https://www.slideshare.net/themr0c/asset-management-with-fusioninventory-and-glpi[Slides - UKUUG version], UKUUG Spring 2011 Conference, 2011-03-23.
 
-* https://www.slideshare.net/themr0c/wpkg[Wpkg - Windows Packages manager], Libre Software Meeting 2010 / RMLL 2010, 2010-07-06
+WPKG, Windows Packages manager::
+* https://www.slideshare.net/themr0c/wpkg-jdll2010[Slides, French], JDLL (Journées des Logiciels Libres de Lyon), 2010-10-14.
+* https://www.slideshare.net/themr0c/wpkg[Slides, English], Libre Software Meeting 2010 / RMLL 2010, 2010-07-06

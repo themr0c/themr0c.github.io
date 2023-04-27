@@ -1,0 +1,39 @@
+
+### converge
+
+NOTE: Execute the main role.
+
+----
+--> Scenario: 'default'
+--> Action: 'converge'
+
+    PLAY [Converge] ****************************************************************
+
+    TASK [Gathering Facts] *********************************************************
+    ok: [localhost]
+
+    PLAY [Verify] ******************************************************************
+
+    TASK [Gathering Facts] *********************************************************
+    ok: [localhost]
+
+    TASK [Get all pods in osdk-test] ***********************************************
+    ok: [localhost]
+
+    TASK [Output pods] *************************************************************
+    ok: [localhost] => {
+        "pods": {
+            "changed": false,
+            "failed": false,
+            "resources": []
+        }
+    }
+
+    PLAY RECAP *********************************************************************
+    localhost                  : ok=4    changed=0    unreachable=0    failed=0
+
+
+--> Scenario: 'default'
+--> Action: 'idempotence'
+Idempotence completed successfully.
+----

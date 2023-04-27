@@ -1,6 +1,0 @@
-
-### Solution
-
-image::molecule-logo.png[height=442]
-
-https://molecule.readthedocs.io

@@ -1,0 +1,14 @@
+
+### Verifier
+
+Audit the state of the tested platform after role execution with an independant tool.
+
+* Testinfra
+* Goss
+* Inspec
+
+include::testinfra.adoc[]
+
+include::goss.adoc[]
+
+include::inspec.adoc[]

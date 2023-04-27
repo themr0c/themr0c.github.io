@@ -1,9 +1,9 @@
 [%unbreakable]
 == image:language.svg[Interests,25] Languages
 
-French image:battery-full.svg[native,25]::
-English image:battery-full.svg[fluent,25]::
-German image:battery-half.svg[fluent,25]::
+* French image:battery-full.svg[native,25]
+* English image:battery-full.svg[fluent,25]
+* German image:battery-half.svg[fluent,25]
 // * *Dutch* image:battery-empty.svg[notions,25]
 //
 

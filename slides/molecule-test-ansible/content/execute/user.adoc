@@ -1,0 +1,10 @@
+=== Test one role at user request, locally
+
+* Before committing any changes to Git
+* Tradeoffs: blocking, slow, antivirus
+* Run all tests on the named role `$\{rolename}`:
++
+----
+cd ${rolename}
+molecule test --all
+----

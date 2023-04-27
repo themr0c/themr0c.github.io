@@ -1,0 +1,40 @@
+= Molecule test Ansible
+:author: Fabrice Flore-Thebault
+:backend: revealjs
+:data-uri:
+:icons: font
+:imagesdir: images
+:lang: en
+:revdate: 2019-03-21
+:revealjs_defaultTiming: 60
+:revealjs_height: 1080
+:revealjs_parallaxBackgroundImage: https://upload.wikimedia.org/wikipedia/commons/2/21/Atomium_Evening_BrusselsB.jpg
+:revealjs_parallaxBackgroundSize: 3072px 2304px
+:revealjs_slideNumber: true
+:revealjs_theme: league
+:revealjs_width: 1920
+:source-highlighter: highlightjs
+:title-slide-background-image: atomium.jpg
+:toc: preamble
+
+Loadays, Antwerp, 2019-05-04
+
+Jeudis du Libre, Mons, 2019-03-21
+
+include::content/about/index.adoc[]
+
+include::content/stories/index.adoc[]
+
+include::content/tools/index.adoc[]
+
+include::content/first-demo/index.adoc[]
+
+include::content/scenario/index.adoc[]
+
+include::content/execute/index.adoc[]
+
+include::content/create/index.adoc[]
+
+include::content/examples/index.adoc[]
+
+include::content/community/index.adoc[]

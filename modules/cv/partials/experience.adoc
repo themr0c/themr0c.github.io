@@ -1,7 +1,7 @@
 == image:suitcase.svg[xp,25] Experience
 
 // .image:suitcase.svg[xp,25] Experience
-[plantuml,svg,width=100%,align=center]
+[plantuml,target=experience.svg,format=svg]
 ....
 include::example$/experience.puml[]
 ....

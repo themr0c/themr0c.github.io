@@ -1,0 +1,32 @@
+
+## Molecule scenario dissected
+
+// image::https://upload.wikimedia.org/wikipedia/commons/a/af/IBM_Automatic_Sequence_Controlled_Calculator_Sequence_Indicators.jpg[background, size=cover]
+
+image::https://upload.wikimedia.org/wikipedia/commons/d/db/Impact_sequence.jpg[background]
+
+[.notes]
+--
+The purpose of Molecule is to run tests scenarios against a role.
+--
+
+[source,shell]
+----
+$ molecule matrix -s default test
+--> Test matrix
+
+└── default
+    ├── lint
+    ├── cleanup
+    ├── destroy
+    ├── dependency
+    ├── syntax
+    ├── create
+    ├── prepare
+    ├── converge
+    ├── idempotence
+    ├── side_effect
+    ├── verify
+    ├── cleanup
+    └── destroy
+----

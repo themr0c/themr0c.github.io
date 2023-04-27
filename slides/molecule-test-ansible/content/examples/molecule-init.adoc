@@ -1,0 +1,241 @@
+== Create a new role
+
+----
+Usage: molecule init [OPTIONS] COMMAND [ARGS]...
+
+  Initialize a new role or scenario.
+
+Options:
+  --help  Show this message and exit.
+
+Commands:
+  role      Initialize a new role for use with Molecule.
+  scenario  Initialize a new scenario for use with...
+  template  Initialize a new role from a Cookiecutter...
+----
+
+[%notitle]
+=== Demo
+
+image::molecule-init.cast.gif[background,size=contain]
+
+https://asciinema.org/a/235388
+
+=== Molecule init demo
+
+----
+molecule  init role --driver-name docker --verifier-name goss  --role-name jdl
+--> Initializing new role jdl...
+Initialized role in /home/fab/src/jdl-2019/jdl successfully.
+----
+
+=== Default values need to be changed
+
+----
+--> Executing Ansible Lint on /home/fab/src/jdl-2019/jdl/molecule/default/playbook.yml...
+    [701] Role info should contain platforms
+    /home/fab/src/jdl-2019/jdl/meta/main.yml:1
+    {'meta/main.yml': {'galaxy_info': {'author': 'your name', 'description': 'your description', 'company': 'your company (optional)', 'license': 'license (GPLv2, CC-BY, etc)', 'min_ansible_version': 1.2, 'galaxy_tags': [], '__line__': 2, '__file__': '/home/fab/src/jdl-2019/jdl/meta/main.yml'}, 'dependencies': [], '__line__': 1, '__file__': '/home/fab/src/jdl-2019/jdl/meta/main.yml'}}
+
+    [703] Should change default metadata: author
+    /home/fab/src/jdl-2019/jdl/meta/main.yml:1
+    {'meta/main.yml': {'galaxy_info': {'author': 'your name', 'description': 'your description', 'company': 'your company (optional)', 'license': 'license (GPLv2, CC-BY, etc)', 'min_ansible_version': 1.2, 'galaxy_tags': [], '__line__': 2, '__file__': '/home/fab/src/jdl-2019/jdl/meta/main.yml'}, 'dependencies': [], '__line__': 1, '__file__': '/home/fab/src/jdl-2019/jdl/meta/main.yml'}}
+
+    [703] Should change default metadata: description
+    /home/fab/src/jdl-2019/jdl/meta/main.yml:1
+    {'meta/main.yml': {'galaxy_info': {'author': 'your name', 'description': 'your description', 'company': 'your company (optional)', 'license': 'license (GPLv2, CC-BY, etc)', 'min_ansible_version': 1.2, 'galaxy_tags': [], '__line__': 2, '__file__': '/home/fab/src/jdl-2019/jdl/meta/main.yml'}, 'dependencies': [], '__line__': 1, '__file__': '/home/fab/src/jdl-2019/jdl/meta/main.yml'}}
+
+    [703] Should change default metadata: company
+    /home/fab/src/jdl-2019/jdl/meta/main.yml:1
+    {'meta/main.yml': {'galaxy_info': {'author': 'your name', 'description': 'your description', 'company': 'your company (optional)', 'license': 'license (GPLv2, CC-BY, etc)', 'min_ansible_version': 1.2, 'galaxy_tags': [], '__line__': 2, '__file__': '/home/fab/src/jdl-2019/jdl/meta/main.yml'}, 'dependencies': [], '__line__': 1, '__file__': '/home/fab/src/jdl-2019/jdl/meta/main.yml'}}
+
+    [703] Should change default metadata: license
+    /home/fab/src/jdl-2019/jdl/meta/main.yml:1
+    {'meta/main.yml': {'galaxy_info': {'author': 'your name', 'description': 'your description', 'company': 'your company (optional)', 'license': 'license (GPLv2, CC-BY, etc)', 'min_ansible_version': 1.2, 'galaxy_tags': [], '__line__': 2, '__file__': '/home/fab/src/jdl-2019/jdl/meta/main.yml'}, 'dependencies': [], '__line__': 1, '__file__': '/home/fab/src/jdl-2019/jdl/meta/main.yml'}}
+
+----
+
+=== Successful test
+
+----
+molecule test
+--> Validating schema /home/fab/src/jdl-2019/jdl/molecule/default/molecule.yml.
+Validation completed successfully.
+--> Test matrix
+
+└── default
+    ├── lint
+    ├── cleanup
+    ├── destroy
+    ├── dependency
+    ├── syntax
+    ├── create
+    ├── prepare
+    ├── converge
+    ├── idempotence
+    ├── side_effect
+    ├── verify
+    ├── cleanup
+    └── destroy
+
+--> Scenario: 'default'
+--> Action: 'lint'
+--> Executing Yamllint on files found in /home/fab/src/jdl-2019/jdl/...
+Lint completed successfully.
+--> Executing Yamllint on files found in /home/fab/src/jdl-2019/jdl/molecule/default/tests/...
+Lint completed successfully.
+--> Executing Ansible Lint on /home/fab/src/jdl-2019/jdl/molecule/default/playbook.yml...
+Lint completed successfully.
+--> Scenario: 'default'
+--> Action: 'cleanup'
+Skipping, cleanup playbook not configured.
+--> Scenario: 'default'
+--> Action: 'destroy'
+
+    PLAY [Destroy] *****************************************************************
+
+    TASK [Destroy molecule instance(s)] ********************************************
+    changed: [localhost] => (item=None)
+    changed: [localhost]
+
+    TASK [Wait for instance(s) deletion to complete] *******************************
+    ok: [localhost] => (item=None)
+    ok: [localhost]
+
+    TASK [Delete docker network(s)] ************************************************
+
+    PLAY RECAP *********************************************************************
+    localhost                  : ok=2    changed=1    unreachable=0    failed=0
+
+
+--> Scenario: 'default'
+--> Action: 'dependency'
+Skipping, missing the requirements file.
+--> Scenario: 'default'
+--> Action: 'syntax'
+
+    playbook: /home/fab/src/jdl-2019/jdl/molecule/default/playbook.yml
+
+--> Scenario: 'default'
+--> Action: 'create'
+
+    PLAY [Create] ******************************************************************
+
+    TASK [Log into a Docker registry] **********************************************
+    skipping: [localhost] => (item=None)
+
+    TASK [Create Dockerfiles from image names] *************************************
+    changed: [localhost] => (item=None)
+    changed: [localhost]
+
+    TASK [Discover local Docker images] ********************************************
+    ok: [localhost] => (item=None)
+    ok: [localhost]
+
+    TASK [Build an Ansible compatible image] ***************************************
+    changed: [localhost] => (item=None)
+    changed: [localhost]
+
+    TASK [Create docker network(s)] ************************************************
+
+    TASK [Determine the CMD directives] ********************************************
+    ok: [localhost] => (item=None)
+    ok: [localhost]
+
+    TASK [Create molecule instance(s)] *********************************************
+    changed: [localhost] => (item=None)
+    changed: [localhost]
+
+    TASK [Wait for instance(s) creation to complete] *******************************
+    FAILED - RETRYING: Wait for instance(s) creation to complete (300 retries left).
+    changed: [localhost] => (item=None)
+    changed: [localhost]
+
+    PLAY RECAP *********************************************************************
+    localhost                  : ok=6    changed=4    unreachable=0    failed=0
+
+
+--> Scenario: 'default'
+--> Action: 'prepare'
+Skipping, prepare playbook not configured.
+--> Scenario: 'default'
+--> Action: 'converge'
+
+    PLAY [Converge] ****************************************************************
+
+    TASK [Gathering Facts] *********************************************************
+    ok: [instance]
+
+    PLAY RECAP *********************************************************************
+    instance                   : ok=1    changed=0    unreachable=0    failed=0
+
+
+--> Scenario: 'default'
+--> Action: 'idempotence'
+Idempotence completed successfully.
+--> Scenario: 'default'
+--> Action: 'side_effect'
+Skipping, side effect playbook not configured.
+--> Scenario: 'default'
+--> Action: 'verify'
+--> Executing Goss tests found in /home/fab/src/jdl-2019/jdl/molecule/default/tests/...
+
+    PLAY [Verify] ******************************************************************
+
+    TASK [Gathering Facts] *********************************************************
+    ok: [instance]
+
+    TASK [Download and install Goss] ***********************************************
+    changed: [instance]
+
+    TASK [Copy Goss tests to remote] ***********************************************
+    changed: [instance] => (item=/home/fab/src/jdl-2019/jdl/molecule/default/tests/test_default.yml)
+
+    TASK [Register test files] *****************************************************
+    changed: [instance]
+
+    TASK [Execute Goss tests] ******************************************************
+    changed: [instance] => (item=/tmp/test_default.yml)
+
+    TASK [Display details about the Goss results] **********************************
+    ok: [instance] => (item={'changed': True, 'end': '2019-03-20 22:08:15.317017', 'stdout': 'File: /etc/hosts: exists: matches expectation: [true]\nFile: /etc/hosts: owner: matches expectation: ["root"]\nFile: /etc/hosts: group: matches expectation: ["root"]\n\n\nTotal Duration: 0.000s\nCount: 3, Failed: 0, Skipped: 0', 'cmd': ['/usr/local/bin/goss', '-g', '/tmp/test_default.yml', 'validate', '--format', 'documentation'], 'rc': 0, 'start': '2019-03-20 22:08:14.710863', 'stderr': '', 'delta': '0:00:00.606154', 'invocation': {'module_args': {'creates': None, 'executable': None, '_uses_shell': False, '_raw_params': '/usr/local/bin/goss -g /tmp/test_default.yml validate --format documentation', 'removes': None, 'argv': None, 'warn': True, 'chdir': None, 'stdin': None}}, '_ansible_parsed': True, 'stdout_lines': ['File: /etc/hosts: exists: matches expectation: [true]', 'File: /etc/hosts: owner: matches expectation: ["root"]', 'File: /etc/hosts: group: matches expectation: ["root"]', '', '', 'Total Duration: 0.000s', 'Count: 3, Failed: 0, Skipped: 0'], 'stderr_lines': [], '_ansible_no_log': False, 'failed': False, 'item': '/tmp/test_default.yml', '_ansible_item_result': True, '_ansible_ignore_errors': None, '_ansible_item_label': '/tmp/test_default.yml'}) => {
+        "msg": [
+            "File: /etc/hosts: exists: matches expectation: [true]",
+            "File: /etc/hosts: owner: matches expectation: [\"root\"]",
+            "File: /etc/hosts: group: matches expectation: [\"root\"]",
+            "",
+            "",
+            "Total Duration: 0.000s",
+            "Count: 3, Failed: 0, Skipped: 0"
+        ]
+    }
+
+    TASK [Fail when tests fail] ****************************************************
+    skipping: [instance] => (item={'changed': True, 'end': '2019-03-20 22:08:15.317017', 'stdout': 'File: /etc/hosts: exists: matches expectation: [true]\nFile: /etc/hosts: owner: matches expectation: ["root"]\nFile: /etc/hosts: group: matches expectation: ["root"]\n\n\nTotal Duration: 0.000s\nCount: 3, Failed: 0, Skipped: 0', 'cmd': ['/usr/local/bin/goss', '-g', '/tmp/test_default.yml', 'validate', '--format', 'documentation'], 'rc': 0, 'start': '2019-03-20 22:08:14.710863', 'stderr': '', 'delta': '0:00:00.606154', 'invocation': {'module_args': {'creates': None, 'executable': None, '_uses_shell': False, '_raw_params': '/usr/local/bin/goss -g /tmp/test_default.yml validate --format documentation', 'removes': None, 'argv': None, 'warn': True, 'chdir': None, 'stdin': None}}, '_ansible_parsed': True, 'stdout_lines': ['File: /etc/hosts: exists: matches expectation: [true]', 'File: /etc/hosts: owner: matches expectation: ["root"]', 'File: /etc/hosts: group: matches expectation: ["root"]', '', '', 'Total Duration: 0.000s', 'Count: 3, Failed: 0, Skipped: 0'], 'stderr_lines': [], '_ansible_no_log': False, 'failed': False, 'item': '/tmp/test_default.yml', '_ansible_item_result': True, '_ansible_ignore_errors': None, '_ansible_item_label': '/tmp/test_default.yml'})
+
+    PLAY RECAP *********************************************************************
+    instance                   : ok=6    changed=4    unreachable=0    failed=0
+
+
+Verifier completed successfully.
+--> Scenario: 'default'
+--> Action: 'cleanup'
+Skipping, cleanup playbook not configured.
+--> Scenario: 'default'
+--> Action: 'destroy'
+
+    PLAY [Destroy] *****************************************************************
+
+    TASK [Destroy molecule instance(s)] ********************************************
+    changed: [localhost] => (item=None)
+    changed: [localhost]
+
+    TASK [Wait for instance(s) deletion to complete] *******************************
+    changed: [localhost] => (item=None)
+    changed: [localhost]
+
+    TASK [Delete docker network(s)] ************************************************
+
+    PLAY RECAP *********************************************************************
+    localhost                  : ok=2    changed=2    unreachable=0    failed=0
+----

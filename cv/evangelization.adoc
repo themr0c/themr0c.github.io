@@ -1,8 +1,0 @@
-
-== image:bullhorn.svg[,25] Evangelization
-
-[no-bullet]
-* image:calendar-alt.svg[,25] Organisation of monthly talks about free software (2009-2012) (http://jeudisdulibre.be/)
-* image:microphone.svg[,25]Participation in weekly radio show about free software (2012-2013) (http://www.radiopanik.org/recherche/?q=good+morning+stallman)
-* image:chalkboard-teacher.svg[,25] Various talks about open source solutions
-(http://www.slideshare.net/search/slideshow?searchfrom=header&q=themr0c[Slideshare page]).

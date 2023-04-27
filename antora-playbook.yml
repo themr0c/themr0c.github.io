@@ -8,7 +8,7 @@ content:
   sources:
     - url: ./
       branches: HEAD
-      edit_url: https://github.com/themr0c/themr0c.github.io
+      edit_url: "https://github.com/themr0c/themr0c.github.io/edit/main/{path}"
 output:
   destinations:
     - clean: true

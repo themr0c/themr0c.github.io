@@ -1,4 +1,4 @@
-:page-layout: passthrough
+// :page-layout: passthrough
 :navtitle: Pipeline as Code
 :title: Pipeline as Code
 

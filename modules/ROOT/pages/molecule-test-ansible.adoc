@@ -1,4 +1,4 @@
-:page-layout: passthrough
+// :page-layout: passthrough
 :navtitle: Molecule test Ansible
 :title: Molecule test Ansible
 

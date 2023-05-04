@@ -3,7 +3,7 @@
 // {localdatetime}
 :description: Fabrice Flore-Thébault CV / Résumé
 :navtitle: CV / Résumé
-// :page-aliases:
+:page-aliases:
 
 ////
 :data-uri:

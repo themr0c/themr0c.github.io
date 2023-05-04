@@ -1,4 +1,4 @@
-:page-layout: passthrough
+// :page-layout: passthrough
 :navtitle: Documentation with Efficient Downstreaming in Mind
 :title: Documentation with Efficient Downstreaming in Mind
 

@@ -1,4 +1,4 @@
-:page-layout: passthrough
+// :page-layout: passthrough
 :navtitle: Écrire de la documentation pour des projets libres
 :title: Écrire de la documentation pour des projets libres
 

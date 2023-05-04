@@ -3,7 +3,7 @@ site:
   robots: allow
   title: Fabrice Flore-Thebault
   start_page: ROOT::index.adoc
-  url: https://themr0c.github.io
+  url: https://flore-thebault.com
 content:
   sources:
     - url: ./
@@ -24,12 +24,3 @@ ui:
 urls:
   html_extension_style: indexify
   redirect_facility: static
-antora:
-  extensions:
-    - '@antora/collector-extension'
-    - '@antora/lunr-extension'
-    - '@antora/pdf-extension'
-asciidoc:
-  extensions:
-    - asciidoctor-emoji
-    - asciidoctor-kroki

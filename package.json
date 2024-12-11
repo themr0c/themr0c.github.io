@@ -7,7 +7,7 @@
     "@antora/collector-extension": "^1.0.0-alpha.3",
     "@antora/lunr-extension": "^1.0.0-alpha.8",
     "@antora/pdf-extension": "^1.0.0-alpha.6",
-    "@asciidoctor/reveal.js": "^5.0.0-rc.1",
+    "@asciidoctor/reveal.js": "^5.2.0",
     "asciidoctor": "^2.2.6",
     "asciidoctor-emoji": "^0.4.2",
     "asciidoctor-kroki": "^0.17.0",
